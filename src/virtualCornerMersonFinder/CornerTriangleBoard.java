@@ -1,6 +1,7 @@
 package virtualCornerMersonFinder;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import triangleBoard5.TriangleBoard;
 
@@ -14,35 +15,62 @@ public class CornerTriangleBoard {
 
 	
 	public static void main(String args[]) {
-		CornerTriangleBoard test1 = new CornerTriangleBoard(3, 20);
+		CornerTriangleBoard test1 = new CornerTriangleBoard(3);
 
 		System.out.println(test1);
 		ArrayList<String> listOfMoves = test1.getFullMovesExcludingRepeatMoves();
 		//ArrayList<String> listOfMoves = test1.getPossibleMovesFromPosition(10);
 		
-		System.out.println("Number of possible moves:");
+		System.out.println("Number of possible moves: " + listOfMoves.size());
+		System.out.println("list:");
 		for(int i=0; i<listOfMoves.size(); i++) {
 			System.out.println(listOfMoves.get(i));
 		}
 		
+		Scanner in = new Scanner(System.in);
+		
 		System.out.println("List of positions after 1st move:");
 		for(int i=0; i<listOfMoves.size(); i++) {
-			System.out.println(test1.doOneMove(listOfMoves.get(i)));
+			
+			CornerTriangleBoard tmp = test1.doOneMove(listOfMoves.get(i));
+			System.out.println(tmp);
+
 			System.out.println("----");
+			ArrayList<String> listOfMoves2 = tmp.getFullMovesExcludingRepeatMoves();
+			
+			System.out.println("Number of possible moves for second move: " + listOfMoves2.size());
+			System.out.println("list:");
+			for(int i2=0; i2<listOfMoves2.size(); i2++) {
+				System.out.println(listOfMoves2.get(i2));
+			}
+			
+			for(int i2=0; i2<listOfMoves2.size(); i2++) {
+				
+				System.out.println("Second move:");
+				System.out.println("move: " + listOfMoves2.get(i2) ) ;
+				CornerTriangleBoard tmp2 = tmp.doOneMove(listOfMoves2.get(i2));
+				System.out.println(tmp2);
+				System.out.println("----");
+				
+			}
+			System.out.println("----");
+			System.out.println("----");
+			System.out.println("----");
+			
+			System.out.println("Press enter to get to the next move");
+			//in.nextLine();
 		}
 	}
 	
 	private int numLayers = -1;
 	
-
 	private boolean cornerTriangle[][];
 	
 	private int numPiecesLeft;
 	
 	private int numMovesMade;
 
-	private int maxTolerableNumMoves;
-	
+
 	private int numMovesMadeStartingFromInside;
 	
 	// if there's only 1 peg left within the layers and usedOutsidePegs is true,
@@ -51,9 +79,44 @@ public class CornerTriangleBoard {
 
 	private String historicMoveList;
 	private int internalLastJumpCodeForMultiJumpMoves = -1;
+
+	
+	public int getNumLayers() {
+		return numLayers;
+	}
+
+	//TODO: WARNING: DO NOT MODIFY OUTSIDE THIS CLASS
+	public boolean[][] getCornerTriangle() {
+		return cornerTriangle;
+	}
+	//END TODO
+
+	public int getNumPiecesLeft() {
+		return numPiecesLeft;
+	}
+
+	public int getNumMovesMade() {
+		return numMovesMade;
+	}
+
+	public int getNumMovesMadeStartingFromInside() {
+		return numMovesMadeStartingFromInside;
+	}
+
+	public boolean isUsedOutsidePegs() {
+		return usedOutsidePegs;
+	}
+
+	public String getHistoricMoveList() {
+		return historicMoveList;
+	}
 	
 	
-	//TODO: use (don't just fill up the layers with pegs)
+	
+	public static final String SPACE_BETWEEN_MOVES = "  "; 
+	
+	//Will use and not fill 2 extra layers beyond the number of layers set
+
 	// The fill up the layers with pegs solution is just a proof-of-concept
 		//TODO (nah): lookup numbers could be reflected
 		//, long lookupNumber
@@ -62,10 +125,9 @@ public class CornerTriangleBoard {
 	
 
 	//TODO: for now, just fill the corner with pegs, but try every combo of peg/non-peg later
-	public CornerTriangleBoard(int numLayers, int maxTolerableNumMoves) {
+	public CornerTriangleBoard(int numLayers) {
 		
 		this.numLayers = numLayers;
-		this.maxTolerableNumMoves = maxTolerableNumMoves;
 		
 		this.numPiecesLeft = 0;
 		
@@ -114,7 +176,6 @@ public class CornerTriangleBoard {
 
 		ret += "Num pieces left: " + numPiecesLeft + "\n";
 		ret += "Num moves Made: " + this.numMovesMade + "\n";
-		ret += "Max moves could make: " + this.maxTolerableNumMoves + "\n";
 		ret += "Num moves Made from inside: " + this.numMovesMadeStartingFromInside + "\n";
 		ret += "Used outside pegs: " + this.usedOutsidePegs + "\n";
 		ret += "Move list: " + historicMoveList + "\n";
@@ -182,14 +243,6 @@ public class CornerTriangleBoard {
 	
 	public ArrayList<String> getFullMovesExcludingRepeatMoves() {
 
-		//TODO: Maybe this logic shouldn't be in CornerTriangleBoard except to error out?
-		//Even that is a little suspicious
-		if(this.numMovesMade == this.maxTolerableNumMoves) {
-			System.out.println("ERROR: trying to move after it's been deemed not worth it!");
-			System.exit(1);
-		}
-		//END TODO
-		
 		boolean goodStarts[][] = new boolean[this.cornerTriangle.length][];
 
 		//A good starting point is within the corner or wherever outside the corner:
@@ -230,7 +283,8 @@ public class CornerTriangleBoard {
 		for(int i=0; i<cornerTriangle.length; i++) {
 			for(int j=0; j<cornerTriangle[i].length; j++) {
 				if(goodStarts[i][j] && (i != lastPegLocationi || j != lastPegLocationj) ) {
-					ret.addAll(getPossibleMovesFromPosition(getCode(i, j)));
+					
+					ret.addAll(getPossibleMovesFromPosition(getCode(i, j), true));
 				}
 			}
 		}
@@ -240,7 +294,7 @@ public class CornerTriangleBoard {
 	}
 	
 
-	private ArrayList<String> getPossibleMovesFromPosition(int code) {
+	private ArrayList<String> getPossibleMovesFromPosition(int code, boolean isFirstJump) {
 		int istart = code / cornerTriangle.length;
 		int jstart = code % cornerTriangle.length;
 		
@@ -253,14 +307,14 @@ public class CornerTriangleBoard {
 			if(istart >= 2 && jstart <= istart-2) {
 				if( (cornerTriangle[istart-1][jstart] || istart-1 >= this.numLayers) && cornerTriangle[istart-2][jstart] == false) {
 				
-					ret.addAll( getPossibleMovesAfterJump(getCode(istart, jstart) +"-" + getCode(istart-2, jstart), isFirstJump(code)) );
+					ret.addAll( getPossibleMovesAfterJump(getCode(istart, jstart) +"-" + getCode(istart-2, jstart), isFirstJump) );
 				}
 			}
 		
 			//UP LEFT
 			if(istart >=2 && jstart >= 2) {
 				if((cornerTriangle[istart-1][jstart-1] || istart-1 >= this.numLayers) && cornerTriangle[istart-2][jstart-2] == false) {
-					ret.addAll( getPossibleMovesAfterJump(getCode(istart, jstart) +"-" + getCode(istart-2, jstart-2), isFirstJump(code)) );
+					ret.addAll( getPossibleMovesAfterJump(getCode(istart, jstart) +"-" + getCode(istart-2, jstart-2), isFirstJump) );
 				}
 			}
 		}
@@ -270,14 +324,14 @@ public class CornerTriangleBoard {
 			//RIGHT:
 			if(jstart + 2 < cornerTriangle[istart].length) {
 				if(cornerTriangle[istart][jstart+1] && cornerTriangle[istart][jstart+2] == false) {
-					ret.addAll( getPossibleMovesAfterJump(getCode(istart, jstart) +"-" + getCode(istart, jstart+2), isFirstJump(code)) );
+					ret.addAll( getPossibleMovesAfterJump(getCode(istart, jstart) +"-" + getCode(istart, jstart+2), isFirstJump) );
 				}
 			}
 			
 			//LEFT:
 			if(jstart >=2) {
 				if(cornerTriangle[istart][jstart-1] && cornerTriangle[istart][jstart-2] == false) {
-					ret.addAll( getPossibleMovesAfterJump(getCode(istart, jstart) +"-" + getCode(istart, jstart-2), isFirstJump(code)) );
+					ret.addAll( getPossibleMovesAfterJump(getCode(istart, jstart) +"-" + getCode(istart, jstart-2), isFirstJump) );
 				}
 			}
 			
@@ -285,7 +339,7 @@ public class CornerTriangleBoard {
 			if(istart + 2 < cornerTriangle.length) {
 				if(istart + 1 >= this.numLayers ||
 						(cornerTriangle[istart+1][jstart] && cornerTriangle[istart+2][jstart] == false)) {
-					ret.addAll( getPossibleMovesAfterJump(getCode(istart, jstart) +"-" + getCode(istart+2, jstart), isFirstJump(code)) );
+					ret.addAll( getPossibleMovesAfterJump(getCode(istart, jstart) +"-" + getCode(istart+2, jstart), isFirstJump) );
 				}
 			}
 			
@@ -293,37 +347,13 @@ public class CornerTriangleBoard {
 			if(istart + 2 < cornerTriangle.length) {
 				if(istart + 1 >= this.numLayers ||
 						cornerTriangle[istart+1][jstart+1]  && cornerTriangle[istart+2][jstart+2] == false) {
-					ret.addAll( getPossibleMovesAfterJump(getCode(istart, jstart) +"-" + getCode(istart+2, jstart+2), isFirstJump(code)) );
+					ret.addAll( getPossibleMovesAfterJump(getCode(istart, jstart) +"-" + getCode(istart+2, jstart+2), isFirstJump) );
 				}
 			}
 		}
 		
 		return ret;
 	}
-	
-	private boolean isFirstJump(int code) {
-		
-		//TODO SANITY TEST (Delete same code in main solve if sanity test passes)
-		int lastPegLocation;
-		try {
-			lastPegLocation = Integer.parseInt(this.historicMoveList.substring(this.historicMoveList.lastIndexOf("-") + 1));
-
-
-			//TODO: should these values be the same?
-			if(internalLastJumpCodeForMultiJumpMoves != lastPegLocation) {
-				System.out.println("ERROR: didn't get same results when comparing internalLastJumpCodeForMultiJumpMoves and lastPegLocation");
-				System.exit(1);
-			}
-		} catch(Exception e) {
-		}
-		//END SANITY TEST
-
-		
-		return internalLastJumpCodeForMultiJumpMoves != code;
-	}
-	
-	
-	public static final String SPACE_BETWEEN_MOVES = "  "; 
 
 	private ArrayList<String> getPossibleMovesAfterJump(String jump, boolean isFirstJump) {
 
@@ -377,12 +407,12 @@ public class CornerTriangleBoard {
 		}
 		
 		ArrayList<String> ret = new ArrayList<String>();
-		
 
 		String curJumpDescription = jump.split("-")[0];
 	
 		//TODO: put this condition in a function
-		if(internalLastJumpCodeForMultiJumpMoves != -1 &&
+		if(isFirstJump == false &&
+				internalLastJumpCodeForMultiJumpMoves != -1 &&
 				internalLastJumpCodeForMultiJumpMoves != from) {
 			
 			//if peg is re-entering layers from another outside location, note it down
@@ -397,7 +427,7 @@ public class CornerTriangleBoard {
 			curJumpDescription = jump.split("-")[0];
 		}
 		
-		CornerTriangleBoard tmp = this.moveInternal(jump);
+		CornerTriangleBoard tmp = this.moveInternal(jump,isFirstJump);
 		
 		int landing = Integer.parseInt(jump.split("-")[1]);
 		int landingI = landing / cornerTriangle.length;
@@ -405,7 +435,7 @@ public class CornerTriangleBoard {
 		
 		if(landingI < numLayers) {
 
-			ArrayList<String> newSeriesOfMoves = tmp.getPossibleMovesFromPosition(landing);
+			ArrayList<String> newSeriesOfMoves = tmp.getPossibleMovesFromPosition(landing, false);
 			for(int i=0; i<newSeriesOfMoves.size(); i++) {
 				ret.add(curJumpDescription + "-" + newSeriesOfMoves.get(i));
 			}
@@ -430,7 +460,7 @@ public class CornerTriangleBoard {
 						}
 						//END SANITY CHECK
 						
-						ArrayList<String> newSeriesOfMoves = tmp.getPossibleMovesFromPosition(getCode(i, j));
+						ArrayList<String> newSeriesOfMoves = tmp.getPossibleMovesFromPosition(getCode(i, j), false);
 						for(int i2=0; i2<newSeriesOfMoves.size(); i2++) {
 							ret.add(curJumpDescription + "-" + newSeriesOfMoves.get(i2));
 						}
@@ -444,26 +474,17 @@ public class CornerTriangleBoard {
 	}
 
 
-	public int getCode(int i, int j) {
+	private int getCode(int i, int j) {
 		return i*cornerTriangle.length + j;
 	}
 	
-	
-	private int getPositionClass(int code) {
-
-		int i = code / cornerTriangle.length;
-		int j = code % cornerTriangle.length;
-		
-		return 2*(i%2) + j%2;
-	}
-	
-	public static int getPositionClass(int i, int j) {
+	private static int getPositionClass(int i, int j) {
 		return 2*(i%2) + j%2;
 	}
 	
 
 	//pre: valid move
-	private CornerTriangleBoard moveInternal(String move) {
+	private CornerTriangleBoard moveInternal(String move, boolean isFirstJump) {
 		String fromTo[] = move.split("-");
 		
 		int from = Integer.parseInt(fromTo[0]);
@@ -475,7 +496,7 @@ public class CornerTriangleBoard {
 		int toI = to / cornerTriangle.length;
 		int toJ = to % cornerTriangle.length;
 		
-		CornerTriangleBoard newBoard = new CornerTriangleBoard(this.numLayers, this.maxTolerableNumMoves);
+		CornerTriangleBoard newBoard = new CornerTriangleBoard(this.numLayers);
 		
 		for(int i=0; i<cornerTriangle.length; i++) {
 			for(int j=0; j<cornerTriangle[i].length; j++) {
@@ -516,8 +537,7 @@ public class CornerTriangleBoard {
 		
 		newBoard.historicMoveList = this.historicMoveList;
 		
-		if(internalLastJumpCodeForMultiJumpMoves == from
-			|| isMultiJumpFromOutsideTheLayers(from)) {
+		if(isFirstJump == false) {
 
 			//not a new move
 			newBoard.numMovesMade = this.numMovesMade;
@@ -531,6 +551,7 @@ public class CornerTriangleBoard {
 				newBoard.historicMoveList += "-" + to;
 			}
 			
+
 		} else {
 			newBoard.numMovesMade = this.numMovesMade + 1;
 			
@@ -541,17 +562,14 @@ public class CornerTriangleBoard {
 			}
 			
 			newBoard.historicMoveList += SPACE_BETWEEN_MOVES + move;
-			
+
 		}
+
 		newBoard.internalLastJumpCodeForMultiJumpMoves = to;
 		
 		return newBoard;
 	}
 	
-	private boolean isMultiJumpFromOutsideTheLayers(int from) {
-		return internalLastJumpCodeForMultiJumpMoves >= this.numLayers && from >= this.numLayers
-				&& getPositionClass(from) == getPositionClass(internalLastJumpCodeForMultiJumpMoves);
-	}
 	
 	public CornerTriangleBoard doOneMove(String move) {
 		String seriesOfJumps[] = move.split("-");
@@ -567,7 +585,18 @@ public class CornerTriangleBoard {
 			int toI = to / this.cornerTriangle.length;
 			
 			if(fromI < this.numLayers || toI < this.numLayers) {
-				newBoard = newBoard.moveInternal(from + "-" + to);
+				if(i == 0) {
+					newBoard = newBoard.moveInternal(from + "-" + to, true);
+				} else {
+					newBoard = newBoard.moveInternal(from + "-" + to, false);
+					
+				}
+			} else if(i==0) {
+				System.out.println("ERROR: first move completely outside the layers in CornerTriangleBoard doOneMove!");
+				System.exit(1);
+			}
+			if(fromI >= this.numLayers || toI >= this.numLayers) {
+				newBoard.usedOutsidePegs = true;
 			}
 		}
 		
