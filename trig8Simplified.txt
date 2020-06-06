@@ -1,0 +1,4136 @@
+Trying 8 in TriangleSolveOptimizedTrial5
+Giving up after reaching a max depth of 13
+
+Start search for solution starting with:
+        _ 
+       G G 
+      G G G 
+     G G G G 
+    G G G G G 
+   G G G G G G 
+  G G G G G G G 
+ G G G G G G G G 
+Num pieces left: 35
+Num moves Made: 0
+Move list: 
+Lookup number: 0
+
+
+DEBUG: trying depth 12
+End of search with depth 12 and triangle length 8
+Num records saved for prev depths: 0
+Num records saved total: 1
+DEBUG: trying depth 13
+End of search with depth 13 and triangle length 8
+Num records saved for prev depths: 1
+Num records saved total: 8639
+Start search for solution starting with:
+        G 
+       _ G 
+      G G G 
+     G G G G 
+    G G G G G 
+   G G G G G G 
+  G G G G G G G 
+ G G G G G G G G 
+Num pieces left: 35
+Num moves Made: 0
+Move list: 
+Lookup number: 1
+
+
+DEBUG: trying depth 12
+End of search with depth 12 and triangle length 8
+Num records saved for prev depths: 0
+Num records saved total: 9782
+DEBUG: trying depth 13
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ G _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   24-8  0-16  40-24-8  34-32  36-34  58-40-24  56-40  18-0-16-32-48  51-35-33-49-51  61-43-41  60-58-56-40-42  54-36-18-16-34-50-52-36  63-61-45-27-25
+Lookup number: 10
+Current depth: 13 out of 13
+Num records saved: 775545
+        _ 
+       _ _ 
+      _ _ G 
+     _ G _ _ 
+    G G _ G G 
+   _ G _ G G G 
+  G _ G G G _ _ 
+ G G G _ G _ G G 
+Num pieces left: 20
+Num moves Made: 10
+Move list:   24-8  0-16  40-24-8  34-32  49-33  59-41  18-0-16-18-34-50  36-18  54-36  61-45
+Lookup number: 37926314
+Min num moves: 14
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           4
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           6
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           9
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           36
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           132
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           585
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           2369
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           10080
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           42591
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           159234
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           504189
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           1379507
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           1861
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           8066
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 7 vs 2)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.05
+Perc: 0.9523809523809523
+num moves made before getNecessary: 3
+Ratio: 1.1369863013698631
+Perc: 0.8795180722891566
+num moves made before getNecessary: 4
+Ratio: 1.1925465838509317
+Perc: 0.8385416666666666
+num moves made before getNecessary: 5
+Ratio: 1.2984467455621302
+Perc: 0.7701509541441185
+num moves made before getNecessary: 6
+Ratio: 1.3550979407333
+Perc: 0.7379540400296516
+num moves made before getNecessary: 7
+Ratio: 1.3751954540253994
+Perc: 0.7271693613244959
+num moves made before getNecessary: 8
+Ratio: 1.4232490523349277
+Perc: 0.7026177170885436
+num moves made before getNecessary: 9
+Ratio: 1.469144508927015
+Perc: 0.6806682351012201
+num moves made before getNecessary: 10
+Ratio: 1.5155544936904024
+Perc: 0.6598245092230118
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   24-8  0-16  40-24-8  42-24  18-0-16-32  56-40-24  60-42-40  36-18-16-32-48  35-17-33-35-51  45-43  58-40-56-58-60-44-42  62-60  63-45-61-59-43-41-59
+Lookup number: 3
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   24-8  0-16  40-24-8  42-24  60-42  35-33-51-35  18-0-16-34  56-40  36-18-16-32-48  45-43-27-25-43  58-60-44-42-40-56-58  62-60  63-45-61-59-41-57-59
+Lookup number: 3
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   24-8  0-16  40-24-8  42-24  60-42  35-33-51-35  18-0-16-34  56-40  36-18-16-32-48  58-56-40-42  45-43-27-25-43-41  62-60-58-40-42  63-45-61-43-41-59
+Lookup number: 3
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   24-8  0-16  40-24-8  42-24  60-42  35-33-51-35  18-0-16-34  56-40  36-18-16-32-48  58-56-40-42  45-43-41  62-60-58-40-42  63-45-61-43-27-25-43-41-59
+Lookup number: 3
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ G _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   24-8  0-16  40-24-8  56-40  34-32-48  36-34  51-35-33-51  18-0-16-34  58-40-42  61-43-41  60-58-56-40-42  54-36-18  63-61-45-43-41-59-43-25-9-27-25
+Lookup number: 10
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ G _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   24-8  0-16  40-24-8  56-40  34-32-48  36-34  51-35-33-51  18-0-16-34  58-56-40-42  54-36-18  61-45-43-41  60-58-40-42  63-61-43-41-59-43-25-9-27-25
+Lookup number: 10
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ G _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   24-8  0-16  40-24-8  56-40  34-32-48  36-34  51-35-33-51  58-42  60-58-56-40  61-43  18-0-16-34-50-32-48-50-52-34  54-36-18  63-61-45-43-25-9-27-25
+Lookup number: 10
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   24-8  0-16  40-24-8  56-40  42-24  60-42  18-16-32-48  35-17-33-35-51-33  58-40-56-58-42-24  36-18-0-16-32-50  45-43  62-60-44-42-58-60  63-45-61-59
+Lookup number: 3
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ G 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   24-8  0-16  40-24-8  56-40  42-24  60-42  18-16-32-48  35-17-33-35-51-33  58-40-56-58-42-24  36-18-0-16-32-50  45-43  62-60-58-42-44  63-45-43-61-45
+Lookup number: 2
+Current depth: 13 out of 13
+Num records saved: 1534244
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ G _ 
+    _ _ _ _ _ 
+   _ _ _ G G G 
+  _ _ _ _ G G G 
+ _ G _ G _ G G G 
+Num pieces left: 12
+Num moves Made: 10
+Move list:   24-8  0-16  42-24-8  35-33  18-0-16-18-34  40-24-42-26  58-42  56-40  36-18-34-50-48-32  60-42-40-24-26
+Lookup number: 17409365
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           4
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           6
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           9
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           38
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           151
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           731
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           3334
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           16201
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           76161
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           305744
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           1004189
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           2896306
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           3894
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           15097
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 32 vs 20)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.05
+Perc: 0.9523809523809523
+num moves made before getNecessary: 3
+Ratio: 1.125748502994012
+Perc: 0.8882978723404256
+num moves made before getNecessary: 4
+Ratio: 1.2132269099201825
+Perc: 0.8242481203007519
+num moves made before getNecessary: 5
+Ratio: 1.3112868439971244
+Perc: 0.762609649122807
+num moves made before getNecessary: 6
+Ratio: 1.3639786483652654
+Perc: 0.733149306404836
+num moves made before getNecessary: 7
+Ratio: 1.38032636906952
+Perc: 0.7244663453572227
+num moves made before getNecessary: 8
+Ratio: 1.4278682833692875
+Perc: 0.7003447108162787
+num moves made before getNecessary: 9
+Ratio: 1.4703411113972946
+Perc: 0.68011428929555
+num moves made before getNecessary: 10
+Ratio: 1.5086488274265397
+Perc: 0.6628447799252293
+Current depth: 13 out of 13
+Num records saved: 2200821
+        _ 
+       _ _ 
+      G _ _ 
+     _ _ G _ 
+    _ G _ G _ 
+   _ G G G G G 
+  _ G _ _ G G G 
+ G _ _ _ _ G G G 
+Num pieces left: 17
+Num moves Made: 10
+Move list:   24-8  40-24  0-16-32  56-40-24  18-16-32  34-16  58-40-24-8  36-18-0-16  51-49  60-58-56
+Lookup number: 152005333
+Min num moves: 14
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           4
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           6
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           13
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           50
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           192
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           982
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           4935
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           24585
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           113939
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           453949
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           1504189
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           4372911
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           4944
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           17575
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 6 vs 2)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.078125
+Perc: 0.927536231884058
+num moves made before getNecessary: 3
+Ratio: 1.1306306306306306
+Perc: 0.8844621513944223
+num moves made before getNecessary: 4
+Ratio: 1.2231040564373898
+Perc: 0.8175919250180245
+num moves made before getNecessary: 5
+Ratio: 1.2924375202856215
+Perc: 0.7737317930688097
+num moves made before getNecessary: 6
+Ratio: 1.3381785637132364
+Perc: 0.7472844260971842
+num moves made before getNecessary: 7
+Ratio: 1.36446971455094
+Perc: 0.7328854494429798
+num moves made before getNecessary: 8
+Ratio: 1.4086100499559213
+Perc: 0.7099196829039324
+num moves made before getNecessary: 9
+Ratio: 1.4501398127886411
+Perc: 0.6895886804714261
+num moves made before getNecessary: 10
+Ratio: 1.492167454917511
+Perc: 0.6701660706406986
+Testing branching improvement for forwards jumps: (current sample: 6 vs 1)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.078125
+Perc: 0.927536231884058
+num moves made before getNecessary: 3
+Ratio: 1.1306306306306306
+Perc: 0.8844621513944223
+num moves made before getNecessary: 4
+Ratio: 1.2231040564373898
+Perc: 0.8175919250180245
+num moves made before getNecessary: 5
+Ratio: 1.2941082548299536
+Perc: 0.7727328809376928
+num moves made before getNecessary: 6
+Ratio: 1.340911846732145
+Perc: 0.7457611791834335
+num moves made before getNecessary: 7
+Ratio: 1.3661529159082177
+Perc: 0.7319824804057169
+num moves made before getNecessary: 8
+Ratio: 1.410324368516278
+Perc: 0.7090567406504101
+num moves made before getNecessary: 9
+Ratio: 1.4519825131830582
+Perc: 0.6887135285174921
+num moves made before getNecessary: 10
+Ratio: 1.4930982638226291
+Perc: 0.6697482839741578
+Current depth: 13 out of 13
+Num records saved: 2851102
+        _ 
+       G _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ G 
+   _ _ _ G G G 
+  G _ G _ G G G 
+ _ _ G _ _ G G G 
+Num pieces left: 14
+Num moves Made: 10
+Move list:   24-8  40-24  18-16-32  58-40-24  51-49  34-50  36-18-34  56-58-40-42-26  60-58  0-18-34-16-32-34-36
+Lookup number: 824259224
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           4
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           6
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           13
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           51
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           209
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           1157
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           6349
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           32963
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           155150
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           612990
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           2004189
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           5653064
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           5408
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           18045
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 3 vs 2)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.078125
+Perc: 0.927536231884058
+num moves made before getNecessary: 3
+Ratio: 1.139344262295082
+Perc: 0.8776978417266187
+num moves made before getNecessary: 4
+Ratio: 1.251416430594901
+Perc: 0.7990945104697227
+num moves made before getNecessary: 5
+Ratio: 1.3144329896907216
+Perc: 0.7607843137254902
+num moves made before getNecessary: 6
+Ratio: 1.3566444620074518
+Perc: 0.7371128014780539
+num moves made before getNecessary: 7
+Ratio: 1.373581843871094
+Perc: 0.7280236008229055
+num moves made before getNecessary: 8
+Ratio: 1.4150673102419038
+Perc: 0.7066801647965787
+num moves made before getNecessary: 9
+Ratio: 1.4549365690642675
+Perc: 0.6873151869728198
+num moves made before getNecessary: 10
+Ratio: 1.4942392952007097
+Perc: 0.6692368506248376
+Current depth: 13 out of 13
+Num records saved: 3378826
+        _ 
+       _ G 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ G 
+   _ G G _ _ _ 
+  G G G _ _ G G 
+ G G G G _ _ G G 
+Num pieces left: 15
+Num moves Made: 10
+Move list:   24-8  40-24  34-16-32-34  43-25  61-43  18-16-34-52  27-25  59-43-61-59  45-27-43  0-16-34-52-36
+Lookup number: 1037321205
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           4
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           6
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           13
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           54
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           236
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           1397
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           7812
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           41309
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           194920
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           768064
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           2504189
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           6898832
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           5739
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           18213
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ G _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   24-8  40-24  56-40  0-16-32-48  34-32  36-34  18-16  58-56-40-24-8  51-35-17-33-51  61-43-25  54-36-18-0-16-34  60-58-40-42  63-61-45-43-41-59-43-25
+Lookup number: 10
+Testing branching improvement for forwards jumps: (current sample: 31 vs 22)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.078125
+Perc: 0.927536231884058
+num moves made before getNecessary: 3
+Ratio: 1.1569965870307166
+Perc: 0.8643067846607669
+num moves made before getNecessary: 4
+Ratio: 1.2455020313406848
+Perc: 0.8028890959925443
+num moves made before getNecessary: 5
+Ratio: 1.324194995513907
+Perc: 0.7551757886019724
+num moves made before getNecessary: 6
+Ratio: 1.3574497797830056
+Perc: 0.7366755035017608
+num moves made before getNecessary: 7
+Ratio: 1.3773226459348673
+Perc: 0.7260462920227694
+num moves made before getNecessary: 8
+Ratio: 1.4168754636950907
+Perc: 0.7057783309988904
+num moves made before getNecessary: 9
+Ratio: 1.4561046437721927
+Perc: 0.6867638286005286
+num moves made before getNecessary: 10
+Ratio: 1.4976204957958954
+Perc: 0.6677259043978028
+Current depth: 13 out of 13
+Num records saved: 4092717
+        G 
+       G G 
+      _ G G 
+     G G G G 
+    _ _ _ _ _ 
+   _ _ G G G G 
+  _ G G G G _ _ 
+ _ _ G _ _ _ G G 
+Num pieces left: 20
+Num moves Made: 10
+Move list:   24-8  40-24  56-40  34-32-48  36-34  51-35-33-51  58-56-40-42  61-43  54-52  60-58
+Lookup number: 145500490
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           4
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           6
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           13
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           60
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           268
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           1561
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           8877
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           48158
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           230614
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           916737
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           3004189
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           8358564
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           6454
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           19983
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   24-8  40-24  56-40  34-32-48  36-34  51-35-33-51  61-43  0-16-34-52  18-34  58-40-56-58-42-26-8  54-36-18-0-16-32-50  60-42-58-60  63-61-45-43-61-59
+Lookup number: 3
+End of search with depth 13 and triangle length 8
+Num records saved for prev depths: 9782
+Num records saved total: 4229194
+SKIPING (1, 1)
+
+
+Start search for solution starting with:
+        G 
+       G G 
+      _ G G 
+     G G G G 
+    G G G G G 
+   G G G G G G 
+  G G G G G G G 
+ G G G G G G G G 
+Num pieces left: 35
+Num moves Made: 0
+Move list: 
+Lookup number: 3
+
+
+DEBUG: trying depth 12
+End of search with depth 12 and triangle length 8
+Num records saved for prev depths: 0
+Num records saved total: 6070
+DEBUG: trying depth 13
+Current depth: 13 out of 13
+Num records saved: 599738
+        _ 
+       G _ 
+      _ G _ 
+     _ _ _ _ 
+    G _ _ _ _ 
+   G _ _ G G _ 
+  _ G G G G G _ 
+ _ G _ G G G G G 
+Num pieces left: 17
+Num moves Made: 10
+Move list:   0-16  24-8  40-24  18-0-16-32  34-16  42-40-24-8  56-40  58-42  36-34-50  54-36-18-34-32
+Lookup number: 1467418526
+Min num moves: 14
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           6
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           12
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           18
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           85
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           374
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           2009
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           11322
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           59690
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           278807
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           1086284
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           3506853
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           9657949
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           7051
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           21618
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 13 vs 9)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0879120879120878
+Perc: 0.9191919191919192
+num moves made before getNecessary: 3
+Ratio: 1.1577669902912622
+Perc: 0.8637316561844863
+num moves made before getNecessary: 4
+Ratio: 1.2351608518350703
+Perc: 0.8096111518708731
+num moves made before getNecessary: 5
+Ratio: 1.302516411378556
+Perc: 0.7677446451070978
+num moves made before getNecessary: 6
+Ratio: 1.3426148368983184
+Perc: 0.7448152459793903
+num moves made before getNecessary: 7
+Ratio: 1.3666468864291423
+Perc: 0.7317179074785445
+num moves made before getNecessary: 8
+Ratio: 1.407189435071519
+Perc: 0.7106363756555463
+num moves made before getNecessary: 9
+Ratio: 1.4483369214802773
+Perc: 0.6904470811791132
+num moves made before getNecessary: 10
+Ratio: 1.4891415242175257
+Perc: 0.6715278459013178
+Testing branching improvement for forwards jumps: (current sample: 12 vs 6)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0879120879120878
+Perc: 0.9191919191919192
+num moves made before getNecessary: 3
+Ratio: 1.1577669902912622
+Perc: 0.8637316561844863
+num moves made before getNecessary: 4
+Ratio: 1.2351608518350703
+Perc: 0.8096111518708731
+num moves made before getNecessary: 5
+Ratio: 1.3024344569288389
+Perc: 0.7677929547088426
+num moves made before getNecessary: 6
+Ratio: 1.342539604745362
+Perc: 0.7448569833361965
+num moves made before getNecessary: 7
+Ratio: 1.3664928885659235
+Perc: 0.7318003689352951
+num moves made before getNecessary: 8
+Ratio: 1.4070852276192483
+Perc: 0.7106890047392325
+num moves made before getNecessary: 9
+Ratio: 1.448106293791792
+Perc: 0.690557042868415
+num moves made before getNecessary: 10
+Ratio: 1.4888028223023237
+Perc: 0.6716806181584031
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ G _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   0-16  24-8  40-24  18-0-16-32  56-40-24  58-40  34-18-16-32-48  36-34-32  60-58-56-40-24-26  51-33-49-51-35  61-43  54-36-18-34-52-36  63-61-45-27-43
+Lookup number: 17
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ G _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   0-16  24-8  40-24  18-0-16-32  56-40-24  58-40  36-18-16-32-48  54-36  61-45-27  34-18-36-34-32  63-61  51-33-49-51-35-53  60-44-62-60-58-56-40-24-26
+Lookup number: 10
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ G _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   0-16  24-8  40-24  56-40  18-0-16-32-48  36-18-16  43-27  59-43  33-51-35-17  58-56-40-42-26-8-24-26  61-43  54-36-18-34-52  63-61-45-43-61-59-41-57
+Lookup number: 1
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ G _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   0-16  24-8  40-24  56-40  18-0-16-32-48  42-24  36-18-16-32  60-42  35-17-33-35-51-33  45-43  58-42-24-40-42-44-60-58-40-56-58  62-60  63-45-61-59-57
+Lookup number: 1
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ G _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   0-16  24-8  40-24  56-40  18-0-16-32-48  42-24  36-18-16-32  60-42  35-17-33-35-51-33  45-43  58-40-24-42-44-60-58-56-40-42  62-60  63-45-61-59-41-43
+Lookup number: 17
+Current depth: 13 out of 13
+Num records saved: 1367973
+        _ 
+       _ _ 
+      _ G _ 
+     _ G G G 
+    G G G G G 
+   _ G G _ G G 
+  G _ _ G _ G G 
+ _ G _ G _ G G G 
+Num pieces left: 22
+Num moves Made: 10
+Move list:   0-16  24-8  40-24  56-40  18-0-16-32-48  50-32  57-41  59-57  61-59  43-61
+Lookup number: 24304035
+Min num moves: 14
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           6
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           12
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           18
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           85
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           388
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           2127
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           12094
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           65250
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           309772
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           1227945
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           4006853
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           11060864
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           8786
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           26540
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ G _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   0-16  24-8  40-24  56-40  18-16-32-48  42-24  60-42  35-17-33-35-51-33  45-43  58-42-44-60-58-56-40-42  36-18-0-16-32-34-50  62-60  63-45-61-59-41-57
+Lookup number: 1
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ G _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   0-16  24-8  40-24  56-40  18-16-32-48  42-24  60-42  35-17-33-51-35  45-43  58-40-56-58-42-26-44-42  36-18-0-16-32-50  62-60-58  63-45-61-43-41-59-57
+Lookup number: 1
+Testing branching improvement for forwards jumps: (current sample: 12 vs 10)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0879120879120878
+Perc: 0.9191919191919192
+num moves made before getNecessary: 3
+Ratio: 1.1577669902912622
+Perc: 0.8637316561844863
+num moves made before getNecessary: 4
+Ratio: 1.2399150743099787
+Perc: 0.8065068493150684
+num moves made before getNecessary: 5
+Ratio: 1.3019456947872803
+Perc: 0.7680811911002063
+num moves made before getNecessary: 6
+Ratio: 1.3435344204564865
+Perc: 0.7443054563948086
+num moves made before getNecessary: 7
+Ratio: 1.3671367735876552
+Perc: 0.7314557104449682
+num moves made before getNecessary: 8
+Ratio: 1.4067403601513417
+Perc: 0.7108632327094224
+num moves made before getNecessary: 9
+Ratio: 1.4466184413416132
+Perc: 0.6912672833567548
+num moves made before getNecessary: 10
+Ratio: 1.4874861824409882
+Perc: 0.6722751524044307
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ G _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   0-16  24-8  40-24  56-40  34-32-48  36-34  51-35-33-51  18-0-16-18-34  58-40-56-58-42-26  54-36-18-34-16-32-50  61-45-43  60-44-42-58-60  63-61-59-43
+Lookup number: 17
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ G _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   0-16  24-8  40-24  56-40  34-32-48  36-34  51-35-33-51  58-42  60-58-40-56-58  61-43  18-0-16-18-36-52-34-16-32-50-34  54-36  63-61-45-27-25-43-59-57
+Lookup number: 1
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ G _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   0-16  24-8  40-24  56-40  34-32-48  36-34  51-35-33-51  58-56-40-42  61-43-41  60-58-42  18-0-16-18-36-52-50-32-16-34  54-36  63-61-45-27-25-43-41-57
+Lookup number: 1
+End of search with depth 13 and triangle length 8
+Num records saved for prev depths: 6070
+Num records saved total: 1570691
+Start search for solution starting with:
+        G 
+       G G 
+      G _ G 
+     G G G G 
+    G G G G G 
+   G G G G G G 
+  G G G G G G G 
+ G G G G G G G G 
+Num pieces left: 35
+Num moves Made: 0
+Move list: 
+Lookup number: 4
+
+
+DEBUG: trying depth 13
+End of search with depth 13 and triangle length 8
+Num records saved for prev depths: 0
+Num records saved total: 1
+SKIPING (2, 2)
+
+
+Start search for solution starting with:
+        G 
+       G G 
+      G G G 
+     _ G G G 
+    G G G G G 
+   G G G G G G 
+  G G G G G G G 
+ G G G G G G G G 
+Num pieces left: 35
+Num moves Made: 0
+Move list: 
+Lookup number: 6
+
+
+DEBUG: trying depth 12
+End of search with depth 12 and triangle length 8
+Num records saved for prev depths: 0
+Num records saved total: 9782
+DEBUG: trying depth 13
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ G _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  16-32  0-16  42-24-8  56-40-24  60-42  35-33-51-35  58-42  18-0-16-32-50-48  45-43-41  62-60-58-56-40-42  36-18-16-34  63-45-61-43-27-25-43-41
+Lookup number: 10
+Current depth: 13 out of 13
+Num records saved: 529271
+        _ 
+       G G 
+      _ _ _ 
+     _ G G G 
+    _ _ G G G 
+   _ _ _ G _ _ 
+  _ _ _ G G G G 
+ G _ _ _ _ G G G 
+Num pieces left: 17
+Num moves Made: 10
+Move list:   40-24  16-32  0-16  42-24-8  58-42  56-58-40-24  18-16-32-50  43-41  45-43  60-58-42-40-56
+Lookup number: 3570745386
+Min num moves: 14
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           9
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           21
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           40
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           139
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           552
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           2757
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           14476
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           75115
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           351686
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           1387005
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           4511181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           12403658
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           9939
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           30303
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ G 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  16-32  0-16  42-24-8  60-42  35-33-51-35  45-43  56-40-42-44  58-42  18-0-16-18-34-50-48  62-60-58-56-40-24-26  36-18-34-36  63-45-43-61-45-27
+Lookup number: 3
+Testing branching improvement for forwards jumps: (current sample: 11 vs 5)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0822784810126582
+Perc: 0.9239766081871345
+num moves made before getNecessary: 3
+Ratio: 1.157718120805369
+Perc: 0.863768115942029
+num moves made before getNecessary: 4
+Ratio: 1.2349437458636665
+Perc: 0.8097534833869239
+num moves made before getNecessary: 5
+Ratio: 1.298389050387597
+Perc: 0.7701851765474136
+num moves made before getNecessary: 6
+Ratio: 1.3434814688688348
+Perc: 0.7443347922334691
+num moves made before getNecessary: 7
+Ratio: 1.3698755714757034
+Perc: 0.7299933080219442
+num moves made before getNecessary: 8
+Ratio: 1.4097971311317357
+Perc: 0.7093219144212863
+num moves made before getNecessary: 9
+Ratio: 1.4514148721839923
+Perc: 0.6889828808873005
+num moves made before getNecessary: 10
+Ratio: 1.4925571989088404
+Perc: 0.6699910735287513
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ G 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  16-32  0-16  56-40-24-8  58-40  34-32-48  36-34  51-35-33-49-51  61-43-41  60-58-56-40-42  18-0-16-34-50-52-36-18  54-36  63-61-45-27-9-25-27
+Lookup number: 3
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  16-32  0-16  56-40-24-8  58-40  34-32-48  36-34  51-35-33-49-51-33  18-0-16-18-34-32  60-58-56-40-24-26  61-43  54-36-18-34-52  63-61-45-43-61
+Lookup number: 2
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ G 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  16-32  0-16  56-40-24-8  58-40  34-32-48  36-34  51-35-33-49-51-33  18-0-16-18-34-32  60-58-56-40-24-26  61-43  54-36-18-34-52-36  63-61-45-27
+Lookup number: 3
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ G 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  16-32  0-16  56-40-24-8  58-40  34-32-48  36-34  51-35-33-51  60-58-56-40-42  18-0-16-34  61-43-25  54-36-18-16-34  63-61-45-43-41-59-43-25-27
+Lookup number: 3
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ G 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  16-32  0-16  56-40-24-8  58-40  34-32-48  36-34  51-35-33-51  60-58-56-40-42  18-0-16-34  61-43-41-59-43-25  54-36-18-16-34  63-61-45-43-25-27
+Lookup number: 3
+Current depth: 13 out of 13
+Num records saved: 1268158
+        _ 
+       _ G 
+      G _ _ 
+     _ G G G 
+    _ _ _ _ _ 
+   _ _ _ G G G 
+  _ _ _ G G G G 
+ _ _ G G G G G G 
+Num pieces left: 18
+Num moves Made: 10
+Move list:   40-24  16-32  42-40-24  0-16-32  26-42  18-16  56-40-24-26  59-41-25  36-34-50  57-41-59
+Lookup number: 89826439
+Min num moves: 14
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           9
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           21
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           40
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           148
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           604
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           2998
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           15850
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           82412
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           387691
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           1535455
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           5011181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           13864010
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           10929
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           33392
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 6 vs 1)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0822784810126582
+Perc: 0.9239766081871345
+num moves made before getNecessary: 3
+Ratio: 1.1697247706422018
+Perc: 0.8549019607843137
+num moves made before getNecessary: 4
+Ratio: 1.2322775263951735
+Perc: 0.8115055079559363
+num moves made before getNecessary: 5
+Ratio: 1.2988097837955885
+Perc: 0.7699356845600908
+num moves made before getNecessary: 6
+Ratio: 1.3449318906189731
+Perc: 0.7435320754716981
+num moves made before getNecessary: 7
+Ratio: 1.3709056500514893
+Perc: 0.729444801662639
+num moves made before getNecessary: 8
+Ratio: 1.410733505027112
+Perc: 0.7088511022361957
+num moves made before getNecessary: 9
+Ratio: 1.451117752602027
+Perc: 0.6891239516620074
+num moves made before getNecessary: 10
+Ratio: 1.491940537571215
+Perc: 0.6702679998412918
+Testing branching improvement for forwards jumps: (current sample: 9 vs 2)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0822784810126582
+Perc: 0.9239766081871345
+num moves made before getNecessary: 3
+Ratio: 1.1697247706422018
+Perc: 0.8549019607843137
+num moves made before getNecessary: 4
+Ratio: 1.2369121561668146
+Perc: 0.8084648493543759
+num moves made before getNecessary: 5
+Ratio: 1.3024737631184409
+Perc: 0.7677697841726618
+num moves made before getNecessary: 6
+Ratio: 1.346456849560339
+Perc: 0.7426899720748807
+num moves made before getNecessary: 7
+Ratio: 1.3722984074175746
+Perc: 0.7287044819077106
+num moves made before getNecessary: 8
+Ratio: 1.411890140895926
+Perc: 0.7082704036487161
+num moves made before getNecessary: 9
+Ratio: 1.4520009823495754
+Perc: 0.6887047682170547
+num moves made before getNecessary: 10
+Ratio: 1.4924969094844696
+Perc: 0.6700181378234242
+Current depth: 13 out of 13
+Num records saved: 1865057
+        _ 
+       G _ 
+      _ _ G 
+     G G _ _ 
+    _ G G G _ 
+   _ _ G G G G 
+  _ G G _ G G G 
+ _ G _ G _ G G G 
+Num pieces left: 21
+Num moves Made: 10
+Move list:   40-24  16-32  42-40-24  58-42  34-50  18-16-32  0-18-34  60-42  36-18  56-40-24
+Lookup number: 445615532
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           9
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           21
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           40
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           148
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           615
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           3158
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           17043
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           90330
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           428780
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           1696026
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           5511181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           15093606
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           11030
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           33530
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 3 vs 0)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0822784810126582
+Perc: 0.9239766081871345
+num moves made before getNecessary: 3
+Ratio: 1.1674140508221225
+Perc: 0.8565941101152369
+num moves made before getNecessary: 4
+Ratio: 1.2332304238001683
+Perc: 0.8108784706417842
+num moves made before getNecessary: 5
+Ratio: 1.3019017826108545
+Perc: 0.7681070979060987
+num moves made before getNecessary: 6
+Ratio: 1.3477192918615017
+Perc: 0.7419942758397235
+num moves made before getNecessary: 7
+Ratio: 1.3732162131983474
+Perc: 0.7282174433921863
+num moves made before getNecessary: 8
+Ratio: 1.4116055279486823
+Perc: 0.7084132076566606
+num moves made before getNecessary: 9
+Ratio: 1.4506990954678882
+Perc: 0.6893228258872486
+num moves made before getNecessary: 10
+Ratio: 1.4909849999578177
+Perc: 0.6706975590152091
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ G 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  16-32  56-40-24  58-40  0-16-32-48  34-16  36-34-32  60-58-56-40-24-8  51-33-49-51-35  61-43  18-0-16-18-36-52-34  54-36  63-61-45-27-25-43-27
+Lookup number: 3
+Current depth: 13 out of 13
+Num records saved: 2507816
+        G 
+       G G 
+      _ G G 
+     _ G G G 
+    G _ _ _ _ 
+   _ G G G _ _ 
+  G _ G _ _ _ _ 
+ _ G _ _ _ _ G G 
+Num pieces left: 17
+Num moves Made: 10
+Move list:   40-24  16-32  56-40-24  58-40  34-16-32-48  36-34  51-35  61-43-25  54-36-34-32  59-61-45-43
+Lookup number: 3569704432
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           9
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           21
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           40
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           149
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           631
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           3319
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           18251
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           97581
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           465588
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           1847412
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           6011181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           16425842
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           11343
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           34042
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ G _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  56-40  16-32-48  0-16  42-24-8  18-0-16  60-42  35-33-51-35  45-43  36-18-34  58-56-40-42-26-8-24-26-44-42  62-60-58  63-45-61-43-41-57-59-41
+Lookup number: 10
+Testing branching improvement for forwards jumps: (current sample: 2 vs 1)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0898876404494382
+Perc: 0.9175257731958762
+num moves made before getNecessary: 3
+Ratio: 1.1680555555555556
+Perc: 0.8561236623067776
+num moves made before getNecessary: 4
+Ratio: 1.2427461139896374
+Perc: 0.8046695851573901
+num moves made before getNecessary: 5
+Ratio: 1.3029282313841732
+Perc: 0.767501982006825
+num moves made before getNecessary: 6
+Ratio: 1.3462347047712901
+Perc: 0.742812524781768
+num moves made before getNecessary: 7
+Ratio: 1.3705211438833316
+Perc: 0.7296494508406702
+num moves made before getNecessary: 8
+Ratio: 1.4087578990908232
+Perc: 0.7098451768365415
+num moves made before getNecessary: 9
+Ratio: 1.4483960567457672
+Perc: 0.6904188915335656
+num moves made before getNecessary: 10
+Ratio: 1.4887463908357186
+Perc: 0.6717060784534582
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ G _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  56-40  16-32-48  0-16  42-24-8  60-42  35-33-51-35  18-0-16-34  45-43-25  36-18-16-34  58-56-40-42  62-60-58  63-45-61-43-27-25-43-41-57-59-41
+Lookup number: 10
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ G _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  56-40  16-32-48  0-16  42-24-8  60-42  35-33-51-35  58-56-40-42  18-0-16-34  62-60-58  45-61-43-25  36-18-16-34  63-45-43-27-25-43-41-57-59-41
+Lookup number: 10
+Testing branching improvement for forwards jumps: (current sample: 9 vs 9)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0898876404494382
+Perc: 0.9175257731958762
+num moves made before getNecessary: 3
+Ratio: 1.1680555555555556
+Perc: 0.8561236623067776
+num moves made before getNecessary: 4
+Ratio: 1.2447623914154318
+Perc: 0.8033661740558292
+num moves made before getNecessary: 5
+Ratio: 1.3031754479332978
+Perc: 0.767356384426899
+num moves made before getNecessary: 6
+Ratio: 1.346189149452924
+Perc: 0.7428376617107549
+num moves made before getNecessary: 7
+Ratio: 1.3711841292413134
+Perc: 0.7292966558424999
+num moves made before getNecessary: 8
+Ratio: 1.4092971467403266
+Perc: 0.7095735646048656
+num moves made before getNecessary: 9
+Ratio: 1.4489852518882413
+Perc: 0.6901381492301958
+num moves made before getNecessary: 10
+Ratio: 1.4893204697875508
+Perc: 0.6714471601552945
+Current depth: 13 out of 13
+Num records saved: 3154635
+        _ 
+       G G 
+      _ _ G 
+     _ _ G _ 
+    _ G _ G G 
+   _ G _ G G G 
+  _ G _ _ G G G 
+ _ _ _ _ G _ _ G 
+Num pieces left: 17
+Num moves Made: 10
+Move list:   40-24  56-40  16-32-48  34-32  0-16-34  51-33  27-25  58-42-26-8  60-58-56-40-24-26  62-60
+Lookup number: 281854922
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           9
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           21
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           44
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           161
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           672
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           3562
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           19917
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           106352
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           505684
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           2003295
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           6511181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           17774593
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           12341
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           38243
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+FOUND A SOLUTION:
+        _ 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ G _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  56-40  16-32-48  42-24  0-16-32  60-42  18-16  58-56-40-24-8  35-17-33-51-35  45-43-25  36-18-0-16-34  62-60-44-26-42-40-58-60  63-45-61-59-41
+Lookup number: 10
+FOUND A SOLUTION:
+        G 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  56-40  16-32-48  42-24  60-42  35-33-51-35  45-43  58-42-44  63-45-43  0-16-32-50  62-60-58-40-56-58-42-44  27-45-61-43  18-16-34-36-52-34-18-0
+Lookup number: 0
+FOUND A SOLUTION:
+        G 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 13
+Move list:   40-24  56-40  16-32-48  42-24  60-42  35-33-51-35  45-43  58-42-44  63-45-43  18-16-32-50  62-60-58-40-56-58-42-44  27-45-61-43  0-16-34-36-52-34-18-0
+Lookup number: 0
+Current depth: 13 out of 13
+Num records saved: 3898620
+        G 
+       G G 
+      _ G _ 
+     G _ G _ 
+    _ _ G _ G 
+   G _ _ G _ _ 
+  G G G _ _ _ G 
+ _ G G G _ _ G G 
+Num pieces left: 19
+Num moves Made: 10
+Move list:   40-24  56-40  34-32-48  36-34  51-35-33-51  16-34  61-43  54-36-52-54  18-36  60-42-40
+Lookup number: 3950220893
+Min num moves: 14
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           9
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           21
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           44
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           163
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           689
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           3715
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           21055
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           113359
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           541509
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           2151636
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           7011181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           19356504
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           13350
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           42075
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 4 vs 2)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0898876404494382
+Perc: 0.9175257731958762
+num moves made before getNecessary: 3
+Ratio: 1.164642375168691
+Perc: 0.8586326767091541
+num moves made before getNecessary: 4
+Ratio: 1.2447724477244773
+Perc: 0.8033596837944664
+num moves made before getNecessary: 5
+Ratio: 1.3048408016400987
+Perc: 0.7663770160643858
+num moves made before getNecessary: 6
+Ratio: 1.348518274238668
+Perc: 0.7415546523198354
+num moves made before getNecessary: 7
+Ratio: 1.3709664685730916
+Perc: 0.7294124421881775
+num moves made before getNecessary: 8
+Ratio: 1.409668932379488
+Perc: 0.7093864218969652
+num moves made before getNecessary: 9
+Ratio: 1.4500648271580139
+Perc: 0.6896243404233884
+num moves made before getNecessary: 10
+Ratio: 1.4903278597727017
+Perc: 0.6709932941550967
+Testing branching improvement for forwards jumps: (current sample: 14 vs 12)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0898876404494382
+Perc: 0.9175257731958762
+num moves made before getNecessary: 3
+Ratio: 1.1637816245006658
+Perc: 0.8592677345537757
+num moves made before getNecessary: 4
+Ratio: 1.2437275985663083
+Perc: 0.8040345821325648
+num moves made before getNecessary: 5
+Ratio: 1.305191100969766
+Perc: 0.7661713286713286
+num moves made before getNecessary: 6
+Ratio: 1.3487269521671814
+Perc: 0.7414399173925939
+num moves made before getNecessary: 7
+Ratio: 1.3707686404290396
+Perc: 0.7295177103606689
+num moves made before getNecessary: 8
+Ratio: 1.4091621874883438
+Perc: 0.7096415223732163
+num moves made before getNecessary: 9
+Ratio: 1.4494473392361773
+Perc: 0.6899181315045052
+num moves made before getNecessary: 10
+Ratio: 1.489480371340377
+Perc: 0.671375077672292
+End of search with depth 13 and triangle length 8
+Num records saved for prev depths: 9782
+Num records saved total: 4231890
+Start search for solution starting with:
+        G 
+       G G 
+      G G G 
+     G _ G G 
+    G G G G G 
+   G G G G G G 
+  G G G G G G G 
+ G G G G G G G G 
+Num pieces left: 35
+Num moves Made: 0
+Move list: 
+Lookup number: 7
+
+
+DEBUG: trying depth 13
+Current depth: 13 out of 13
+Num records saved: 300970
+        _ 
+       _ G 
+      _ G G 
+     _ _ G _ 
+    _ _ G G G 
+   _ G G G G G 
+  _ _ G G G G G 
+ _ G _ G _ _ G G 
+Num pieces left: 21
+Num moves Made: 10
+Move list:   27-25  24-26  40-24  16-32  42-40-24  0-16-32  57-41  59-57  61-59  56-40-24-42
+Lookup number: 361885456
+Min num moves: 14
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           10
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           24
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           52
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           190
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           784
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           4191
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           23322
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           123445
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           583154
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           2306270
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           7511181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           20709253
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           14463
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           43396
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 36 vs 31)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0913461538461537
+Perc: 0.9162995594713657
+num moves made before getNecessary: 3
+Ratio: 1.165083135391924
+Perc: 0.8583078491335372
+num moves made before getNecessary: 4
+Ratio: 1.2427268779852367
+Perc: 0.8046820405310972
+num moves made before getNecessary: 5
+Ratio: 1.3042186795006767
+Perc: 0.7667425836768819
+num moves made before getNecessary: 6
+Ratio: 1.3476777657837193
+Perc: 0.7420171389549243
+num moves made before getNecessary: 7
+Ratio: 1.3710583776388752
+Perc: 0.7293635459360369
+num moves made before getNecessary: 8
+Ratio: 1.4087312434309411
+Perc: 0.7098586083492526
+num moves made before getNecessary: 9
+Ratio: 1.448987355071195
+Perc: 0.6901371475052422
+num moves made before getNecessary: 10
+Ratio: 1.4889442082150783
+Perc: 0.6716168372747716
+Current depth: 13 out of 13
+Num records saved: 854041
+        _ 
+       G _ 
+      G G _ 
+     _ G _ G 
+    _ G _ _ _ 
+   _ G G _ _ _ 
+  G G G _ G _ G 
+ G G G G _ _ _ _ 
+Num pieces left: 17
+Num moves Made: 10
+Move list:   27-25  24-26  43-25  18-34  45-27  0-18-36  59-43-45-27  61-59  40-24-26-44  63-61-45-43-25
+Lookup number: 1200772571
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           10
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           24
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           52
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           195
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           812
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           4395
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           24405
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           129442
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           613122
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           2442142
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           8011181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           22073752
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           15495
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           44399
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 15 vs 8)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0976744186046512
+Perc: 0.9110169491525424
+num moves made before getNecessary: 3
+Ratio: 1.1690767519466074
+Perc: 0.8553758325404377
+num moves made before getNecessary: 4
+Ratio: 1.2475825946817083
+Perc: 0.8015501372517359
+num moves made before getNecessary: 5
+Ratio: 1.3061446247677801
+Perc: 0.765612001180796
+num moves made before getNecessary: 6
+Ratio: 1.3458273080754524
+Perc: 0.7430373822849611
+num moves made before getNecessary: 7
+Ratio: 1.3702672010952357
+Perc: 0.7297846720703187
+num moves made before getNecessary: 8
+Ratio: 1.4078556570260563
+Perc: 0.7103000900762743
+num moves made before getNecessary: 9
+Ratio: 1.4483911471172681
+Perc: 0.690421231854599
+num moves made before getNecessary: 10
+Ratio: 1.4891491341385066
+Perc: 0.6715244142276683
+Current depth: 13 out of 13
+Num records saved: 1389762
+        _ 
+       _ _ 
+      _ _ _ 
+     G _ G _ 
+    G G _ G _ 
+   _ _ _ G G _ 
+  _ G G G G G G 
+ _ G G G _ _ G G 
+Num pieces left: 18
+Num moves Made: 10
+Move list:   27-25  42-26  18-34  0-18  40-42-26  59-41  56-40-42  45-27-9  16-0-18-16-34-50  61-59
+Lookup number: 17316929
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           10
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           24
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           53
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           199
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           848
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           4574
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           25449
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           135830
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           647994
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           2595088
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           8511181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           23299030
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           16175
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           45806
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Current depth: 13 out of 13
+Num records saved: 1935303
+        _ 
+       _ _ 
+      _ G _ 
+     G G _ G 
+    _ _ G G _ 
+   _ _ _ G G _ 
+  G _ _ G G G G 
+ _ _ G G G G G G 
+Num pieces left: 19
+Num moves Made: 10
+Move list:   27-25  42-26  58-42  16-34-50  32-34  0-16-32  9-27-25  40-24  45-27  56-58-42-40-58
+Lookup number: 191637295
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           10
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           24
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           53
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           203
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           875
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           4715
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           26370
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           141287
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           678115
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           2732905
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           9011181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           24686101
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           16310
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           46073
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 38 vs 33)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0976744186046512
+Perc: 0.9110169491525424
+num moves made before getNecessary: 3
+Ratio: 1.1787234042553192
+Perc: 0.8483754512635379
+num moves made before getNecessary: 4
+Ratio: 1.2517943743937925
+Perc: 0.7988532465519913
+num moves made before getNecessary: 5
+Ratio: 1.3073240945303608
+Perc: 0.7649212648828575
+num moves made before getNecessary: 6
+Ratio: 1.3475096601454346
+Perc: 0.742109707690015
+num moves made before getNecessary: 7
+Ratio: 1.3717370513793163
+Perc: 0.7290026896878485
+num moves made before getNecessary: 8
+Ratio: 1.4093725624024962
+Perc: 0.7095355952547732
+num moves made before getNecessary: 9
+Ratio: 1.44933001941117
+Perc: 0.689973978739692
+num moves made before getNecessary: 10
+Ratio: 1.489040805645543
+Perc: 0.6715732679780192
+Testing branching improvement for forwards jumps: (current sample: 107 vs 98)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.0976744186046512
+Perc: 0.9110169491525424
+num moves made before getNecessary: 3
+Ratio: 1.1787234042553192
+Perc: 0.8483754512635379
+num moves made before getNecessary: 4
+Ratio: 1.2532517214996175
+Perc: 0.797924297924298
+num moves made before getNecessary: 5
+Ratio: 1.307922813487882
+Perc: 0.7645711120622373
+num moves made before getNecessary: 6
+Ratio: 1.3480605894087994
+Perc: 0.7418064201688119
+num moves made before getNecessary: 7
+Ratio: 1.3719295357659003
+Perc: 0.7289004091902832
+num moves made before getNecessary: 8
+Ratio: 1.4092486299699236
+Perc: 0.7095979933798781
+num moves made before getNecessary: 9
+Ratio: 1.4488559512973342
+Perc: 0.6901997393906415
+num moves made before getNecessary: 10
+Ratio: 1.4882982308083366
+Perc: 0.6719083442415112
+Current depth: 13 out of 13
+Num records saved: 2440245
+        _ 
+       _ _ 
+      _ G _ 
+     _ _ G G 
+    G G G _ _ 
+   G G G _ _ _ 
+  G G G _ _ G G 
+ G G _ _ G _ G G 
+Num pieces left: 19
+Num moves Made: 10
+Move list:   43-25  16-34  0-16  24-8  45-43-25  61-43  18-0-16-34-52  59-43-61-59  58-60  36-34
+Lookup number: 153261613
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           10
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           25
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           56
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           212
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           929
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           5015
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           27986
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           149645
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           717498
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           2888124
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           9511181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           25954593
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           17301
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           48573
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 8 vs 8)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.096638655462185
+Perc: 0.9118773946360154
+num moves made before getNecessary: 3
+Ratio: 1.1880907372400755
+Perc: 0.841686555290374
+num moves made before getNecessary: 4
+Ratio: 1.2555728356661482
+Perc: 0.79644921552436
+num moves made before getNecessary: 5
+Ratio: 1.3069111171025434
+Perc: 0.7651629762068491
+num moves made before getNecessary: 6
+Ratio: 1.3500808418514154
+Perc: 0.7406963857280304
+num moves made before getNecessary: 7
+Ratio: 1.3735825227065084
+Perc: 0.7280232410278481
+num moves made before getNecessary: 8
+Ratio: 1.4107525201132107
+Perc: 0.7088415478568498
+num moves made before getNecessary: 9
+Ratio: 1.4497598867464687
+Perc: 0.6897693950162921
+num moves made before getNecessary: 10
+Ratio: 1.489276015402816
+Perc: 0.6714672026256477
+Current depth: 13 out of 13
+Num records saved: 2893379
+        G 
+       G G 
+      _ G G 
+     _ _ G _ 
+    G G _ _ _ 
+   _ G G _ _ _ 
+  _ G G G _ _ G 
+ G G _ _ _ _ _ _ 
+Num pieces left: 16
+Num moves Made: 10
+Move list:   43-25  16-34  45-43-25  62-44  60-62  63-61  58-60-62  27-45-43-61-63-45  32-16-34-36-54  48-32
+Lookup number: 1168136715
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           10
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           25
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           56
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           222
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           995
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           5399
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           30196
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           161520
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           771266
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           3076158
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           10011181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           26996784
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           17813
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           49032
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+End of search with depth 13 and triangle length 8
+Num records saved for prev depths: 0
+Num records saved total: 3246213
+SKIPING (3, 2)
+
+
+SKIPING (3, 3)
+
+
+SKIPING (4, 0)
+
+
+Start search for solution starting with:
+        G 
+       G G 
+      G G G 
+     G G G G 
+    G _ G G G 
+   G G G G G G 
+  G G G G G G G 
+ G G G G G G G G 
+Num pieces left: 35
+Num moves Made: 0
+Move list: 
+Lookup number: 11
+
+
+DEBUG: trying depth 13
+End of search with depth 13 and triangle length 8
+Num records saved for prev depths: 0
+Num records saved total: 159
+Start search for solution starting with:
+        G 
+       G G 
+      G G G 
+     G G G G 
+    G G _ G G 
+   G G G G G G 
+  G G G G G G G 
+ G G G G G G G G 
+Num pieces left: 35
+Num moves Made: 0
+Move list: 
+Lookup number: 12
+
+
+DEBUG: trying depth 12
+End of search with depth 12 and triangle length 8
+Num records saved for prev depths: 0
+Num records saved total: 1
+DEBUG: trying depth 13
+Current depth: 13 out of 13
+Num records saved: 117205
+        _ 
+       _ _ 
+      _ _ _ 
+     _ G _ _ 
+    G _ _ G _ 
+   _ G G _ _ _ 
+  G G G G _ G _ 
+ _ G G G G _ G G 
+Num pieces left: 16
+Num moves Made: 10
+Move list:   16-34  0-16  24-8  40-24  56-40  43-25  18-0-16-32-48  36-18-16-34-32  54-36  61-43-45-27-25
+Lookup number: 14466012
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           13
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           32
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           67
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           246
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           1090
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           5880
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           32851
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           174128
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           823097
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           3255618
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           10511181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           28107403
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           18644
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           50812
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 25 vs 21)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.1076923076923078
+Perc: 0.9027777777777778
+num moves made before getNecessary: 3
+Ratio: 1.191687871077184
+Perc: 0.8391459074733096
+num moves made before getNecessary: 4
+Ratio: 1.2632954196126653
+Perc: 0.7915804842438253
+num moves made before getNecessary: 5
+Ratio: 1.3127429575589755
+Perc: 0.7617637514197632
+num moves made before getNecessary: 6
+Ratio: 1.3512525993643818
+Perc: 0.7400540805400795
+num moves made before getNecessary: 7
+Ratio: 1.3745911528829677
+Perc: 0.7274890413070625
+num moves made before getNecessary: 8
+Ratio: 1.4100808217947258
+Perc: 0.709179207704717
+num moves made before getNecessary: 9
+Ratio: 1.4486687712145663
+Perc: 0.6902889189511542
+num moves made before getNecessary: 10
+Ratio: 1.4882319175637624
+Perc: 0.6719382834074688
+Current depth: 13 out of 13
+Num records saved: 682915
+        _ 
+       G _ 
+      _ G _ 
+     G _ _ _ 
+    _ _ G G G 
+   _ _ _ G G G 
+  _ _ _ _ G G G 
+ _ _ G G _ G G G 
+Num pieces left: 17
+Num moves Made: 10
+Move list:   16-34  27-25  42-26  18-34  58-42-26  32-16-34-32-50  0-18-34  48-32  56-58-40-24  60-42-58
+Lookup number: 128351111
+Min num moves: 14
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           13
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           32
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           70
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           256
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           1131
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           6129
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           34120
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           180828
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           857507
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           3403841
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           11011181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           29372451
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           19369
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           52387
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 16 vs 16)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.114814814814815
+Perc: 0.8970099667774086
+num moves made before getNecessary: 3
+Ratio: 1.1943986820428336
+Perc: 0.8372413793103448
+num moves made before getNecessary: 4
+Ratio: 1.2642258491398324
+Perc: 0.7909979064898813
+num moves made before getNecessary: 5
+Ratio: 1.3117220313096603
+Perc: 0.7623566396926122
+num moves made before getNecessary: 6
+Ratio: 1.3498695491862576
+Perc: 0.7408123256079303
+num moves made before getNecessary: 7
+Ratio: 1.37383483990463
+Perc: 0.7278895329728418
+num moves made before getNecessary: 8
+Ratio: 1.409626537481955
+Perc: 0.7094077568845437
+num moves made before getNecessary: 9
+Ratio: 1.448160044662859
+Perc: 0.6905314116940758
+num moves made before getNecessary: 10
+Ratio: 1.488007598273494
+Perc: 0.6720395790722308
+Testing branching improvement for forwards jumps: (current sample: 9 vs 5)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.114814814814815
+Perc: 0.8970099667774086
+num moves made before getNecessary: 3
+Ratio: 1.1943986820428336
+Perc: 0.8372413793103448
+num moves made before getNecessary: 4
+Ratio: 1.2642258491398324
+Perc: 0.7909979064898813
+num moves made before getNecessary: 5
+Ratio: 1.3117220313096603
+Perc: 0.7623566396926122
+num moves made before getNecessary: 6
+Ratio: 1.3498695491862576
+Perc: 0.7408123256079303
+num moves made before getNecessary: 7
+Ratio: 1.3738228256785048
+Perc: 0.7278958984439053
+num moves made before getNecessary: 8
+Ratio: 1.4096174624036197
+Perc: 0.709412324032112
+num moves made before getNecessary: 9
+Ratio: 1.4481513257915535
+Perc: 0.6905355691701653
+num moves made before getNecessary: 10
+Ratio: 1.4880128897438372
+Perc: 0.6720371892559015
+Current depth: 13 out of 13
+Num records saved: 1232313
+        _ 
+       _ _ 
+      _ _ _ 
+     _ G G _ 
+    _ G _ G _ 
+   G G G G G _ 
+  G G G G _ _ G 
+ G G G G _ G _ _ 
+Num pieces left: 19
+Num moves Made: 10
+Move list:   16-34  43-25  0-16-34  45-43-25  60-44  27-45-43  9-27  63-45  32-16-18-36-54  62-44
+Lookup number: 12028109
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           13
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           32
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           72
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           259
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           1161
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           6339
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           35373
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           188223
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           894956
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           3558390
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           11511181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           30641820
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           19627
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           52546
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 16 vs 4)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.1145833333333333
+Perc: 0.897196261682243
+num moves made before getNecessary: 3
+Ratio: 1.197378565921357
+Perc: 0.8351577591757888
+num moves made before getNecessary: 4
+Ratio: 1.2609285908226988
+Perc: 0.7930663221360896
+num moves made before getNecessary: 5
+Ratio: 1.3145700037636432
+Perc: 0.7607050192359309
+num moves made before getNecessary: 6
+Ratio: 1.35213452174702
+Perc: 0.7395713842938897
+num moves made before getNecessary: 7
+Ratio: 1.375407148749751
+Perc: 0.7270574396163367
+num moves made before getNecessary: 8
+Ratio: 1.4098279668135005
+Perc: 0.7093064001703729
+num moves made before getNecessary: 9
+Ratio: 1.4476122779041252
+Perc: 0.6907927041402379
+num moves made before getNecessary: 10
+Ratio: 1.4872371397246589
+Perc: 0.672387727074336
+Current depth: 13 out of 13
+Num records saved: 1687916
+        _ 
+       _ G 
+      _ _ G 
+     _ G _ G 
+    _ _ G G G 
+   _ G G _ _ _ 
+  _ G G _ _ _ G 
+ G G _ _ _ _ G G 
+Num pieces left: 16
+Num moves Made: 10
+Move list:   16-34  43-25  45-43  60-44  0-16-34-52  18-34  58-60  61-45-43-59-61-43-25  32-34  48-32-16-18
+Lookup number: 1374986943
+Min num moves: 14
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           13
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           32
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           72
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           272
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           1238
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           6747
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           37484
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           198664
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           942769
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           3734069
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           12011181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           31740439
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           20021
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           52641
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Current depth: 13 out of 13
+Num records saved: 2122660
+        G 
+       G G 
+      _ G _ 
+     _ _ _ G 
+    G _ _ G _ 
+   G G G _ _ _ 
+  G G G G _ _ _ 
+ G G _ G _ _ _ G 
+Num pieces left: 18
+Num moves Made: 10
+Move list:   16-34  43-25  61-43  36-52  60-44  58-60  63-61-59  18-34-52  32-16-34-32  45-43-61-45-63
+Lookup number: 4539676410
+Min num moves: 14
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           13
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           32
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           72
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           274
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           1270
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           7009
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           39271
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           209164
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           990593
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           3907850
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           12511181
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           32842622
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           20370
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 13
+visits to getBestMoveList:           52799
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+End of search with depth 13 and triangle length 8
+Num records saved for prev depths: 1
+Num records saved total: 2188869
+SKIPING (4, 3)
+
+
+SKIPING (4, 4)
+
+
+SKIPING (5, 0)
+
+
+SKIPING (5, 1)
+
+
+SKIPING (5, 2)
+
+
+SKIPING (5, 3)
+
+
+SKIPING (5, 4)
+
+
+SKIPING (5, 5)
+
+
+SKIPING (6, 0)
+
+
+SKIPING (6, 1)
+
+
+SKIPING (6, 2)
+
+
+SKIPING (6, 3)
+
+
+SKIPING (6, 4)
+
+
+SKIPING (6, 5)
+
+
+SKIPING (6, 6)
+
+
+SKIPING (7, 0)
+
+
+SKIPING (7, 1)
+
+
+SKIPING (7, 2)
+
+
+SKIPING (7, 3)
+
+
+SKIPING (7, 4)
+
+
+SKIPING (7, 5)
+
+
+SKIPING (7, 6)
+
+
+SKIPING (7, 7)
+
+

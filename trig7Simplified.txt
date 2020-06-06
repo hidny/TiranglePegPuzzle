@@ -1,0 +1,3467 @@
+Trying 7 in TriangleSolveOptimizedTrial5
+Giving up after reaching a max depth of 12
+
+Start search for solution starting with:
+       _ 
+      G G 
+     G G G 
+    G G G G 
+   G G G G G 
+  G G G G G G 
+ G G G G G G G 
+Num pieces left: 27
+Num moves Made: 0
+Move list: 
+Lookup number: 0
+
+
+DEBUG: trying depth 9
+End of search with depth 9 and triangle length 7
+Num records saved for prev depths: 0
+Num records saved total: 1
+DEBUG: trying depth 10
+End of search with depth 10 and triangle length 7
+Num records saved for prev depths: 1
+Num records saved total: 30
+DEBUG: trying depth 11
+End of search with depth 11 and triangle length 7
+Num records saved for prev depths: 30
+Num records saved total: 1621
+DEBUG: trying depth 12
+End of search with depth 12 and triangle length 7
+Num records saved for prev depths: 1621
+Num records saved total: 157844
+Start search for solution starting with:
+       G 
+      _ G 
+     G G G 
+    G G G G 
+   G G G G G 
+  G G G G G G 
+ G G G G G G G 
+Num pieces left: 27
+Num moves Made: 0
+Move list: 
+Lookup number: 1
+
+
+DEBUG: trying depth 10
+End of search with depth 10 and triangle length 7
+Num records saved for prev depths: 0
+Num records saved total: 232
+DEBUG: trying depth 11
+End of search with depth 11 and triangle length 7
+Num records saved for prev depths: 232
+Num records saved total: 16550
+DEBUG: trying depth 12
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  23-7-21-23  38-22  35-21  44-28-14-30  24-22-38  46-30  40-24-38-22-36-38-40  48-32  8-24-40  42-44-46-48-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  23-21-7  16-0-14  37-23-7-21-37  32-30  45-29  35-21-37-23  48-32-16-30  43-29-31-45-43  47-45  42-44-46-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  23-21-7  16-0-14  38-22  44-30  35-21-7-23-21-37-23  42-44  32-30  45-43-29-31  47-45  48-32-16-30-32-46-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  16-0-14  30-28  23-7-21-35  32-30  45-29-31  48-32-30  43-45-31-29-15  47-45  42-28-44-46-32-16-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  16-0-14  30-28  23-7-21-35  32-30  47-31-29-15  45-47  48-46  43-45-47  42-28-44-30-46-48-32-16-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  16-0-14  30-28  45-29  32-16-30  39-23-7-21-23-37-21-35-37  43-45-31  48-32-30-44  47-45-43  42-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  16-0-14  37-35  23-7-21-37-23  32-30  47-31-29  45-47  48-46  43-45-47  42-28-30-16-32-48-46-30-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-14  32-30-28  48-32  24-40  46-32-48-46-30  8-24-22-38  44-30  7-21-35-37-23  42-44-46-30-16-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-14  32-30-28  48-32  46-30  24-22-38  8-24-40  44-30  7-21-35-37-23  42-44-46-32-48-46-30-16-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-14  44-30-28  7-21-35-37  46-30  24-22-38  42-44-46-30  8-24-38-22  40-24  48-46-32-16-14-30-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-14  44-30-28  7-21-35-37  46-30  24-22-38  48-46-30  8-24-38-22  40-24  42-44-30-14-16-32-46-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-14  44-30-28  7-21-35-37  46-30  40-38-22  24-40  48-32  8-24-40  42-44-30-16-14-30-32-48-46-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-14  44-30-28  46-30  24-22-38  32-46-30  7-21-35-37-23  48-32  8-24-40  42-44-46-48-32-30-16-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-14  44-30-28  46-30  24-22-38  42-44-46-30  7-21-35-37-23  8-24-22  40-24  48-46-32-16-14-30-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-14  44-30-28  46-30  24-22-38  48-46-30  7-21-35-37-23  8-24-22  40-24  42-44-46-32-16-14-30-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-14  46-30  24-22-38  48-46-30  8-24-38-22  40-24  44-30  7-21-23-37  42-44-30-28-44-46-32-16-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-14  46-30  24-22-38  48-46-30  8-24-38-22  40-24  44-30  7-21-23-37-21  42-44-28-14-16-32-46-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-14  46-30  44-28  24-38-22-36  42-44-30  7-21-35-37  8-24-22-38  40-24  48-46-30-44-46-32-16-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-14  46-30  44-28  24-38-22-36  48-46-44-30  7-21-35-37  8-24-22-38  40-24  42-44-30-46-32-16-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-28  32-30  45-29-31  48-32-30  43-45-31-29  16-14-30  23-37-21-35  47-45  42-28-44-46-32-16-0-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-28  32-30  47-31-29  45-47  48-46  43-45-47  16-30-46-48-32-16-0-14  37-21-7-23-21-35  42-28-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-28  44-30  23-21-35-37-23  46-30  8-22-38  42-44-46-30  24-8  40-24-22-38-24  48-46-32-16-0-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  35-21-7  30-28  44-30  23-21-35-37-23  46-30  8-22-38  48-46-30  24-8  40-24-22-38-24  42-44-46-32-16-0-14
+Lookup number: 2
+Current depth: 12 out of 12
+Num records saved: 330543
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ G G _ 
+  G _ _ G _ G 
+ _ G G G G G G 
+Num pieces left: 12
+Num moves Made: 9
+Move list:   21-7  0-14  35-21-7  37-35  42-28  39-37-21-35  22-38  16-0-14-16-30  32-16
+Lookup number: 649242
+Min num moves: 12
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           7
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           13
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           29
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           154
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           805
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           4139
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           18301
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           67273
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           202629
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           506052
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           913184
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           3221
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           5830
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  37-21-7  16-0-14  23-37  32-30  43-29-31  45-43  42-44-30  35-21-7-23-37  47-45-29-15  48-32-30-46-32-16-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  37-21-7  16-0-14  23-37  32-30  43-29-31  45-43  48-32-30  47-45-31-29-45  35-21-7-23  42-44-46-32-16-30-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  37-21-7  16-0-14  31-29  32-16-30  35-21-7-23-21-37-35  47-31-29  45-47  48-46  43-45-47  42-28-30-46-48-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  37-21-7  16-0-14  31-29  32-16-30  35-21-7-23-37-35  47-31  45-47  48-46  43-45-47  42-28-30-32-48-46-30-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  37-21-7  16-0-14  31-29  47-31  45-47  48-46  43-45-47  32-16-30-32-48-46-30  35-21-7-23-37-35  42-28-30-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  37-21-7  16-0-14-16  43-29-15  45-43  47-45  24-22  35-21-23-37  42-44-46-30  40-24-8-22-38-40  48-32-30-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  37-21-7  23-37  32-30  43-29-31  16-0-14-16-32-30  45-29-31  47-45-43  48-32-46-30  35-21-23-37  42-44-30-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  37-21-7  23-37  32-30  43-29-31  16-0-14-16-32-30  45-29-31  48-32-30  35-21-23-37  47-45-43  42-44-30-46-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  37-21-7  23-37  32-30  43-29-31  45-43  42-44-30  35-21-23-37  16-0-14-16-32-30  47-45-31-29-45  48-32-46-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  37-21-7  23-37  32-30  43-29-31  45-43  42-44-30  35-21-23-37  16-0-14-16-32-30  47-45-29-31  48-32-30-46-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  37-21-7  23-37  32-30  43-29-31  45-43  42-44-30  35-21-23-37  48-32-30  47-45-31-29-45  16-0-14-16-32-46-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  0-14  37-21-7  23-37  32-30  43-29-31  45-43  42-44-30  35-21-23-37  48-32-30  47-45-29-31  16-0-14-16-32-30-46-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  30-14  44-30  24-22  35-21-23-37  42-44-30-28  46-30  7-21-35-37-23  16-30  0-16  40-24-8-22-38  48-46-32-30-46-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  30-14  44-30  24-22  35-21-23-37  42-44-30-28  46-30  8-22-38  40-24-8  48-46-32-30  7-21-35-37-23  0-16-30-46-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  30-14  44-30  24-22  35-21-23-37  42-44-30-28  46-30  8-22-38  48-46-30  7-21-35-37-23  40-24-8  0-16-30-32-46-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  30-14  46-30  24-38-22  14-30  0-14  40-24-22-38  44-30  42-44-46-32  35-21-7-23-37-39  8-24-40-38  48-46-30-28-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  30-14  46-30  24-38-22  14-30  0-14  40-24-22-38  48-46-32  44-30  35-21-7-23-37-39  8-24-40-38  42-44-28-30-46-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  30-14  46-30  24-38-22  14-30  0-14  40-24-22-38-40  44-30  35-21-7-23-37  48-32  8-24-40  42-44-30-28-44-46-48-32
+Lookup number: 2
+Testing branching improvement for forwards jumps: (current sample: 3 vs 3)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.1133004926108374
+Perc: 0.8982300884955752
+num moves made before getNecessary: 3
+Ratio: 1.2330009066183136
+Perc: 0.8110294117647059
+num moves made before getNecessary: 4
+Ratio: 1.2994071146245059
+Perc: 0.7695817490494297
+num moves made before getNecessary: 5
+Ratio: 1.3183686599706903
+Perc: 0.758513176445071
+num moves made before getNecessary: 6
+Ratio: 1.3464315051944915
+Perc: 0.7427039519960954
+num moves made before getNecessary: 7
+Ratio: 1.3761004409712176
+Perc: 0.7266911413052268
+num moves made before getNecessary: 8
+Ratio: 1.3949897388188184
+Perc: 0.7168511510677715
+num moves made before getNecessary: 9
+Ratio: 1.4187318536111628
+Perc: 0.7048548303575862
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  35-21  0-14-28  30-14  46-30  40-38-22  24-40  48-32  8-24-40  44-30  23-7-21-23-37-21-35-37  42-44-30-32-48-46-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   21-7  35-21  0-14-28  30-14  46-30  40-38-22  24-40  48-32  8-24-40  44-30  23-7-21-23-37-35-21  42-44-46-48-32-30-28-14
+Lookup number: 2
+End of search with depth 12 and triangle length 7
+Num records saved for prev depths: 16550
+Num records saved total: 622376
+SKIPING (1, 1)
+
+
+Start search for solution starting with:
+       G 
+      G G 
+     _ G G 
+    G G G G 
+   G G G G G 
+  G G G G G G 
+ G G G G G G G 
+Num pieces left: 27
+Num moves Made: 0
+Move list: 
+Lookup number: 3
+
+
+DEBUG: trying depth 9
+End of search with depth 9 and triangle length 7
+Num records saved for prev depths: 0
+Num records saved total: 1
+DEBUG: trying depth 10
+End of search with depth 10 and triangle length 7
+Num records saved for prev depths: 1
+Num records saved total: 553
+DEBUG: trying depth 11
+End of search with depth 11 and triangle length 7
+Num records saved for prev depths: 553
+Num records saved total: 41178
+DEBUG: trying depth 12
+Current depth: 12 out of 12
+Num records saved: 99168
+       _ 
+      _ G 
+     G _ _ 
+    _ _ G G 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ G G _ G G G G 
+Num pieces left: 11
+Num moves Made: 9
+Move list:   0-14  21-7  16-0-14  22-8  38-22  32-16-30  35-21-23  44-28  40-38-22-36-38-24
+Lookup number: 6574242
+Min num moves: 12
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           11
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           27
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           81
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           427
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           2077
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           10479
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           45034
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           158053
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           444236
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           1030614
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           1608617
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           4605
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           7722
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  42-44-28-30  39-23-37  46-30  40-24-8-22-38  48-46-30-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  42-44-28-30  39-23-37  46-30  40-24-8-22-38-36  48-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  46-30  36-22-38  42-44-46-30  40-24-8-22-38  48-46-32-30-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  46-30  36-22-38  42-44-46-30  40-24-8-22-38-24  48-46-32-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  46-30  36-22-38  48-46-30  40-24-8-22-38  42-44-46-32-30-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  46-30  36-22-38  48-46-30  40-24-8-22-38-24  42-44-46-32-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  46-30  39-23-37  42-44-30  40-24-8-22-38  48-46-30-28-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  46-30  39-23-37  48-46-44-30  40-24-8-22-38  42-44-28-30-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  46-30  39-23-37  48-46-44-28-30  40-24-8-22-38  42-44-30-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  46-30  39-23-37  48-46-44-28-30  40-24-8-22-38-36  42-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  46-30  40-24-8-22-38  48-46-30  39-23-37  42-44-30-28-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  46-30  40-24-8-22-38  48-46-30-28-44-46  31-47-45  42-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  46-30  40-24-8-22-38-24  48-46  45-47-31  42-44-28-30-32-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  46-30  40-24-8-22-38-40  42-44-46  47-45  48-32-30-28-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-30-14-0-16  46-30  40-24-8-22-38-40  48-46  45-47  42-44-28-30-32-48-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-28-30-14-0-16  42-44  46-30  40-24-8-22-38-36  45-43-29  48-46-32-30-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-28-30-14-0-16  45-29  47-45  42-44-46-30  40-24-8-22-38-40  48-32-30-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-28-30-14-0-16  46-30  40-24-8-22-38  42-44-46-32-30  37-23  48-46-30-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-28-30-14-0-16  46-30  40-24-8-22-38  42-44-46-30  37-23  48-46-32-30-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-28-30-14-0-16  46-30  40-24-8-22-38  48-46-32-30  37-23  42-44-46-30-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-28-30-14-0-16  46-30  40-24-8-22-38  48-46-32-30  45-31-29  42-44-30-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-28-30-14-0-16  46-30  40-24-8-22-38  48-46-30  37-23  42-44-46-32-30-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-28-30-14-0-16  46-30  40-24-8-22-38-24  48-46  45-47-31  42-44-30-32-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-28-30-14-0-16  46-30  40-24-8-22-38-40  42-44-46  47-45  48-32-30-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  24-8  35-21-7  44-28-30-14-0-16  46-30  40-24-8-22-38-40  48-46  45-47  42-44-30-32-48-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  35-21-7  32-30-14  48-32  44-30-28  46-30  7-21-35-37-23  24-8-22-24-40  42-44-46-32-48-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  44-30  35-21-7-23-21-37-23  32-30  45-31-15  24-8-22-38  42-44  47-45-43-29  48-32-46-30-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  44-30  35-21-7-23-37  42-44-28-30  31-29-15  46-30  24-8-22-38  40-24  48-46-30-44-46-32-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  44-30  35-21-7-23-37  46-44-28-30  31-29-15  48-46-30  24-8-22-38  40-24  42-44-30-46-32-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  44-30  35-21-7-23-37-21  46-30  24-38  48-46  45-47-31-29-15  40-24-8-22  42-44-28-14-30-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  30-16  44-30  42-44  24-8  40-24  35-21-23-37-21-7  46-32-30  45-43-29-31  48-46-30-32-16-0-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  32-16  22-8-24-22  37-23  48-32-30  45-31-15  35-21-7-23-21-37  43-29-31  47-45-43  42-44-30-32-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  32-16  38-24-8  22-38  44-30-16  46-30  35-21-7-23-37  48-32  8-24-40  42-44-30-28-44-46-32-48-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  32-16  48-32  22-8-24-40  46-48-32  38-24-40-38  29-31-15  44-30  35-21-7-23-37  42-44-30-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  32-16  48-32  38-24-40  22-38  46-30  44-46-48-32  35-21-7  36-22-38-40-24-8  42-44-30-16-0-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  32-16  48-32  38-24-40  46-48-32  22-38-40-24-8  44-30  35-21-7  36-22-38  42-44-46-30-16-0-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  35-21-7  30-16-14  32-30-28  45-31  43-45-29  47-45  48-32-30  7-21-23-37-21-35  42-28-44-46-32-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  35-21-7  30-16-14  44-30  7-21-37-23  42-44  32-30  45-31-15  47-45-43-29-31  48-32-16-14-30-32-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  35-21-7  30-14  44-30-28  46-30  24-22-38  42-44-46-30  7-21-35-37-23  40-24-22  48-46-32-30-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  35-21-7  30-14  44-30-28  46-30  24-22-38  48-46-30  7-21-35-37-23  40-24-22  42-44-46-32-30-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  35-21-7  30-14-16  46-30  24-8  40-24-38-22  44-28-30-16-0-14-30  42-44-46  47-31-29-45-47  48-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  35-21-7  30-14-16  46-30  48-46  24-8  40-24-38-22  44-28-30  45-47-31-29  42-44-30-16-0-14-30-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  35-21-7  30-14-16  46-30  48-46  24-22-38-24-8  45-47-31  44-30  40-24-38-22  42-44-28-30-14-0-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  35-21-7  30-14-16  46-30  48-46  24-22-38-24-8  45-47-31  44-28-30  40-24-38-22  42-44-30-14-0-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  35-21-7  30-28  32-16-14  7-21-35  46-32-30  45-31-15-29-31  48-46  43-45-47  42-28-44-30-32-48-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  35-21-7  30-28  32-16-14  7-21-35  48-32-30  45-31-15  43-45-29-31  47-45  42-28-44-46-32-30-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  35-21-7  30-28  32-16-14  7-21-35  48-32-30  45-31-15-29-31  43-45-29  47-45  42-28-30-32-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14  35-21-7  44-28  23-21-35  42-28  32-16-14  7-21-35  48-32  38-22-36-38-24-40  46-32-48-46-44-42-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14-16  29-15  45-29  24-22  35-21-23-37-35  46-30  40-24-8-22-38-24  48-46  43-45-47-31  42-28-30-32-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  16-0-14-16  29-15  45-29  24-22  35-21-23-37-35  46-30  40-24-8-22-38-40  48-46  43-45-47  42-28-30-32-48-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  7-21-23  40-24-22  44-30-32  46-30  35-21-23-37  42-44-30  8-24-40-38-22  48-46-44-28-30-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  7-21-23  40-24-22  44-30-32  46-30  35-21-23-37  42-44-28-30  8-24-40-38-22  48-46-44-30-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  7-21-23  40-24-22  44-30-32  46-30  35-21-23-37  48-46-44-30  8-24-40-38-22  42-44-28-30-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  7-21-23  40-24-22  44-30-32  46-30  35-21-23-37  48-46-44-28-30  8-24-40-38-22  42-44-30-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  35-21-23  40-24-22  44-30-28  46-30  42-44-46-32  7-21-35-37-23-39  8-24-40-38  48-46-30-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  35-21-23  40-24-22  44-30-28  46-30  48-46-32  7-21-35-37-23-39  8-24-40-38  42-44-46-30-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  44-30  7-21-23-37  46-30  8-24-38-22  40-24  42-44-30  35-21-23-37-21  48-46-32-16-14-28-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  44-30  7-21-23-37  46-30  8-24-38-22  40-24  42-44-30-14  35-21-7-23  48-46-32-16-30-28-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  44-30  7-21-23-37  46-30  8-24-38-22  40-24  48-46-44-30  35-21-23-37-21  42-44-28-14-16-32-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  44-30  7-21-23-37  46-30  8-24-38-22  40-24  48-46-44-30-14  35-21-7-23  42-44-28-30-16-32-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  44-30  7-21-37-23  46-30-14  8-24-38  40-24  42-44-46-32-16-30  35-21-7-23-37  48-46-30-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  44-30  35-21-23-37  42-44-30-28  7-21-35-37  46-30  8-24-38-22  40-24  48-46-32-16-14-30-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  44-30  35-21-23-37  46-30  8-24-38-22  48-46-44-30-28  7-21-35-37  40-24  42-44-30-14-16-32-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  24-22  44-30  35-21-23-37-35  42-28  46-30  7-21-35  8-24-38-22  40-24  48-46-32-16-14-30-28-42-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  46-30  24-22-38  44-46-30  8-24-38-22  40-24  42-44-30  7-21-23-37  35-21  48-46-32-16-14-28-30-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  30-14  46-30  24-22-38  48-46-30  8-24-38-22  40-24  44-30  7-21-23-37  35-21  42-44-30-28-14-16-32-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-0-14-28  30-16  44-30  39-23-21-35-37-23  46-30  24-8-22-38  42-44-46-30  40-24-22-38  48-46-30-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-0-14-28  30-16  44-30  39-23-21-35-37-23  46-30  24-8-22-38  48-46-30  40-24-22-38  42-44-46-30-28
+Lookup number: 2
+Testing branching improvement for forwards jumps: (current sample: 1 vs 1)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.1181619256017505
+Perc: 0.8943248532289628
+num moves made before getNecessary: 3
+Ratio: 1.233920704845815
+Perc: 0.8104248482684755
+num moves made before getNecessary: 4
+Ratio: 1.2749688667496886
+Perc: 0.7843328775151397
+num moves made before getNecessary: 5
+Ratio: 1.3106382213268095
+Perc: 0.7629870575479337
+num moves made before getNecessary: 6
+Ratio: 1.343528147482442
+Perc: 0.744308931579767
+num moves made before getNecessary: 7
+Ratio: 1.367712693597662
+Perc: 0.7311477071764083
+num moves made before getNecessary: 8
+Ratio: 1.381416451648671
+Perc: 0.7238946653679531
+num moves made before getNecessary: 9
+Ratio: 1.4049390855150863
+Perc: 0.7117746315907886
+num moves made before getNecessary: 10
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 11
+Ratio: 1.0
+Perc: 1.0
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-0-14-28  32-16  23-21-35  38-24-8-22-38  44-28-30  42-44  45-31-29-45-43  47-45  48-32-46-44-42-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-0-14-28  32-16  23-21-35  38-24-8-22-38  47-31  45-47  48-46  43-45-47  42-28-30-32-48-46-30-44-28
+Lookup number: 2
+Testing branching improvement for forwards jumps: (current sample: 13 vs 10)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.1181619256017505
+Perc: 0.8943248532289628
+num moves made before getNecessary: 3
+Ratio: 1.233920704845815
+Perc: 0.8104248482684755
+num moves made before getNecessary: 4
+Ratio: 1.2749688667496886
+Perc: 0.7843328775151397
+num moves made before getNecessary: 5
+Ratio: 1.3104855381186071
+Perc: 0.7630759523188982
+num moves made before getNecessary: 6
+Ratio: 1.3433935778206703
+Perc: 0.7443834900731452
+num moves made before getNecessary: 7
+Ratio: 1.3673681491591534
+Perc: 0.7313319391086724
+num moves made before getNecessary: 8
+Ratio: 1.3807861443985248
+Perc: 0.7242251119456327
+num moves made before getNecessary: 9
+Ratio: 1.4044179561260732
+Perc: 0.7120387457579836
+num moves made before getNecessary: 10
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 11
+Ratio: 1.0
+Perc: 1.0
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-0-14-28  37-21-35  23-37  32-30  43-29-31  45-43  42-44  47-45-43  48-32-16-14-30-32-46-30-44-42-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-0-14-28  37-21-35  23-37  32-30  45-31-29  42-28-30  43-45-29-31  47-45  48-32-16-14-30-32-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-0-14-28  37-21-35  23-37  32-30  45-29-31  48-32-30  43-45-31-29  47-45  42-28-30-14-16-32-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-0-14-28  37-21-35  23-37  32-30  47-31-29  45-47  48-46  43-45-47  42-28-30-14-16-32-48-46-30-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-14-28  37-21-35  23-37  32-30  43-29-31  45-43  42-44  47-45-43  48-32-16-0-14-30-32-46-30-44-42-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-14-28  37-21-35  23-37  32-30  45-31-29  42-28-30  43-45-29-31  47-45  48-32-16-0-14-30-32-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-14-28  37-21-35  23-37  32-30  45-29-31  48-32-30  43-45-31-29  47-45  42-28-30-14-0-16-32-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-14-28  37-21-35  23-37  32-30  45-29-31  48-32-30  43-45-31-29-15  47-45  42-28-44-46-32-16-0-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-14-28  37-21-35  23-37  32-30  47-31-29  45-47  48-46  43-45-47  42-28-30-14-0-16-32-48-46-30-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  16-14-28  37-21-35  23-37  32-30  47-31-29-15  45-47  48-46  43-45-47  42-28-44-30-46-48-32-16-0-14-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  30-14-28  44-30  24-22  7-23-21-35-37-23  46-30  40-24-22-38-40  48-32  8-24-40  42-44-46-48-32-30-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  30-14-28  46-30  8-22-38  44-46-30  24-8  40-24-22-38  42-44-30  39-23-37-35-21  48-46-30-28-14-0-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  30-14-28  46-30  8-22-38  48-46-30  24-8  40-24-22-38  44-30  39-23-37-35-21  42-44-46-30-28-14-0-16
+Lookup number: 2
+Current depth: 12 out of 12
+Num records saved: 576062
+       G 
+      _ G 
+     _ _ _ 
+    _ _ _ G 
+   _ G G _ _ 
+  G G G _ _ _ 
+ G G G G _ G G 
+Num pieces left: 14
+Num moves Made: 9
+Move list:   0-14  21-7  35-21  30-14-28  46-30  24-22  40-24  39-23-21-35  16-14-0
+Lookup number: 25285044
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           11
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           27
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           81
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           434
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           2147
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           11243
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           51212
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           194517
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           601589
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           1530614
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           2662242
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           13317
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           22358
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  30-14-28  46-30  24-22-38  44-46-30  8-24-38-22  42-44-30  7-23-21-35-37-23  40-24  48-46-32-16-30-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  30-14-28  46-30  24-22-38  48-46-30  8-24-38-22  40-24  44-30  7-23-21-35-37-23  42-44-46-32-16-30-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  30-14-28  46-30  24-22-38  48-46-30  8-24-38-22  40-24  44-30-14  7-21-35-37-21  42-44-46-32-16-14-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  30-14-28  46-30  40-38-22  24-40  48-32  8-24-40  44-30-16-14  7-21-35-37-21  42-44-46-48-32-30-14-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  30-14-28  46-30  40-38-22  24-40  48-32  8-24-40  44-30-16-14  7-21-35-37-21-23  42-44-46-48-32-30-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   0-14  21-7  35-21  30-14-28  46-30  40-38-22  24-40  48-32  8-24-40  44-30-14  7-21-35-37-21  42-44-46-48-32-30-16-14-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  7-21  30-28-14  32-30  47-31-29  16-30  45-47  48-46  42-28  37-23-7-21-35-37-21  43-45-47  0-16-32-48-46-30-14-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  7-21  30-28-14  32-30  47-31-29  16-30  45-47  48-46  42-28  37-23-7-21-35-37-21-23  43-45-47  0-16-30-46-48-32-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  7-21  30-28-14  32-30  47-31-29  16-30  45-47  48-46  42-28  37-21-7-23-21-35-37  43-45-31-29-45-47  0-16-32-48-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  30-28  32-30  45-31-29  28-30  42-28  47-31-29-45-47  16-30  7-21-35-37-23  48-46  43-45-47  0-16-14-30-16-32-48-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  30-28  32-30  45-31-29  28-30  42-28  47-45-29-31  48-32-46  16-30  7-21-35-37-23-39  43-45-47-31  0-16-14-30-32-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  16-14  30-28  32-30  45-31-29-15  0-16-30  35-21-7-23  43-45-29-31  47-45  48-32-16-30-32-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  16-14  30-28  32-30  45-31-29-15  48-32-16-30  35-21-7-23  43-45-29-31  47-45  0-16-30-32-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  30-14  16-30  37-23-7-21-37  32-30  43-29-31  48-32-30  45-31-29-45-43  47-45  0-16-32-46-44-42-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  30-14  16-30-28  32-30  45-29-31  0-16-32-30  35-21-7-23  43-45-31-29  47-45  48-32-46-44-28-30-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  30-14  16-30-28  32-30  45-29-31  0-16-32-30  35-21-7-23-37  43-45-29  47-45  48-32-46-30-28-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  30-14  16-30-28  32-30  45-29-31  46-32-30  35-21-7-23-37  48-46  43-45-47  0-16-32-48-46-30-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  30-14  16-30-28  32-30  45-29-31  46-30  48-46  35-21-7-23-37  43-45-47  0-16-32-46-48-32-30-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  30-14  16-30-28  32-30  45-29-31  48-32-30  35-21-7-23  43-45-31-29  47-45  0-16-30-28-44-46-32-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  30-14  16-30-28  32-30  45-29-31  48-32-30  35-21-7-23-37  43-45-29  47-45  0-16-32-46-30-28-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  30-14  16-30-28  32-30  47-31-29  45-47  48-46  35-21-7-23  43-45-47  0-16-30-28-44-30-46-48-32-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  30-14  46-30  24-22-38  48-46-30  8-24-38-22  40-24  44-28-30  37-23-21-7  0-14-16-32-46-44-42-28
+Lookup number: 2
+Current depth: 12 out of 12
+Num records saved: 928374
+       G 
+      _ G 
+     G G G 
+    _ G G _ 
+   G G G _ G 
+  G _ _ G _ _ 
+ _ G _ _ _ _ _ 
+Num pieces left: 14
+Num moves Made: 9
+Move list:   28-14  42-28  7-21-35  30-14  46-30  40-38-22  44-30  48-46-44-28  24-38
+Lookup number: 398755
+Min num moves: 12
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           11
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           29
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           92
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           512
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           2772
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           15134
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           71085
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           269760
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           820309
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           2030614
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           3435649
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           15974
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           26290
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  30-28  32-30  45-29-31  48-32-30  43-45-31-29  16-30  35-21-37-23  47-45  0-16-14-30-16-32-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  44-42-28  23-7  37-23-21-35-37  46-30  40-38-22  24-40  48-32  8-24-40  0-14-30-32-48-46-44-30-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  7-21-35  44-42-28  30-14  37-35-21-7  46-30  40-38-22-36  24-40  48-32  8-24-40  0-14-16-30-32-48-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  23-21-35  37-23  16-30  0-16  7-21-37-23  46-30  24-8-22-38  48-46-30  40-24-22-38  44-28-42-44-46-32-30-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  23-21-35  37-23  16-30  0-16  7-21-37-23  46-30  24-8-22-38  48-46-30  40-24-22-38-24  44-28-42-44-46-32-16
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  23-21-35  38-22  40-38  24-40  48-32  44-30  46-44-42-28  7-21-35-37-23-7  8-24-40  0-14-30-32-48-46-30-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  23-21-35  44-42-28  37-23  7-21-35-37  46-30  8-22-38  24-8  48-46-30  40-24-22-38-24  0-16-32-46-44-30-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   28-14  42-28  23-21-35  44-42-28  37-23  16-30  7-21-35-37-23  0-16  24-8-22-36  46-30  40-24-22-38  48-46-32-30-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   30-14  46-30  8-22-38  48-46-30  24-8  40-24-22-38  44-30  35-37-23  21-35  42-28  7-21-35  0-16-30-32-46-30-28-42-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ G _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   30-14  46-30  8-22-38  48-46-30  24-8  40-24-22-38  44-30-32-46-30  35-37-23  21-35  42-28  7-21-35  0-16-30-28-42-44-46
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   30-14  46-30  8-22-38  48-46-30  24-8  40-24-22-38-24  44-30  35-37-23  21-35  42-28  7-21-35  0-16-30-28-42-44-46-32-16
+Lookup number: 2
+Testing branching improvement for forwards jumps: (current sample: 5 vs 3)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.1168614357262103
+Perc: 0.8953662182361734
+num moves made before getNecessary: 3
+Ratio: 1.2291478470340258
+Perc: 0.8135717785399315
+num moves made before getNecessary: 4
+Ratio: 1.2813086618396352
+Perc: 0.7804520719966513
+num moves made before getNecessary: 5
+Ratio: 1.3106182245008693
+Perc: 0.7629986988627723
+num moves made before getNecessary: 6
+Ratio: 1.3439468008004134
+Perc: 0.7440770716552402
+num moves made before getNecessary: 7
+Ratio: 1.3732101829915317
+Perc: 0.7282206412287919
+num moves made before getNecessary: 8
+Ratio: 1.3899739005581686
+Perc: 0.7194379690139738
+num moves made before getNecessary: 9
+Ratio: 1.4130214137739283
+Perc: 0.7077033583866066
+num moves made before getNecessary: 10
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 11
+Ratio: 1.0
+Perc: 1.0
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   30-14  46-30  24-22-38  44-30  7-23-37  42-44-30  21-7  35-21-37-23  40-24-22  48-46-30-32  8-24-40-38  0-14-30-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   30-14  46-30  24-22-38  44-30  7-23-37  42-44-30  21-7  35-21-37-23  48-46-30  8-24-38-22  40-24  0-14-30-16-32-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   G _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   30-14  46-30  24-38-22  14-30  0-14  8-24-22-38  44-30  21-7-23-37  42-44-30  35-21-37-23  40-24  48-46-32-16-30-46-44-28
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ G 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   30-14  46-30  24-38-22  14-30  8-24-22-38  28-30  45-31-29  0-14-28-30  48-46  43-45-47-31  40-24-38-22  42-28-44-30-14-16
+Lookup number: 2
+End of search with depth 12 and triangle length 7
+Num records saved for prev depths: 41178
+Num records saved total: 1132667
+Start search for solution starting with:
+       G 
+      G G 
+     G _ G 
+    G G G G 
+   G G G G G 
+  G G G G G G 
+ G G G G G G G 
+Num pieces left: 27
+Num moves Made: 0
+Move list: 
+Lookup number: 4
+
+
+DEBUG: trying depth 10
+End of search with depth 10 and triangle length 7
+Num records saved for prev depths: 0
+Num records saved total: 2
+DEBUG: trying depth 11
+End of search with depth 11 and triangle length 7
+Num records saved for prev depths: 2
+Num records saved total: 27
+DEBUG: trying depth 12
+End of search with depth 12 and triangle length 7
+Num records saved for prev depths: 27
+Num records saved total: 6106
+SKIPING (2, 2)
+
+
+Start search for solution starting with:
+       G 
+      G G 
+     G G G 
+    _ G G G 
+   G G G G G 
+  G G G G G G 
+ G G G G G G G 
+Num pieces left: 27
+Num moves Made: 0
+Move list: 
+Lookup number: 6
+
+
+DEBUG: trying depth 10
+End of search with depth 10 and triangle length 7
+Num records saved for prev depths: 0
+Num records saved total: 31
+DEBUG: trying depth 11
+End of search with depth 11 and triangle length 7
+Num records saved for prev depths: 31
+Num records saved total: 1628
+DEBUG: trying depth 12
+Current depth: 12 out of 12
+Num records saved: 142422
+       _ 
+      _ _ 
+     G _ _ 
+    G _ _ _ 
+   G G G _ _ 
+  G G _ _ _ _ 
+ G G G _ _ _ _ 
+Num pieces left: 10
+Num moves Made: 9
+Move list:   7-21  30-14  46-30  8-22-38  48-46-30  24-8  40-24-22-38-24  44-30  0-16-32-46-44
+Lookup number: 3742
+Min num moves: 13
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           17
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           45
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           131
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           679
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           3843
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           21020
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           97635
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           360445
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           1058172
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           2530176
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           4159417
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           18375
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           29322
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+End of search with depth 12 and triangle length 7
+Num records saved for prev depths: 1628
+Num records saved total: 159038
+Start search for solution starting with:
+       G 
+      G G 
+     G G G 
+    G _ G G 
+   G G G G G 
+  G G G G G G 
+ G G G G G G G 
+Num pieces left: 27
+Num moves Made: 0
+Move list: 
+Lookup number: 7
+
+
+DEBUG: trying depth 9
+End of search with depth 9 and triangle length 7
+Num records saved for prev depths: 0
+Num records saved total: 1
+DEBUG: trying depth 10
+End of search with depth 10 and triangle length 7
+Num records saved for prev depths: 1
+Num records saved total: 15
+DEBUG: trying depth 11
+End of search with depth 11 and triangle length 7
+Num records saved for prev depths: 15
+Num records saved total: 4656
+DEBUG: trying depth 12
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   24-22  21-23  38-22  14-30  0-14  40-24-22-38  44-30  35-21-7-23-37  42-44-30-32  46-30  8-24-40-38-22  48-46-44-28-30-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   24-22  21-23  38-22  14-30  0-14  40-24-22-38  44-30  35-21-7-23-37  42-44-28-30-32  46-30  8-24-40-38-22  48-46-44-30-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   24-22  21-23  38-22  14-30  0-14  40-24-22-38  44-30  35-21-7-23-37  46-30-32  48-46-44-30  8-24-40-38-22  42-44-28-30-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   24-22  21-23  38-22  14-30  0-14  40-24-22-38  44-30  35-21-7-23-37  46-30-32  48-46-44-28-30  8-24-40-38-22  42-44-30-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   24-22  21-23  40-24-22  30-32  44-30  35-21-23-37  42-44-28  46-30  8-24-40-38-22-36  48-46-44-30  7-21-35-37-23-7  0-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  0-14  24-22-38  44-30  21-7-23-37  46-30  8-24-38-22  35-21-23  42-44-30  40-24-22-38  48-46-30-28-44-46-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  0-14  24-22-38  44-30  21-7-23-37  46-30  8-24-38-22  35-21-23  42-44-28-30  40-24-22-38  48-46-30-44-46-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  0-14  24-22-38  44-30  21-7-23-37  46-30  8-24-38-22  35-21-23  48-46-44-30  40-24-22-38  42-44-28-30-46-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  0-14  24-22-38  44-30  21-7-23-37  46-30  8-24-38-22  35-21-23  48-46-44-28-30  40-24-22-38  42-44-30-46-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  0-14  24-22-38  46-30  8-24-38-22  44-30  21-23  40-24-22-38  48-46-30  35-21-7-23-37  42-44-30-28-44-46-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  8-22-38  46-30  24-38-22  0-14-30  48-46  45-47-31-15  40-24-8-22-38  28-30  43-45-31-29  42-28-30-44-28-14
+Lookup number: 2
+Testing branching improvement for forwards jumps: (current sample: 10 vs 10)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.118488253319714
+Perc: 0.8940639269406393
+num moves made before getNecessary: 3
+Ratio: 1.2345444169678523
+Perc: 0.810015408320493
+num moves made before getNecessary: 4
+Ratio: 1.2834812605555357
+Perc: 0.7791309703790805
+num moves made before getNecessary: 5
+Ratio: 1.3129326533979744
+Perc: 0.7616536898613347
+num moves made before getNecessary: 6
+Ratio: 1.3432920893534173
+Perc: 0.7444397297696749
+num moves made before getNecessary: 7
+Ratio: 1.3748221767373576
+Perc: 0.7273667947175086
+num moves made before getNecessary: 8
+Ratio: 1.3916662603835432
+Perc: 0.7185630840287814
+num moves made before getNecessary: 9
+Ratio: 1.41244038952692
+Perc: 0.7079944806272058
+num moves made before getNecessary: 10
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 11
+Ratio: 1.0
+Perc: 1.0
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-22-38  46-30  48-46  8-24-38-22  28-30  45-47-31-29  42-28-30  43-45-29-31  40-24  0-14-16-32-30-14-28-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38  45-31  8-24-38-22  0-14-30-16  28-30  47-31-29  42-28-30  40-24-8-22-38  43-45-47  48-46-30-44-28-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38  45-31  8-24-38-22  0-14-30-16  28-30  47-31-29  43-45-47  42-28-44-30  40-24-8-22-38  48-46-30-28-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38-22  0-14-30  8-22-38  28-30  45-29-31-15  40-24-8-22  42-28-14-30  47-31-29  43-45-47  48-46-30-28-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38-22  0-14-30  8-22-38  28-30  47-31-29  42-28-30  45-29-31-15  40-24-8-22  43-45-47  48-46-30-14-28-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38-22  0-14-30  8-24-22-38  28-30  40-24  45-31-29  42-28-30  47-31-29-45-47  43-45  48-46-44-28-14-16-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38-22  0-14-30  8-24-22-38  28-30  40-24  47-31-29  42-28-30  45-29-31  43-45-47  48-46-30-32-16-14-28-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38-22  0-14-30  40-24-22-38-40  8-24  28-30  43-29-31  45-43  42-44  47-45-43  48-32-16-14-28-42-44-30-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38-22  0-14-30  40-38-22  8-24-40  28-30  43-29-31  45-43  42-44  47-45-43  48-32-30-16-14-28-42-44-30-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38-22  0-14-30  40-38-22  8-24-40  28-30-16-14-30  43-29-31  45-43  42-44  47-45-43  48-32-30-44-42-28-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38-22  0-14-30  47-31  8-24-38-22  45-47  43-45  28-14-30-16  48-46-44-28-30  40-24-8-22-38-36  42-28-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38-22  28-30  43-29-31  32-30  45-43  42-44  48-32  8-24-40-38  47-45-31-29-45-43  0-14-16-30-14-28-42-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ G _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38-22  28-30  43-29-31  45-43  42-44  40-38  8-24-40  48-32-30-16-14-30  47-45-31-29-45-43  0-14-28-42-44
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     _ _ _ 
+    _ _ _ _ 
+   _ _ _ _ G 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38-22  28-30  43-29-31  45-43  42-44  47-45-43  32-30-14-28-42-44-30  48-32  8-24-22-38-40-24  0-14-16-32
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  14-30  24-38-22  28-30  43-29-31  45-43  42-44  47-45-43  32-30-14-28-42-44-30  48-32  8-24-40-38-22  0-14-16-30-14
+Lookup number: 2
+Current depth: 12 out of 12
+Num records saved: 399411
+       G 
+      _ _ 
+     _ _ _ 
+    _ G _ _ 
+   _ G G _ G 
+  G G _ _ _ _ 
+ G G _ G G G _ 
+Num pieces left: 12
+Num moves Made: 9
+Move list:   38-22  16-30  21-23  7-21  32-16  48-32  8-24-40-38-22  44-30-32  28-14-16-30
+Lookup number: 8398460
+Min num moves: 12
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           21
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           60
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           182
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           940
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           5127
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           26893
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           121212
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           441409
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           1284534
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           3030756
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           4887476
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           20486
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           31529
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 7 vs 6)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.1214859437751004
+Perc: 0.891674127126231
+num moves made before getNecessary: 3
+Ratio: 1.2357207615593835
+Perc: 0.8092443140132062
+num moves made before getNecessary: 4
+Ratio: 1.2827823273683145
+Perc: 0.7795554854981085
+num moves made before getNecessary: 5
+Ratio: 1.3145764544312304
+Perc: 0.7607012864327193
+num moves made before getNecessary: 6
+Ratio: 1.342967705425337
+Perc: 0.7446195436868571
+num moves made before getNecessary: 7
+Ratio: 1.3755115264526672
+Perc: 0.7270022684425764
+num moves made before getNecessary: 8
+Ratio: 1.3932871802621487
+Perc: 0.7177271234289608
+num moves made before getNecessary: 9
+Ratio: 1.4159125920886642
+Perc: 0.7062582857073569
+num moves made before getNecessary: 10
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 11
+Ratio: 1.0
+Perc: 1.0
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  28-30  24-38  45-31-29  40-38  8-24-40  14-28-30  43-45-31-29  0-14-16-30-44  42-28-30  47-45-43-29-31  48-32-30-14
+Lookup number: 2
+FOUND A SOLUTION:
+       _ 
+      _ _ 
+     G _ _ 
+    _ _ _ _ 
+   _ _ _ _ _ 
+  _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 12
+Move list:   38-22  28-30  24-38  45-29-31  32-30  43-45-31-29  42-28-44  14-30  48-32  8-24-40-38-22-36  47-45-43-29  0-14-16-30-28-14
+Lookup number: 2
+End of search with depth 12 and triangle length 7
+Num records saved for prev depths: 4656
+Num records saved total: 458115
+SKIPING (3, 2)
+
+
+SKIPING (3, 3)
+
+
+SKIPING (4, 0)
+
+
+SKIPING (4, 1)
+
+
+Start search for solution starting with:
+       G 
+      G G 
+     G G G 
+    G G G G 
+   G G _ G G 
+  G G G G G G 
+ G G G G G G G 
+Num pieces left: 27
+Num moves Made: 0
+Move list: 
+Lookup number: 12
+
+
+DEBUG: trying depth 9
+End of search with depth 9 and triangle length 7
+Num records saved for prev depths: 0
+Num records saved total: 2
+DEBUG: trying depth 10
+End of search with depth 10 and triangle length 7
+Num records saved for prev depths: 2
+Num records saved total: 54
+DEBUG: trying depth 11
+End of search with depth 11 and triangle length 7
+Num records saved for prev depths: 54
+Num records saved total: 8571
+DEBUG: trying depth 12
+Current depth: 12 out of 12
+Num records saved: 337430
+       G 
+      G _ 
+     _ G _ 
+    _ _ G _ 
+   _ G _ _ _ 
+  _ G _ _ _ _ 
+ _ _ G _ G G G 
+Num pieces left: 10
+Num moves Made: 9
+Move list:   14-30  38-22  24-38  45-31  40-24-38  43-45-31  28-14-30-32  42-28-44  8-24-40-38-36
+Lookup number: 1770818
+Min num moves: 12
+Debug stats
+Num moves = 0
+visits to getBestMoveList:           25
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 1
+visits to getBestMoveList:           79
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 2
+visits to getBestMoveList:           212
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 3
+visits to getBestMoveList:           1112
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 4
+visits to getBestMoveList:           6310
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 5
+visits to getBestMoveList:           33295
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 6
+visits to getBestMoveList:           148601
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 7
+visits to getBestMoveList:           530850
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 8
+visits to getBestMoveList:           1519931
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 9
+visits to getBestMoveList:           3533512
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 10
+visits to getBestMoveList:           5639355
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 11
+visits to getBestMoveList:           23927
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+Num moves = 12
+visits to getBestMoveList:           35721
+Visits to Isolation filter:          0
+Visits to Isolation filter function: 0
+Close to Isolation filter:(off by 1) 0
+Close to Isolation filter:(off by 2) 0
+End DebugStats
+Testing branching improvement for forwards jumps: (current sample: 10 vs 5)
+num moves made before getNecessary: 0
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 1
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 2
+Ratio: 1.1353191489361703
+Perc: 0.8808095952023988
+num moves made before getNecessary: 3
+Ratio: 1.2387434554973822
+Perc: 0.8072696534234995
+num moves made before getNecessary: 4
+Ratio: 1.2849511472778101
+Perc: 0.7782397036015853
+num moves made before getNecessary: 5
+Ratio: 1.3143895649214088
+Perc: 0.7608094484984693
+num moves made before getNecessary: 6
+Ratio: 1.341730371511584
+Perc: 0.7453062263719997
+num moves made before getNecessary: 7
+Ratio: 1.3731910999585617
+Perc: 0.728230761202994
+num moves made before getNecessary: 8
+Ratio: 1.3931720215603902
+Perc: 0.7177864502905916
+num moves made before getNecessary: 9
+Ratio: 1.4177219087108042
+Perc: 0.705356948958589
+num moves made before getNecessary: 10
+Ratio: 1.0
+Perc: 1.0
+num moves made before getNecessary: 11
+Ratio: 1.0
+Perc: 1.0
+End of search with depth 12 and triangle length 7
+Num records saved for prev depths: 8571
+Num records saved total: 405215
+SKIPING (4, 3)
+
+
+SKIPING (4, 4)
+
+
+SKIPING (5, 0)
+
+
+SKIPING (5, 1)
+
+
+SKIPING (5, 2)
+
+
+SKIPING (5, 3)
+
+
+SKIPING (5, 4)
+
+
+SKIPING (5, 5)
+
+
+SKIPING (6, 0)
+
+
+SKIPING (6, 1)
+
+
+SKIPING (6, 2)
+
+
+SKIPING (6, 3)
+
+
+SKIPING (6, 4)
+
+
+SKIPING (6, 5)
+
+
+SKIPING (6, 6)
+
+
