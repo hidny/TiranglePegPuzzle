@@ -527,6 +527,7 @@ public class CornerTriangleBoard {
 		newBoard.historicMoveList = this.historicMoveList;
 		newBoard.numMovesMade = this.numMovesMade;
 		newBoard.numMovesMadeStartingFromInside = this.numMovesMadeStartingFromInside;
+		newBoard.usedOutsidePegs = this.usedOutsidePegs;
 		
 		if(isFirstJump) {
 			
@@ -606,8 +607,23 @@ public class CornerTriangleBoard {
 		
 	}
 	
+	public boolean lastMoveLandsInside() {
+		int lastLandingI = internalLastJumpCodeForMultiJumpMoves / cornerTriangle.length;
+		if(lastLandingI < this.numLayers) {
+			return true;
+		} else{
+			return false;
+		}
+	}
+	
+	private long curLookupNumber = -1;
 	public long getLookupNumber() {
-		return CornerTriangleLookup.convertToNumberSimple(cornerTriangle);
+		if(curLookupNumber == -1) {
+			curLookupNumber = CornerTriangleLookup.convertToNumberSimple(cornerTriangle, usedOutsidePegs);
+			return curLookupNumber;
+		} else {
+			return curLookupNumber;
+		}
 	}
 
 }
