@@ -6,7 +6,7 @@ public class CornerTriangleLookup {
 	//nah...
 
 	//Simple algo impossible to mess up lookup unless num element greater than 63
-	public static long convertToNumberSimple(boolean triangle[][]) {
+	public static long convertToNumberSimple(boolean triangle[][], boolean pegsOutsidelayers) {
 		long ret = 0L;
 		
 		long curNum=1L;
@@ -19,6 +19,10 @@ public class CornerTriangleLookup {
 				}
 				curNum *= mult;
 			}
+		}
+		
+		if(pegsOutsidelayers) {
+			ret += curNum;
 		}
 		
 		return ret;

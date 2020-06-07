@@ -106,6 +106,7 @@ public class CornerTriangleSearch {
 					
 					if(tmpNextMove.getNumPiecesLeft() == 0
 							|| (tmpNextMove.getNumPiecesLeft() == 1
+									&& tmpNextMove.arePegsOutsidelayers() == false
 							         && tmpNextMove.lastMoveLandsInside()//TODO: boolean to check if all pegs were moves
 									)) {
 						
@@ -126,6 +127,18 @@ public class CornerTriangleSearch {
 						
 						//TODO: get min combos of a.getNumMovesMade(); and a.getNumMovesMadeStartingFromInside();
 					
+					} else if(tmpNextMove.getNumPiecesLeft() == 1
+									&& tmpNextMove.arePegsOutsidelayers() == false) {
+
+						System.out.println("ERROR: WEIRD EDGE CASE:");
+						System.out.println("Advanced search:");
+						System.out.println("Found move list:");
+						System.out.println(tmpNextMove);
+						
+						numMovesCutoff = tmpNextMove.getNumMovesMade();
+						System.out.println("New numMoves cut off: " + numMovesCutoff);
+						
+						System.exit(1);
 					}
 					
 					int numMersonMoves = tmpNextMove.getNumMovesMadeStartingFromInside();

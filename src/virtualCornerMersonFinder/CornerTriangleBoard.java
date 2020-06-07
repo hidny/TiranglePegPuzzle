@@ -13,6 +13,21 @@ public class CornerTriangleBoard {
 
 	
 	public static void main(String args[]) {
+		
+		
+		CornerTriangleBoard test = new CornerTriangleBoard(5);
+		
+		String moves[] = "21-37  24-38  43-29-31  43-29  7-21-35  42-28-44-30-14  40-24-22  39-23-7-21-23  8-24-22-36".split("  ");
+		
+		for(int i=0; i<moves.length; i++) {
+			test = test.doOneMove(moves[i]);
+			System.out.println(test);
+		}
+		
+		
+		
+		
+		/*
 		CornerTriangleBoard test1 = new CornerTriangleBoard(3);
 
 		System.out.println(test1);
@@ -57,7 +72,7 @@ public class CornerTriangleBoard {
 			
 			System.out.println("Press enter to get to the next move");
 			//in.nextLine();
-		}
+		}*/
 	}
 	
 	private int numLayers = -1;
@@ -73,6 +88,8 @@ public class CornerTriangleBoard {
 
 	private String historicMoveList;
 	private int internalLastJumpCodeForMultiJumpMoves = -1;
+	
+	private boolean pegsOutsidelayers = false;
 
 	
 	public int getNumLayers() {
@@ -167,7 +184,8 @@ public class CornerTriangleBoard {
 		ret += "Num pieces left: " + numPiecesLeft + "\n";
 		ret += "Num moves Made: " + this.numMovesMade + "\n";
 		ret += "Num moves Made from inside: " + this.numMovesMadeStartingFromInside + "\n";
-		ret += "Move list: " + historicMoveList + "\n";
+		ret += "pegsOutsidelayers: " + this.pegsOutsidelayers + "\n";
+		ret += "Move list: " + this.historicMoveList + "\n";
 		ret += "Lookup number: " + this.getLookupNumber() + "\n";
 		ret += "\n";
 
@@ -530,7 +548,7 @@ public class CornerTriangleBoard {
 			newBoard.historicMoveList += SPACE_BETWEEN_MOVES + move;
 		} else {
 
-			//not a new move
+			//not a new move, but just outside layer coming back in from different angle:
 			
 			if(internalLastJumpCodeForMultiJumpMoves != from) {
 
@@ -541,8 +559,18 @@ public class CornerTriangleBoard {
 			}
 			
 		}
-
+		
 		newBoard.internalLastJumpCodeForMultiJumpMoves = to;
+
+		newBoard.pegsOutsidelayers = this.pegsOutsidelayers;
+
+		if(fromI >= this.numLayers && toI < this.numLayers) {
+			newBoard.pegsOutsidelayers = false;
+
+		} else if(fromI < this.numLayers && toI >= this.numLayers) {
+			newBoard.pegsOutsidelayers = true;
+			
+		}
 		
 		return newBoard;
 	}
@@ -561,9 +589,16 @@ public class CornerTriangleBoard {
 			int fromI = from / this.cornerTriangle.length;
 			int toI = to / this.cornerTriangle.length;
 			
+			
+			
 			if(fromI < this.numLayers || toI < this.numLayers) {
 				if(i == 0) {
+					
+
 					newBoard = newBoard.moveInternal(from + "-" + to, true);
+
+					
+
 				} else {
 					newBoard = newBoard.moveInternal(from + "-" + to, false);
 					
@@ -579,6 +614,10 @@ public class CornerTriangleBoard {
 				System.exit(1);
 			}
 
+		}
+		if(newBoard.historicMoveList.contains("21-37  24-38  43-29-31  43-29  7-21-35  42-28-44-30-14  40-24-22  39-23-7-21-23  8-24-22-36")) {
+			System.out.println("DEBUG");
+			
 		}
 		
 		if(newBoard == this) {
@@ -604,11 +643,15 @@ public class CornerTriangleBoard {
 	private long curLookupNumber = -1;
 	public long getLookupNumber() {
 		if(curLookupNumber == -1) {
-			curLookupNumber = CornerTriangleLookup.convertToNumberSimple(cornerTriangle);
+			curLookupNumber = CornerTriangleLookup.convertToNumberSimple(cornerTriangle, this.pegsOutsidelayers);
 			return curLookupNumber;
 		} else {
 			return curLookupNumber;
 		}
+	}
+
+	public boolean arePegsOutsidelayers() {
+		return pegsOutsidelayers;
 	}
 
 }
