@@ -11,7 +11,7 @@ public class CornerTriangleSearch {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int LAYERS = 4;
+		int LAYERS = 6;
 		
 		System.out.println("Trying " + LAYERS + " full layers with a move cut-off of " + INITIAL_NUM_MOVES_CUTOFF);
 		CornerTriangleBoard a = new CornerTriangleBoard(LAYERS);
@@ -105,7 +105,7 @@ public class CornerTriangleSearch {
 					
 					
 					if(tmpNextMove.getNumPiecesLeft() == 0
-							|| (tmpNextMove.getNumPiecesLeft() == 1 && tmpNextMove.isUsedOutsidePegs()
+							|| (tmpNextMove.getNumPiecesLeft() == 1
 							         && tmpNextMove.lastMoveLandsInside()//TODO: boolean to check if all pegs were moves
 									)) {
 						

@@ -70,10 +70,6 @@ public class CornerTriangleBoard {
 
 
 	private int numMovesMadeStartingFromInside;
-	
-	// if there's only 1 peg left within the layers and usedOutsidePegs is true,
-	// then it could that the last peg ends in the corner...
-	private boolean usedOutsidePegs;
 
 	private String historicMoveList;
 	private int internalLastJumpCodeForMultiJumpMoves = -1;
@@ -99,10 +95,6 @@ public class CornerTriangleBoard {
 
 	public int getNumMovesMadeStartingFromInside() {
 		return numMovesMadeStartingFromInside;
-	}
-
-	public boolean isUsedOutsidePegs() {
-		return usedOutsidePegs;
 	}
 
 	public String getHistoricMoveList() {
@@ -175,7 +167,6 @@ public class CornerTriangleBoard {
 		ret += "Num pieces left: " + numPiecesLeft + "\n";
 		ret += "Num moves Made: " + this.numMovesMade + "\n";
 		ret += "Num moves Made from inside: " + this.numMovesMadeStartingFromInside + "\n";
-		ret += "Used outside pegs: " + this.usedOutsidePegs + "\n";
 		ret += "Move list: " + historicMoveList + "\n";
 		ret += "Lookup number: " + this.getLookupNumber() + "\n";
 		ret += "\n";
@@ -527,7 +518,6 @@ public class CornerTriangleBoard {
 		newBoard.historicMoveList = this.historicMoveList;
 		newBoard.numMovesMade = this.numMovesMade;
 		newBoard.numMovesMadeStartingFromInside = this.numMovesMadeStartingFromInside;
-		newBoard.usedOutsidePegs = this.usedOutsidePegs;
 		
 		if(isFirstJump) {
 			
@@ -535,8 +525,6 @@ public class CornerTriangleBoard {
 			
 			if(fromI < this.numLayers) {
 				newBoard.numMovesMadeStartingFromInside++;
-			} else {
-				newBoard.usedOutsidePegs = true;
 			}
 			
 			newBoard.historicMoveList += SPACE_BETWEEN_MOVES + move;
@@ -591,9 +579,6 @@ public class CornerTriangleBoard {
 				System.exit(1);
 			}
 
-			if(fromI >= this.numLayers) {
-				newBoard.usedOutsidePegs = true;
-			}
 		}
 		
 		if(newBoard == this) {
@@ -619,7 +604,7 @@ public class CornerTriangleBoard {
 	private long curLookupNumber = -1;
 	public long getLookupNumber() {
 		if(curLookupNumber == -1) {
-			curLookupNumber = CornerTriangleLookup.convertToNumberSimple(cornerTriangle, usedOutsidePegs);
+			curLookupNumber = CornerTriangleLookup.convertToNumberSimple(cornerTriangle);
 			return curLookupNumber;
 		} else {
 			return curLookupNumber;
