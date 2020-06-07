@@ -177,8 +177,7 @@ public class CornerTriangleBoard {
 		ret += "Num moves Made from inside: " + this.numMovesMadeStartingFromInside + "\n";
 		ret += "Used outside pegs: " + this.usedOutsidePegs + "\n";
 		ret += "Move list: " + historicMoveList + "\n";
-		//TODO
-		//ret += "Lookup number: " + this.getLookupNumber() + "\n";
+		ret += "Lookup number: " + this.getLookupNumber() + "\n";
 		ret += "\n";
 
 		return ret;
@@ -526,22 +525,23 @@ public class CornerTriangleBoard {
 		}
 		
 		newBoard.historicMoveList = this.historicMoveList;
+		newBoard.numMovesMade = this.numMovesMade;
+		newBoard.numMovesMadeStartingFromInside = this.numMovesMadeStartingFromInside;
 		
 		if(isFirstJump) {
 			
-			newBoard.numMovesMade = this.numMovesMade + 1;
+			newBoard.numMovesMade++;
 			
 			if(fromI < this.numLayers) {
-				this.numMovesMadeStartingFromInside++;
+				newBoard.numMovesMadeStartingFromInside++;
 			} else {
-				this.usedOutsidePegs = true;
+				newBoard.usedOutsidePegs = true;
 			}
 			
 			newBoard.historicMoveList += SPACE_BETWEEN_MOVES + move;
 		} else {
 
 			//not a new move
-			newBoard.numMovesMade = this.numMovesMade;
 			
 			if(internalLastJumpCodeForMultiJumpMoves != from) {
 
@@ -579,12 +579,18 @@ public class CornerTriangleBoard {
 					newBoard = newBoard.moveInternal(from + "-" + to, false);
 					
 				}
+				
+				//TODO: debug numMovesMadeStartingFromInside!
+				if(newBoard.numMovesMadeStartingFromInside > 0) {
+					//System.out.println("hello");
+					//System.out.println(newBoard);
+				}
 			} else if(i==0) {
 				System.out.println("ERROR: first move completely outside the layers in CornerTriangleBoard doOneMove!");
 				System.exit(1);
 			}
 
-			if(fromI >= this.numLayers || toI >= this.numLayers) {
+			if(fromI >= this.numLayers) {
 				newBoard.usedOutsidePegs = true;
 			}
 		}
@@ -598,6 +604,10 @@ public class CornerTriangleBoard {
 		
 		return newBoard;
 		
+	}
+	
+	public long getLookupNumber() {
+		return CornerTriangleLookup.convertToNumberSimple(cornerTriangle);
 	}
 
 }
