@@ -6,16 +6,23 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+import triangleBoard5.utilFunctions;
+
 public class CornerTriangleSearch {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+
+		testWholeLayer(4);
 		
-		int LAYERS = 6;
+	}
+	
+	public static void testFilledLayer(int numLayers) {
 		
-		System.out.println("Trying " + LAYERS + " full layers with a move cut-off of " + INITIAL_NUM_MOVES_CUTOFF);
-		CornerTriangleBoard a = new CornerTriangleBoard(LAYERS);
+		System.out.println("Trying " + numLayers + " full layers with a move cut-off of " + INITIAL_NUM_MOVES_CUTOFF);
+		CornerTriangleBoard a = new CornerTriangleBoard(numLayers);
 		
+		search(a);
 		//4 full:
 		//Num moves Made: 5
 		//Num moves Made from inside: 3
@@ -23,9 +30,22 @@ public class CornerTriangleSearch {
 		//And:
 		//Num moves Made: 4
 		//Num moves Made from inside: 4
-
+	}
+	
+	public static void testWholeLayer(int numLayers) {
 		
-		search(a);
+		for(int j=0; j<Math.pow(2, utilFunctions.getTriangleNumber(numLayers)); j++) {
+			CornerTriangleBoard test = new CornerTriangleBoard(numLayers, j);
+			
+			System.out.println(test);
+			
+			int a[] = search(test);
+			
+			for(int i=0; i<a.length; i += 2) {
+				System.out.println("We could do "  + a[i] + " merson move(s) with " + a[i+1] + " move(s).");
+			}
+			System.out.println("-------------------------------------------");
+		}
 	}
 
 
@@ -44,7 +64,13 @@ public class CornerTriangleSearch {
 	
 	//TODO: organize logic:
 	//Breadth-First Search
-	public static void search(CornerTriangleBoard start) {
+	public static int[] search(CornerTriangleBoard start) {
+		
+		if(start.getLookupNumber() == 0) {
+			return new int[] {0, 0};
+		}
+		
+		ArrayList<Integer> ret = new ArrayList<Integer>();
 		
 		//Initialize arrays
 		listArray = new Queue[ARRAY_LENGTH];
@@ -103,42 +129,35 @@ public class CornerTriangleSearch {
 					
 					CornerTriangleBoard tmpNextMove = current.doOneMove(moves.get(i));
 					
+					//System.out.println(tmpNextMove);
 					
 					if(tmpNextMove.getNumPiecesLeft() == 0
 							|| (tmpNextMove.getNumPiecesLeft() == 1
 									&& tmpNextMove.arePegsOutsidelayers() == false
-							         && tmpNextMove.lastMoveLandsInside()//TODO: boolean to check if all pegs were moves
 									)) {
 						
 						int numMersonMoves = tmpNextMove.getNumMovesMadeStartingFromInside();
 
-						System.out.println("Advanced search:");
-						System.out.println("Found move list:");
-						System.out.println(tmpNextMove);
 						
 						numMovesCutoff = tmpNextMove.getNumMovesMade();
-						System.out.println("New numMoves cut off: " + numMovesCutoff);
 						
-						System.out.println("Press enter to get next solution");
-						in.nextLine();
+						//System.out.println("Advanced search:");
+						//System.out.println("Found move list:");
+						//System.out.println(tmpNextMove);
+						//System.out.println("New numMoves cut off: " + numMovesCutoff);
+						
+
+						ret.add(numMersonMoves);
+						ret.add(tmpNextMove.getNumMovesMade());
+						
+						//System.out.println("Press enter to get next solution");
+						//in.nextLine();
 						
 						//TODO: also use this...
 						//a.getNumMovesMade();
 						
 						//TODO: get min combos of a.getNumMovesMade(); and a.getNumMovesMadeStartingFromInside();
 					
-					} else if(tmpNextMove.getNumPiecesLeft() == 1
-									&& tmpNextMove.arePegsOutsidelayers() == false) {
-
-						System.out.println("ERROR: WEIRD EDGE CASE:");
-						System.out.println("Advanced search:");
-						System.out.println("Found move list:");
-						System.out.println(tmpNextMove);
-						
-						numMovesCutoff = tmpNextMove.getNumMovesMade();
-						System.out.println("New numMoves cut off: " + numMovesCutoff);
-						
-						System.exit(1);
 					}
 					
 					int numMersonMoves = tmpNextMove.getNumMovesMadeStartingFromInside();
@@ -179,6 +198,18 @@ public class CornerTriangleSearch {
 		} //END EACH MESON #
 		
 		System.out.println("End search");
+		
+		if(ret.size() == 0) {
+			System.out.println("ERROR: Didn't find any answers!");
+			System.exit(1);
+		}
+		int retInt[] = new int[ret.size()];
+		for(int i=0; i<retInt.length; i++) {
+			retInt[i] = ret.get(i);
+		}
+		
+		return retInt;
+		
 	}
 	
 

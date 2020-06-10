@@ -3,6 +3,8 @@ package virtualCornerMersonFinder;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import triangleBoard5.utilFunctions;
+
 
 //WARNING: this code is really really easy to mess up
 //READ IT THOROUGHLY!
@@ -131,8 +133,13 @@ public class CornerTriangleBoard {
 	public static final int EXTRA_LAYERS_ABOVE_LAYERS = 2;
 	
 
-	//TODO: for now, just fill the corner with pegs, but try every combo of peg/non-peg later
 	public CornerTriangleBoard(int numLayers) {
+									//Hack but whatever
+		this(numLayers, (int)Math.pow(2, utilFunctions.getTriangleNumber(numLayers)) - 1);
+	}
+	
+	//TODO: for now, just fill the corner with pegs, but try every combo of peg/non-peg later
+	public CornerTriangleBoard(int numLayers, int lookupNumber) {
 		
 		this.numLayers = numLayers;
 		
@@ -144,18 +151,28 @@ public class CornerTriangleBoard {
 			cornerTriangle[i] = new boolean[i+1];
 		}
 
+		int tmpLookup = lookupNumber;
+		int BASE = 2;
+
 		for(int i=0; i<cornerTriangle.length; i++) {
 			for(int j=0; j<cornerTriangle[i].length; j++) {
 
-				if(i<this.numLayers) {
+				if(i<this.numLayers && tmpLookup % BASE == 1) {
 					cornerTriangle[i][j] = true;
 					numPiecesLeft++;
 				} else {
 					//Always false:
 					cornerTriangle[i][j] = false;
 				}
+				
+				tmpLookup /= BASE;
 			}
 			
+		}
+		
+		if(this.getLookupNumber() != lookupNumber) {
+			System.out.println("ERROR: didn't setup new corner board with correct lookup number");
+			System.exit(1);
 		}
 		
 		numMovesMade = 0;
@@ -214,7 +231,7 @@ public class CornerTriangleBoard {
 		}
 		
 		this.numPiecesLeft--;
-		//this.lastLookupNumberResult = -1;
+		this.curLookupNumberResult = -1;
 	}
 	
 	
@@ -241,7 +258,7 @@ public class CornerTriangleBoard {
 		}
 		
 		this.numPiecesLeft++;
-		//this.lastLookupNumberResult = -1;
+		this.curLookupNumberResult = -1;
 	}
 
 	
@@ -536,6 +553,7 @@ public class CornerTriangleBoard {
 		newBoard.historicMoveList = this.historicMoveList;
 		newBoard.numMovesMade = this.numMovesMade;
 		newBoard.numMovesMadeStartingFromInside = this.numMovesMadeStartingFromInside;
+		newBoard.curLookupNumberResult = -1;
 		
 		if(isFirstJump) {
 			
@@ -593,15 +611,10 @@ public class CornerTriangleBoard {
 			
 			if(fromI < this.numLayers || toI < this.numLayers) {
 				if(i == 0) {
-					
-
 					newBoard = newBoard.moveInternal(from + "-" + to, true);
-
-					
 
 				} else {
 					newBoard = newBoard.moveInternal(from + "-" + to, false);
-					
 				}
 				
 				//TODO: debug numMovesMadeStartingFromInside!
@@ -630,23 +643,14 @@ public class CornerTriangleBoard {
 		return newBoard;
 		
 	}
-	
-	public boolean lastMoveLandsInside() {
-		int lastLandingI = internalLastJumpCodeForMultiJumpMoves / cornerTriangle.length;
-		if(lastLandingI < this.numLayers) {
-			return true;
-		} else{
-			return false;
-		}
-	}
-	
-	private long curLookupNumber = -1;
+
+	private long curLookupNumberResult = -1;
 	public long getLookupNumber() {
-		if(curLookupNumber == -1) {
-			curLookupNumber = CornerTriangleLookup.convertToNumberSimple(cornerTriangle, this.pegsOutsidelayers);
-			return curLookupNumber;
+		if(curLookupNumberResult == -1) {
+			curLookupNumberResult = CornerTriangleLookup.convertToNumberSimple(cornerTriangle, this.pegsOutsidelayers);
+			return curLookupNumberResult;
 		} else {
-			return curLookupNumber;
+			return curLookupNumberResult;
 		}
 	}
 
@@ -655,3 +659,49 @@ public class CornerTriangleBoard {
 	}
 
 }
+
+/* 6x6 solution:
+ * Num duplicate deleted from lookup: 198716
+Advanced search:
+Found move list:
+        G 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 9
+Num moves Made from inside: 6
+pegsOutsidelayers: false
+Move list:   32-48  16-32-50  26-24  57-41-25  51-33  36-52  56-40-58-42-26-44-60-42  0-16-32-34-50  18-16-34-52-54-36-18-0
+Lookup number: 1
+
+
+?? Wrong order... :(
+2nd solution (also probably the right one)
+Num duplicate deleted from lookup: 199166
+Advanced search:
+Found move list:
+        G 
+       _ _ 
+      _ _ _ 
+     _ _ _ _ 
+    _ _ _ _ _ 
+   _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ 
+ _ _ _ _ _ _ _ _ 
+Num pieces left: 1
+Num moves Made: 7
+Num moves Made from inside: 6
+pegsOutsidelayers: false
+Move list:   32-48  16-32  34-50  18-34  36-52  56-40-24-26-42-44-26  0-16-18-34-32-50-54-36-18-0
+Lookup number: 1
+
+
+New numMoves cut off: 7
+Press enter to get next solution
+
+*/
