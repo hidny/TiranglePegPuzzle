@@ -14,16 +14,21 @@ public class CornerTriangleSearch {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		testWholeLayer(3);
+		testFilledLayer(5);
 		
 	}
 	
 	public static void testFilledLayer(int numLayers) {
 		
 		System.out.println("Trying " + numLayers + " full layers with a move cut-off of " + INITIAL_NUM_MOVES_CUTOFF);
-		CornerTriangleBoard a = new CornerTriangleBoard(numLayers);
+		CornerTriangleBoard board = new CornerTriangleBoard(numLayers);
 		
-		searchOld(a);
+		int a[] = searchOld(board);
+		
+		for(int i=0; i<a.length; i += 2) {
+			System.out.println("In full layers: We could do "  + a[i] + " merson move(s) with " + a[i+1] + " move(s).");
+		}
+		System.out.println("-------------------------------------------");
 		//4 full:
 		//Num moves Made: 5
 		//Num moves Made from inside: 3

@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import triangleBoard5.PositonFilterTests;
+import virtualCornerMersonFinder.caseClasses.MersonMoveAndMovePossibility;
 
 
 //TODO: TEST!
@@ -13,24 +14,44 @@ import triangleBoard5.PositonFilterTests;
 
 public class CornerTriangleSearchNew {
 
+	
+	public static void main(String args[]) {
+		CornerTriangleBoard filled = new CornerTriangleBoard(5);
+		
+		System.out.println(filled);
+		
+		ArrayList<MersonMoveAndMovePossibility> ret = search(filled);
+		
+		System.out.println("Answers found:");
+		for(int i=0; i<ret.size(); i++) {
+			System.out.println("(num Merson, num Moves) = (" + ret.get(i).getNumMersonMoves() + ", " + ret.get(i).getNumMoves() + ")");
+		}
+		
+		//Answer for new CornerTriangleBoard(3):
+		//(num Merson, num Moves) = (3, 4)
+		
+		//Answer for new CornerTriangleBoard(1):
+		//(num Merson, num Moves) = (1, 2) (what?)
+	}
+
 	public static int INITIAL_NUM_MOVES_CUTOFF = 20;
 	
 	public static Queue<Long> foundCornerBoardQueueArray[][];
 	public static HashSet<Long> foundCornerBoardsArray[][];
-	public static int currentNumMovesCutoff = INITIAL_NUM_MOVES_CUTOFF;
+	public static int currentNumMersonMovesCutoff = INITIAL_NUM_MOVES_CUTOFF;
 	
 
 	public static int debugNumAdded = 0;
-	public static int debugNumDuplicateDeleted = 0;
+	public static int debugNumDeleted = 0;
 	
 	public static ArrayList<MersonMoveAndMovePossibility> search(CornerTriangleBoard start) {
 		
 		
 		int numLayersInit = start.getNumLayers();
+		int minNumMerson = PositonFilterTests.getNumMesonRegionsSimple(start.getCornerTriangle());
 		
 		//TODO: compare min to num moves at end...
-		
-		
+
 		foundCornerBoardQueueArray = new Queue[INITIAL_NUM_MOVES_CUTOFF][INITIAL_NUM_MOVES_CUTOFF];
 		foundCornerBoardsArray = new HashSet[INITIAL_NUM_MOVES_CUTOFF][INITIAL_NUM_MOVES_CUTOFF];
 
@@ -47,23 +68,18 @@ public class CornerTriangleSearchNew {
 		
 		ArrayList<MersonMoveAndMovePossibility> ret = new ArrayList<MersonMoveAndMovePossibility>();
 		
-		for(int slack = 0; slack<currentNumMovesCutoff; slack++) {
+		for(int i=0; i<currentNumMersonMovesCutoff; i++) {
 			
-			if(foundCornerBoardQueueArray[0][slack].isEmpty() == false) {
-				break;
-			}
-			
-			for(int i=0; i<currentNumMovesCutoff; i++) {
+			for(int j=i; j<INITIAL_NUM_MOVES_CUTOFF; j++) {
 				
-				if(foundCornerBoardQueueArray[i][i+slack].isEmpty() == false) {
-					ArrayList<MersonMoveAndMovePossibility> tmp = search(i, i+slack, numLayersInit);
+				if(foundCornerBoardQueueArray[i][j].isEmpty() == false) {
+					MersonMoveAndMovePossibility searchResult = search(i, j, numLayersInit);
 					
-					if(tmp.isEmpty() == false) {
-						ret.addAll(tmp);
+					if(searchResult != null) {
+						ret.add(searchResult);
+						break;
 					}
 					
-				} else {
-					break;
 				}
 			}
 		}
@@ -71,7 +87,6 @@ public class CornerTriangleSearchNew {
 
 		//Compare answer to min merson moves:
 		//(Prediction: minNumMersonMoves in search always = minNumMerson in getNumMesonRegionsSimple)
-		int minNumMerson = PositonFilterTests.getNumMesonRegionsSimple(start.getCornerTriangle());
 		if(ret.get(0).getNumMersonMoves() >  minNumMerson) {
 			System.out.println("FOUND that the minNumMerson is lower than the min merson moves found with search!");
 			System.out.println(start);
@@ -83,39 +98,79 @@ public class CornerTriangleSearchNew {
 	}
 
 
-	public static ArrayList<MersonMoveAndMovePossibility> search(int numMerson, int numMoves, int numLayers) {
+	public static MersonMoveAndMovePossibility search(int numMerson, int numMoves, int numLayers) {
 	
 		if(numMoves == INITIAL_NUM_MOVES_CUTOFF) {
 			System.out.println("GIVE UP because numMoves == INITIAL_NUM_MOVES_CUTOFF");
 			System.exit(1);
 		}
 
-		ArrayList<MersonMoveAndMovePossibility> ret = new ArrayList<MersonMoveAndMovePossibility>();
+		//Try to see if there's a solution already within the queue:
+		MersonMoveAndMovePossibility ret = searchForSolutionInQueue(numMerson, numMoves, numLayers);
+
+		if(ret != null) {
+			return ret;
+		}
+		
 		
 		System.out.println("Start search where numMerson = " + numMoves + " and numMoves = " + numMoves);
 
+		FOUND_POSSIBILITY:
 		while(foundCornerBoardQueueArray[numMerson][numMoves].isEmpty() == false) {
 
 			CornerTriangleBoard current = new CornerTriangleBoard(numLayers, foundCornerBoardQueueArray[numMerson][numMoves].remove());
+			debugNumDeleted++;
 
-			//SANITY TEST
-			boolean alreadyFoundPosition1 = false;
-			long lookup1 = current.getLookupNumber();
 			
-			SEARCH_POS_ALREADY_FOUND_SANITY:
+			boolean alreadyFoundPosition1 = false;
+			
+			//SANITY TEST VARIABLE
+			boolean acceptableCase = false;
+			//END SANITY TEST VARIABLE
+			
+			long lookup1 = current.getLookupNumber();
+
+			//DEBUG
+			if(lookup1 == 32769) {
+				System.out.println("DEBUG:");
+				System.out.println(current);
+				System.out.println("END DEBUG");
+			}
+			//END DEBUG
+			
+			SEARCH_POS_ALREADY_FOUND:
 			for(int numMerson2=0; numMerson2<=numMerson; numMerson2++) {
 				for(int numMoves2=0; numMoves2<=numMoves; numMoves2++) {
+
+					//Avoid finding the position we just dequeued:
+					if(numMerson2 == numMerson && numMoves2 == numMoves) {
+						continue;
+					}
+
 					if(foundCornerBoardsArray[numMerson2][numMoves2].contains(lookup1)) {
+						
 						alreadyFoundPosition1 = true;
-						break SEARCH_POS_ALREADY_FOUND_SANITY;
+
+						if((numMerson2 == numMerson-1 && numMoves2 == numMoves) || numMerson2 == numMerson) {
+							acceptableCase = true;
+						} else {
+							acceptableCase = false;
+							break SEARCH_POS_ALREADY_FOUND;
+						}
 					}
 				}
 			}
 
-			if(alreadyFoundPosition1) {
-				System.out.println("ERROR: put duplicate position into the queue!");
-				System.exit(1);
+			//Using acceptableCase == true, means I'm doing a sanity check:
+			if(alreadyFoundPosition1 && acceptableCase == true) {
+				System.out.println("DEBUG: found acceptable case where there's a duplicate position in the queue");
 				continue;
+
+			
+			} else if(alreadyFoundPosition1 && acceptableCase == false) {
+				System.out.println("ERROR: put duplicate position into the queue in a way that should not happen!");
+				System.out.println(current);
+				System.exit(1);
 			}
 			//END SANITY TEST
 			 
@@ -128,43 +183,54 @@ public class CornerTriangleSearchNew {
 				
 				//System.out.println(tmpNextMove);
 				
+				int numMersonMovesNextMove = numMerson;
+				if(tmpNextMove.getNumMovesMadeStartingFromInside() == 1) {
+					numMersonMovesNextMove = numMerson + 1;
+
+				} else if(tmpNextMove.getNumMovesMadeStartingFromInside() > 1
+						|| tmpNextMove.getNumMovesMadeStartingFromInside() < 0) {
+					System.out.println("ERROR: output of getNumMovesMadeStartingFromInside does not make sense in CornerTriangleSearchNew");
+					System.exit(1);
+
+				}
+	
+				int numMovesMadeNextMove = numMoves + 1;
+
+
 				if(tmpNextMove.getNumPiecesLeft() == 0
 						|| (tmpNextMove.getNumPiecesLeft() == 1
 								&& tmpNextMove.arePegsOutsidelayers() == false
 								)) {
-					
-					int numMersonMoves = tmpNextMove.getNumMovesMadeStartingFromInside();
 
-					
-					currentNumMovesCutoff = tmpNextMove.getNumMovesMade();
-					
-					//System.out.println("Advanced search:");
-					//System.out.println("Found move list:");
-					//System.out.println(tmpNextMove);
-					//System.out.println("New numMoves cut off: " + numMovesCutoff);
-					
-					ret.add(new MersonMoveAndMovePossibility(numMersonMoves, tmpNextMove.getNumMovesMade()));
-					
-					//System.out.println("Press enter to get next solution");
-					//in.nextLine();
-					
-					//TODO: also use this...
-					//a.getNumMovesMade();
-					
-					//TODO: get min combos of a.getNumMovesMade(); and a.getNumMovesMadeStartingFromInside();
+					//At this point, we found a solution, but it might not be optimal
+
+					if(numMersonMovesNextMove > numMerson) {
+						//Keep searching for a more optimal move that isn't merson (doesn't start from inside the structure)
+						
+					} else {
+						
+						//Celebrate!
+
+						//System.out.println("Found move list:");
+						//System.out.println(tmpNextMove);
+						
+						currentNumMersonMovesCutoff = numMersonMovesNextMove;
+
+						//System.out.println("New numMoves cut off: " + numMersonMovesNextMove);
+						
+						ret =new MersonMoveAndMovePossibility(numMersonMovesNextMove, numMovesMadeNextMove);
+
+						//System.out.println("Press enter to get next solution");
+						//in.nextLine();
+
+						break FOUND_POSSIBILITY;
+					}
 				
 				}
 				
-				int numMersonMovesNextMove = tmpNextMove.getNumMovesMadeStartingFromInside();
-				int numMovesMadeNextMove = numMoves + 1;
+				
 				long lookupNextMove = tmpNextMove.getLookupNumber();
-				
-				if(numMersonMovesNextMove > numMerson + 1) {
-					System.out.println("ERROR: unexpected number of merson moves in advanced search!");
-					System.exit(1);
-				}
-				
-				
+
 				boolean alreadyFoundPosition2 = false;
 				
 				SEARCH_POS_ALREADY_FOUND:
@@ -183,10 +249,25 @@ public class CornerTriangleSearchNew {
 					foundCornerBoardsArray[numMersonMovesNextMove][numMovesMadeNextMove].add(lookupNextMove);
 					foundCornerBoardQueueArray[numMersonMovesNextMove][numMovesMadeNextMove].add(lookupNextMove);
 
+					//DEBUG
+					if(lookupNextMove == 32769) {
+						System.out.println("--------------------");
+						System.out.println("DEBUG current move:");
+						System.out.println("   (num Merson, num Moves) = (" + numMerson + ", " + numMoves + ")");
+						System.out.println(current);
+						
+						System.out.println("DEBUG next move:");
+						System.out.println("   (num next Merson, num next Moves) = (" + numMersonMovesNextMove + ", " + numMovesMadeNextMove + ")");
+						System.out.println(tmpNextMove);
+						System.out.println("END DEBUG next move");
+						System.out.println("--------------------");
+					}
+					//END DEBUG
+					
 					debugNumAdded++;
 					if(debugNumAdded % 1000 == 0) {
 						System.out.println("Num added to queue: " + debugNumAdded);
-						System.out.println("Num duplicate deleted from lookup: " + debugNumDuplicateDeleted);
+						System.out.println("Num duplicate deleted from queue: " + debugNumDeleted);
 					}
 					
 				}
@@ -199,6 +280,56 @@ public class CornerTriangleSearchNew {
 
 		return ret;
 
+	}
+	
+	
+	private static MersonMoveAndMovePossibility searchForSolutionInQueue(int numMerson, int numMoves, int numLayers) {
+
+		if(numMoves == INITIAL_NUM_MOVES_CUTOFF) {
+			System.out.println("GIVE UP because numMoves == INITIAL_NUM_MOVES_CUTOFF");
+			System.exit(1);
+		}
+
+		MersonMoveAndMovePossibility ret = null;
+		
+		System.out.println("Start search solution in queue where numMerson = " + numMerson + " and numMoves = " + numMoves);
+		
+		//new queue because this algo unfortunately destroys the original queue...
+		Queue<Long> reversedCopyOfQueue= new LinkedList<Long>();
+		
+		FOUND_POSSIBILITY:
+		while(foundCornerBoardQueueArray[numMerson][numMoves].isEmpty() == false) {
+
+			long currentLookup = foundCornerBoardQueueArray[numMerson][numMoves].remove();
+			reversedCopyOfQueue.add(currentLookup);
+			CornerTriangleBoard current = new CornerTriangleBoard(numLayers, currentLookup);
+			
+			//TODO: make function out of condition
+			if(current.getNumPiecesLeft() == 0
+					|| (current.getNumPiecesLeft() == 1
+							&& current.arePegsOutsidelayers() == false
+							)) {
+			//END TODO
+				currentNumMersonMovesCutoff = numMerson;
+
+				//System.out.println("New numMoves cut off: " + numMersonMovesNextMove);
+				
+				ret =new MersonMoveAndMovePossibility(numMerson, numMoves);
+
+				//System.out.println("Press enter to get next solution");
+				//in.nextLine();
+
+				break FOUND_POSSIBILITY;
+			}
+			
+		}
+		
+		foundCornerBoardQueueArray[numMerson][numMoves] = reversedCopyOfQueue;
+		
+		System.out.println("End search solution in queue where numMerson = " + numMoves + " and numMoves = " + numMoves);
+		
+		
+		return ret;
 	}
 	
 	

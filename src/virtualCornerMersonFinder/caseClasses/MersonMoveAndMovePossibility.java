@@ -1,4 +1,4 @@
-package virtualCornerMersonFinder;
+package virtualCornerMersonFinder.caseClasses;
 
 public class MersonMoveAndMovePossibility {
 

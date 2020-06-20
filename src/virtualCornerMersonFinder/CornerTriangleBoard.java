@@ -151,6 +151,17 @@ public class CornerTriangleBoard {
 			cornerTriangle[i] = new boolean[i+1];
 		}
 
+		buildCornerTriangleBasedOnLookupNumber(lookupNumber);
+
+		numMovesMade = 0;
+		numMovesMadeStartingFromInside = 0;
+		
+		historicMoveList ="";
+		
+	}
+	
+	private void buildCornerTriangleBasedOnLookupNumber(long lookupNumber) {
+
 		long tmpLookup = lookupNumber;
 		int BASE = 2;
 
@@ -170,16 +181,17 @@ public class CornerTriangleBoard {
 			
 		}
 		
+		if(tmpLookup % BASE == 1) {
+			this.pegsOutsidelayers = true;
+			tmpLookup /= BASE;
+		}
+		
+		//SANITY CHECK
 		if(this.getLookupNumber() != lookupNumber) {
 			System.out.println("ERROR: didn't setup new corner board with correct lookup number");
 			System.exit(1);
 		}
-		
-		numMovesMade = 0;
-		numMovesMadeStartingFromInside = 0;
-		
-		historicMoveList ="";
-		
+		//END SANITY CHECK
 	}
 	
 	public String toString() {
@@ -618,20 +630,19 @@ public class CornerTriangleBoard {
 				}
 				
 				//TODO: debug numMovesMadeStartingFromInside!
-				if(newBoard.numMovesMadeStartingFromInside > 0) {
+				//if(newBoard.numMovesMadeStartingFromInside > 0) {
 					//System.out.println("hello");
 					//System.out.println(newBoard);
-				}
+				//}
 			} else if(i==0) {
 				System.out.println("ERROR: first move completely outside the layers in CornerTriangleBoard doOneMove!");
 				System.exit(1);
 			}
 
 		}
-		if(newBoard.historicMoveList.contains("21-37  24-38  43-29-31  43-29  7-21-35  42-28-44-30-14  40-24-22  39-23-7-21-23  8-24-22-36")) {
-			System.out.println("DEBUG");
-			
-		}
+		//if(newBoard.historicMoveList.contains("21-37  24-38  43-29-31  43-29  7-21-35  42-28-44-30-14  40-24-22  39-23-7-21-23  8-24-22-36")) {
+		//	System.out.println("DEBUG");
+		//}
 		
 		if(newBoard == this) {
 			System.out.println("ERROR blank move!");
