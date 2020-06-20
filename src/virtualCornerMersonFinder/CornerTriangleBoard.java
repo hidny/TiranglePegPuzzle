@@ -139,7 +139,7 @@ public class CornerTriangleBoard {
 	}
 	
 	//TODO: for now, just fill the corner with pegs, but try every combo of peg/non-peg later
-	public CornerTriangleBoard(int numLayers, int lookupNumber) {
+	public CornerTriangleBoard(int numLayers, long lookupNumber) {
 		
 		this.numLayers = numLayers;
 		
@@ -151,7 +151,7 @@ public class CornerTriangleBoard {
 			cornerTriangle[i] = new boolean[i+1];
 		}
 
-		int tmpLookup = lookupNumber;
+		long tmpLookup = lookupNumber;
 		int BASE = 2;
 
 		for(int i=0; i<cornerTriangle.length; i++) {

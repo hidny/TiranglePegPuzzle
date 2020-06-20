@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+import triangleBoard5.PositonFilterTests;
 import triangleBoard5.utilFunctions;
 
 public class CornerTriangleSearch {
@@ -13,7 +14,7 @@ public class CornerTriangleSearch {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		testWholeLayer(4);
+		testWholeLayer(3);
 		
 	}
 	
@@ -22,7 +23,7 @@ public class CornerTriangleSearch {
 		System.out.println("Trying " + numLayers + " full layers with a move cut-off of " + INITIAL_NUM_MOVES_CUTOFF);
 		CornerTriangleBoard a = new CornerTriangleBoard(numLayers);
 		
-		search(a);
+		searchOld(a);
 		//4 full:
 		//Num moves Made: 5
 		//Num moves Made from inside: 3
@@ -39,7 +40,7 @@ public class CornerTriangleSearch {
 			
 			System.out.println(test);
 			
-			int a[] = search(test);
+			int a[] = searchOld(test);
 			
 			for(int i=0; i<a.length; i += 2) {
 				System.out.println("We could do "  + a[i] + " merson move(s) with " + a[i+1] + " move(s).");
@@ -52,9 +53,9 @@ public class CornerTriangleSearch {
 	public static Scanner in = new Scanner(System.in);
 	
 	public static Queue<CornerTriangleBoard> listArray[];
-	
-	public static HashSet<Long> foundCornerBoardsArray[];
 
+	public static HashSet<Long> foundCornerBoardsArray[];
+	
 	public static int ARRAY_LENGTH = 20;
 	
 	public static int debugNumAdded = 0;
@@ -62,9 +63,10 @@ public class CornerTriangleSearch {
 	
 	public static int INITIAL_NUM_MOVES_CUTOFF = 20;
 	
+	
 	//TODO: organize logic:
 	//Breadth-First Search
-	public static int[] search(CornerTriangleBoard start) {
+	public static int[] searchOld(CornerTriangleBoard start) {
 		
 		if(start.getLookupNumber() == 0) {
 			return new int[] {0, 0};
