@@ -68,7 +68,27 @@ public class CornerTriangleSearchNew {
 		
 		ArrayList<MersonMoveAndMovePossibility> ret = new ArrayList<MersonMoveAndMovePossibility>();
 		
-		for(int i=0; i<currentNumMersonMovesCutoff; i++) {
+		
+		//1st possible row:
+		for(int j=0; j<currentNumMersonMovesCutoff; j++) {
+			for(int i=j; i<=minNumMerson; i++) {
+
+				if(foundCornerBoardQueueArray[i][j].isEmpty() == false) {
+					MersonMoveAndMovePossibility searchResult = search(i, j, numLayersInit);
+					
+					if(searchResult != null) {
+						ret.add(searchResult);
+						break;
+					}
+					
+				}
+			}
+		}
+		
+		/*
+		//Init:
+		
+		for(int i=minNumMerson+1; i<currentNumMersonMovesCutoff; i++) {
 			
 			for(int j=i; j<INITIAL_NUM_MOVES_CUTOFF; j++) {
 				
@@ -83,7 +103,7 @@ public class CornerTriangleSearchNew {
 				}
 			}
 		}
-		
+		*/
 
 		//Compare answer to min merson moves:
 		//(Prediction: minNumMersonMoves in search always = minNumMerson in getNumMesonRegionsSimple)
@@ -163,7 +183,7 @@ public class CornerTriangleSearchNew {
 
 			//Using acceptableCase == true, means I'm doing a sanity check:
 			if(alreadyFoundPosition1 && acceptableCase == true) {
-				System.out.println("DEBUG: found acceptable case where there's a duplicate position in the queue");
+				//System.out.println("DEBUG: found acceptable case where there's a duplicate position in the queue");
 				continue;
 
 			
@@ -265,7 +285,7 @@ public class CornerTriangleSearchNew {
 					//END DEBUG
 					
 					debugNumAdded++;
-					if(debugNumAdded % 1000 == 0) {
+					if(debugNumAdded % 10000 == 0) {
 						System.out.println("Num added to queue: " + debugNumAdded);
 						System.out.println("Num duplicate deleted from queue: " + debugNumDeleted);
 					}
