@@ -10,7 +10,7 @@ public class triangleRecord {
 	
 
 
-	public triangleRecord(int numMovesToGetToPos, TriangleBoard board, int depthUsedInSearch) {
+	public triangleRecord(int numMovesToGetToPos, int depthUsedInSearch) {
 
 		this.numMovesToGetToPos = numMovesToGetToPos;
 		
@@ -18,7 +18,7 @@ public class triangleRecord {
 
 	}
 
-	public void updateNumMovesToGetToPos(int numMovesToGetToPos, TriangleBoard board, int depthUsedInSearch) {
+	public void updateNumMovesToGetToPos(int numMovesToGetToPos, int depthUsedInSearch) {
 		if(numMovesToGetToPos >= this.numMovesToGetToPos && depthUsedInSearch == depthUsedToFindRecord) {
 			System.err.println("ERROR: updating numMovesToGetThere when there wasn't an improvement");
 			System.exit(1);

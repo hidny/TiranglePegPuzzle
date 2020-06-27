@@ -1,4 +1,4 @@
-package triangleBoard5;
+package triangleBoardCheater;
 
 
 //So cool: https://pepkin88.me/triangle-peg-solitaire/
@@ -6,6 +6,10 @@ package triangleBoard5;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+
+import triangleBoard5.PositonFilterTests;
+import triangleBoard5.triangleRecord;
+import triangleBoard5.utilFunctions;
 
 
 //Old ideas:
@@ -23,9 +27,9 @@ public class TriangleSolve {
 	// TODO: try finding all optimal solutions later...
 
 	//TODO: use pen & paper to figure out which layer actually needs getNecessaryFilter
-	public static final int LENGTH = 8;
+	public static final int LENGTH = 4;
 
-	public static int MAX_DEPTH_TOTAL = 13;
+	public static int MAX_DEPTH_TOTAL = 5;
 
 	public static boolean SEARCH_SINGLE_GOAL = false;
 	public static int GOAL_I = 0;
@@ -42,10 +46,6 @@ public class TriangleSolve {
 		for(int i=0; i<MAX_DEPTH_TOTAL + 1; i++) {
 
 			debugVisitsPerNumMoves[i] = 0;
-			debugIsolationFilterPerNumMoves[i] = 0;
-			debugIsolationFilterTriedPerNumMoves[i] = 0;
-			debugIsolationFilterClosePerNumMoves[i] = 0;
-			debugIsolationFilterClosePerNumMoves2[i] = 0;
 		}
 		//END DEBUG STATS
 		
@@ -58,11 +58,11 @@ public class TriangleSolve {
 		System.out.println("Giving up after reaching a max depth of " + MAX_DEPTH_TOTAL);
 		System.out.println();
 
-		TriangleBoard boardStart;
+		TriangleBoardCheater boardStart;
 		
 		for(int i=0; i<LENGTH; i++) {
 			for(int j=0; j<=i; j++) {
-				boardStart = new TriangleBoard(LENGTH);
+				boardStart = new TriangleBoardCheater(LENGTH);
 				boardStart.removePiece(i * LENGTH + j);
 				
 				long lookup = boardStart.getLookupNumber();
@@ -77,6 +77,7 @@ public class TriangleSolve {
 				}
 				
 				initRecordedTriangles(LENGTH);
+				System.out.println("start!");
 				getBestMoveList(boardStart);
 				
 			}
@@ -100,7 +101,7 @@ public class TriangleSolve {
 	}
 	
 	
-	public static void getBestMoveList(TriangleBoard board) {
+	public static void getBestMoveList(TriangleBoardCheater board) {
 
 		initRecordedTriangles(board.length());
 
@@ -127,28 +128,12 @@ public class TriangleSolve {
 	}
 	
 	
-	public static int debugNumFilteredOut = 0;
-	public static int debugNumFiltered = 0;
 	public static int debugVisitsPerNumMoves[] = new int[MAX_DEPTH_TOTAL+1];
-	public static int debugIsolationFilterPerNumMoves[] = new int[MAX_DEPTH_TOTAL+1];
-	public static int debugIsolationFilterTriedPerNumMoves[] = new int[MAX_DEPTH_TOTAL+1];
-	public static int debugIsolationFilterClosePerNumMoves[] = new int[MAX_DEPTH_TOTAL+1];
-	public static int debugIsolationFilterClosePerNumMoves2[] = new int[MAX_DEPTH_TOTAL+1];
 	
 
-	//TODO: keep experimenting and changing this after every optimizaion made:
-	//For Trig 9
-	public static boolean isolationFilterIsWorthwhile(TriangleBoard board) {
-		if(LENGTH == 9) {
-			return board.getNumMovesMade() >= 14 || (board.getNumMovesMade() == 13 && board.getNumPiecesLeft() <= utilFunctions.getTriangleNumber(LENGTH)/2 );
-		} else {
-			return false;
-		}
-	}
-	
 	private static int DEPTH_USED_IN_SEARCH = -1;
 	
-	public static void getBestMoveList(TriangleBoard board, int curMaxDepth) {
+	public static void getBestMoveList(TriangleBoardCheater board, int curMaxDepth) {
 
 		debugVisitsPerNumMoves[board.getNumMovesMade()]++;
 		if(curMaxDepth == 3) {
@@ -167,20 +152,21 @@ public class TriangleSolve {
 	
 					System.out.println("Num moves = " + i);
 					System.out.println("visits to getBestMoveList:           " + debugVisitsPerNumMoves[i]);
-					System.out.println("Visits to Isolation filter:          " + debugIsolationFilterPerNumMoves[i]);
-					System.out.println("Visits to Isolation filter function: " + debugIsolationFilterTriedPerNumMoves[i]);
-					System.out.println("Close to Isolation filter:(off by 1) " + debugIsolationFilterClosePerNumMoves[i]);
-					System.out.println("Close to Isolation filter:(off by 2) " + debugIsolationFilterClosePerNumMoves2[i]);
+				
 				}
 				System.out.println("End DebugStats");
 				
 			}
 		}
 
-		if(board.getNumPiecesLeft() == 1) {
+		//Less than or equal to 1 for the cheater triangle:
+		if(board.getNumPiecesLeft() == 0) {
 			System.out.println("FOUND A SOLUTION:");
 			board.draw();
 			return;
+		} else if(board.getNumPiecesLeft() < 0) {
+			System.out.println("ERROR: impossible board!");
+			System.exit(1);
 		}
 		
 		long lookup = board.getLookupNumber();
@@ -225,29 +211,6 @@ public class TriangleSolve {
 				mustBe100percentMesonEfficient = true;
 			}
 			
-			int numMovesLeftBasedOnPegIsolationSpanningTree = 0;
-			
-			//Only bother doing this calc when there's not many pegs left:
-			if(isolationFilterIsWorthwhile(board)) {
-				numMovesLeftBasedOnPegIsolationSpanningTree = PositonFilterTests.getMinMovesBasedOnIsolationSpanningTree(board.getTriangle(), board.getNumPiecesLeft());
-				
-				debugIsolationFilterTriedPerNumMoves[board.getNumMovesMade()]++;
-			}
-			
-			if(board.getNumMovesMade() + numMovesLeftBasedOnPegIsolationSpanningTree > DEPTH_USED_IN_SEARCH) {
-				debugIsolationFilterPerNumMoves[board.getNumMovesMade()]++;
-				return;
-			} else {
-				if(isolationFilterIsWorthwhile(board)) {
-					
-					if(board.getNumMovesMade() + numMovesLeftBasedOnPegIsolationSpanningTree + 1 > DEPTH_USED_IN_SEARCH) {
-						debugIsolationFilterClosePerNumMoves[board.getNumMovesMade()]++;
-					} else if(board.getNumMovesMade() + numMovesLeftBasedOnPegIsolationSpanningTree + 2 > DEPTH_USED_IN_SEARCH) {
-						debugIsolationFilterClosePerNumMoves2[board.getNumMovesMade()]++;
-					}
-					
-				}
-			}
 		}
 
 		//END APPLY FILTER AFTER WE NOTICE POSITION IS NOT FOUND:
@@ -266,12 +229,11 @@ public class TriangleSolve {
 		
 		//get moves available:
 		ArrayList<String> moves;
-		if(curMaxDepth == 2) {
-			moves = board.getFullMovesWith2MovesAwayFilters(mustBe100percentMesonEfficient);
-			
-		} else {
-			moves = board.getNecessaryFullMovesToCheck(mustBe100percentMesonEfficient);
-		}
+		
+		//Getting full moves because I'm not sure if getNecessary still works with the new cheater rules...
+		//TODO: investigate reinstating the getNecessaryFullCheatMovesToCheck function.
+		moves = board.getFullMovesExcludingRepeatMoves(mustBe100percentMesonEfficient);
+		
 		
 		moves = PositonFilterTests.excludeMovesThatLeadToSameOutcome(board, moves);
 			

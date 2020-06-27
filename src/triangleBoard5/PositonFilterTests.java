@@ -3,6 +3,7 @@ package triangleBoard5;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import triangleBoardInterface.TriangleBoardI;
 import utils.graph.GraphEdge;
 
 public class PositonFilterTests {
@@ -429,7 +430,7 @@ public class PositonFilterTests {
 	
 	
 	//Pre: each move in ArrayList<String> moves is valid on the TriangleBoard in input
-	public static ArrayList<String> excludeMovesThatLeadToSameOutcome(TriangleBoard triangle, ArrayList<String> moves) {
+	public static ArrayList<String> excludeMovesThatLeadToSameOutcome(TriangleBoardI triangle, ArrayList<String> moves) {
 		
 		//Initialize to avoid resize:
 		HashSet<Long> setOfPos = new HashSet<Long>(moves.size() * 2);
@@ -443,7 +444,7 @@ public class PositonFilterTests {
 				ret.add(moves.get(i));
 
 			} else {
-				TriangleBoard tmpMovedPos = triangle.doOneMove(moves.get(i));
+				TriangleBoardI tmpMovedPos = triangle.doOneMove(moves.get(i));
 				long lookup = TriangleLookup.convertToNumberWithComboTricksAndSymmetry(tmpMovedPos.getTriangle(), tmpMovedPos.getNumPiecesLeft());
 				
 				if(setOfPos.contains(lookup) == false) {

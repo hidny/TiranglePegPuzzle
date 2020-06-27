@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+import triangleBoardInterface.TriangleBoardI;
+
 //Hard limit on number of records:
 //20344823
-public class TriangleBoard {
+public class TriangleBoard implements TriangleBoardI {
 	//Only hard-copies allow
 	
 	public static void main(String args[]) {
@@ -240,7 +242,7 @@ public class TriangleBoard {
 	
 //This works, but isn't going to be used,
 	//unless we do a forward save and backwards search:
-	public ArrayList<String> getNecessaryFullBackwardsMovesToCheck(boolean mustBe100percentMesonEfficient) {
+	public ArrayList<String> getNecessaryFullMovesToCheck(boolean mustBe100percentMesonEfficient) {
 		
 		ArrayList<String> fullList = getFullMovesExcludingRepeatMoves(mustBe100percentMesonEfficient);
 		ArrayList<String> neededList = new ArrayList<String>();
