@@ -3,6 +3,7 @@ package triangleBoard5;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import triangleBoardCheater.TriangleBoardCheater;
 import triangleBoardInterface.TriangleBoardI;
 import utils.graph.GraphEdge;
 
@@ -213,8 +214,6 @@ public class PositonFilterTests {
 		
 	}
 	
-	//TODO: refine GetMinMovesBasedOnIsolation with min spanning tree
-	//(Reuse Advent of code's GraphUtils and GraphEdge) 
 	public static int getMinMovesBasedOnIsolationSpanningTree(boolean triangle[][], int countOfPegs) {
 		int adjacencyMatrix[][] = createAdjacencyMatrix(triangle, countOfPegs);
 		
@@ -455,5 +454,65 @@ public class PositonFilterTests {
 		}
 		
 		return ret;
+	}
+	
+	
+	public static int debugNumFilterCheater = 0;
+	public static int debugNumFilterCheaterMissed = 0;
+	
+	//TODO
+	public static int getCheaterHeuristicMixedWithNumMesonRegionsSimple(TriangleBoardI board, int minNumMovesTolerable) {
+		
+		int numMersonRegions = getNumMesonRegionsSimple(board.getTriangle());
+		
+		
+		if(( board.getTriangle().length < 9
+				&& numMersonRegions <= minNumMovesTolerable)
+				||
+				( board.getTriangle().length == 9
+				&& numMersonRegions == minNumMovesTolerable
+				&& board.getNumMovesMade() < 5)
+				//&& false)
+				|| 
+				( board.getTriangle().length == 10
+				&& numMersonRegions == minNumMovesTolerable
+				&& board.getNumMovesMade() < 5)
+				) {
+		
+			//TODO: Only do crazy cheater algo when it's worthwhile:
+			//Criteria:
+			//1)  it must be merson efficient (or at least numMersonRegions < minNumMovesTolerable)
+			//2) Num moves made < 4 (small number of moves do we don't do it all the time)
+			//3) 
+			
+			TriangleBoardCheater cheaterHeuristic = new TriangleBoardCheater(board);
+			
+			int cheaterNumber = triangleBoardCheater.TriangleCheaterSolve.getMinNumberOfMovesByCheating(cheaterHeuristic, minNumMovesTolerable);
+			
+			if(cheaterNumber == -1) {
+				cheaterNumber = minNumMovesTolerable + 1;
+			}
+			//DEBUG:
+			if(cheaterNumber > numMersonRegions) {
+				debugNumFilterCheater++;
+				//System.out.println("***FOUND RELEVANT CASE WHERE CHEATER NUMBER IS HIGH!");
+				//System.out.println("***");
+				//board.draw();
+				//System.out.println("***");
+			} else {
+				debugNumFilterCheaterMissed++;
+				//System.out.println("RELEVANT CASE NOT FOUND");
+			}
+			//END DEBUG
+
+			if((debugNumFilterCheater + debugNumFilterCheaterMissed) % 1000 == 0 ) {
+				System.out.println("Debug: filtered by cheater: " + debugNumFilterCheater);
+				System.out.println("Debug: missed by cheater: " + debugNumFilterCheaterMissed);
+			}
+			
+			return Math.max(numMersonRegions, cheaterNumber);
+		
+		}
+		return numMersonRegions;
 	}
 }

@@ -302,6 +302,9 @@ public class TriangleBoard implements TriangleBoardI {
 	//WARN: lots of copy/paste from getFullMovesExcludingRepeatMoves
 	public ArrayList<String> getFullMovesWith2MovesAwayFilters(boolean mustBe100percentMesonEfficient) {
 
+		if(this.getLookupNumber() == 5) {
+			System.out.println("DEBUG");
+		}
 		boolean goodStarts[][] = this.triangle;
 		if(mustBe100percentMesonEfficient) {
 			goodStarts = PositonFilterTests.getPegsToMoveThatReduceNumMesonRegions(this.triangle);
@@ -412,60 +415,96 @@ public class TriangleBoard implements TriangleBoardI {
 		//UP:
 		if(istart >= 2 && jstart <= istart-2) {
 			if(triangle[istart-1][jstart] && triangle[istart-2][jstart] == false) {
-				
+
+				updateTmpBoardProperties(istart, jstart, sumPegsInPosClass, sumPegsOnEdge, -1);
 				updateTmpBoardProperties(istart-1, jstart, sumPegsInPosClass, sumPegsOnEdge, -1);
+				updateTmpBoardProperties(istart-2, jstart, sumPegsInPosClass, sumPegsOnEdge, +1);
+				
 				ret.addAll( getPromissingMovesAfterJump1MoveAwayFromGoal(getCode(istart, jstart) +"-" + getCode(istart-2, jstart), sumPegsInPosClass, sumPegsOnEdge, movingPegPosClass) );
+
+				updateTmpBoardProperties(istart, jstart, sumPegsInPosClass, sumPegsOnEdge, +1);
 				updateTmpBoardProperties(istart-1, jstart, sumPegsInPosClass, sumPegsOnEdge, +1);
+				updateTmpBoardProperties(istart-2, jstart, sumPegsInPosClass, sumPegsOnEdge, -1);
 			}
 		}
 		
 		//UP LEFT
 		if(istart >=2 && jstart >= 2) {
 			if(triangle[istart-1][jstart-1] && triangle[istart-2][jstart-2] == false) {
-				
+
+				updateTmpBoardProperties(istart, jstart, sumPegsInPosClass, sumPegsOnEdge, -1);
 				updateTmpBoardProperties(istart-1, jstart-1, sumPegsInPosClass, sumPegsOnEdge, -1);
+				updateTmpBoardProperties(istart-2, jstart-2, sumPegsInPosClass, sumPegsOnEdge, +1);
+				
 				ret.addAll( getPromissingMovesAfterJump1MoveAwayFromGoal(getCode(istart, jstart) +"-" + getCode(istart-2, jstart-2), sumPegsInPosClass, sumPegsOnEdge, movingPegPosClass) );
+				
+				updateTmpBoardProperties(istart, jstart, sumPegsInPosClass, sumPegsOnEdge, +1);
 				updateTmpBoardProperties(istart-1, jstart-1, sumPegsInPosClass, sumPegsOnEdge, +1);
+				updateTmpBoardProperties(istart-2, jstart-2, sumPegsInPosClass, sumPegsOnEdge, -1);
 			}
 		}
 		
 		//RIGHT:
 		if(jstart + 2 < triangle[istart].length) {
 			if(triangle[istart][jstart+1] && triangle[istart][jstart+2] == false) {
-				
+
+				updateTmpBoardProperties(istart, jstart, sumPegsInPosClass, sumPegsOnEdge, -1);
 				updateTmpBoardProperties(istart, jstart+1, sumPegsInPosClass, sumPegsOnEdge, -1);
+				updateTmpBoardProperties(istart, jstart+2, sumPegsInPosClass, sumPegsOnEdge, +1);
+				
 				ret.addAll( getPromissingMovesAfterJump1MoveAwayFromGoal(getCode(istart, jstart) +"-" + getCode(istart, jstart+2), sumPegsInPosClass, sumPegsOnEdge, movingPegPosClass) );
+
+				updateTmpBoardProperties(istart, jstart, sumPegsInPosClass, sumPegsOnEdge, +1);
 				updateTmpBoardProperties(istart, jstart+1, sumPegsInPosClass, sumPegsOnEdge, +1);
+				updateTmpBoardProperties(istart, jstart+2, sumPegsInPosClass, sumPegsOnEdge, -1);
 			}
 		}
 		
 		//LEFT:
 		if(jstart >=2) {
 			if(triangle[istart][jstart-1] && triangle[istart][jstart-2] == false) {
-				
+
+				updateTmpBoardProperties(istart, jstart, sumPegsInPosClass, sumPegsOnEdge, -1);
 				updateTmpBoardProperties(istart, jstart-1, sumPegsInPosClass, sumPegsOnEdge, -1);
+				updateTmpBoardProperties(istart, jstart-2, sumPegsInPosClass, sumPegsOnEdge, +1);
+				
 				ret.addAll( getPromissingMovesAfterJump1MoveAwayFromGoal(getCode(istart, jstart) +"-" + getCode(istart, jstart-2), sumPegsInPosClass, sumPegsOnEdge, movingPegPosClass) );
+
+				updateTmpBoardProperties(istart, jstart, sumPegsInPosClass, sumPegsOnEdge, +1);
 				updateTmpBoardProperties(istart, jstart-1, sumPegsInPosClass, sumPegsOnEdge, +1);
+				updateTmpBoardProperties(istart, jstart-2, sumPegsInPosClass, sumPegsOnEdge, -1);
 			}
 		}
 		
 		//DOWN:
 		if(istart + 2 < triangle.length) {
 			if(triangle[istart+1][jstart] && triangle[istart+2][jstart] == false) {
-				
+
+				updateTmpBoardProperties(istart, jstart, sumPegsInPosClass, sumPegsOnEdge, -1);
 				updateTmpBoardProperties(istart+1, jstart, sumPegsInPosClass, sumPegsOnEdge, -1);
+				updateTmpBoardProperties(istart+2, jstart, sumPegsInPosClass, sumPegsOnEdge, +1);
+				
 				ret.addAll( getPromissingMovesAfterJump1MoveAwayFromGoal(getCode(istart, jstart) +"-" + getCode(istart+2, jstart), sumPegsInPosClass, sumPegsOnEdge, movingPegPosClass) );
+				
+				updateTmpBoardProperties(istart, jstart, sumPegsInPosClass, sumPegsOnEdge, +1);
 				updateTmpBoardProperties(istart+1, jstart, sumPegsInPosClass, sumPegsOnEdge, +1);
+				updateTmpBoardProperties(istart+2, jstart, sumPegsInPosClass, sumPegsOnEdge, -1);
 			}
 		}
 		
 		//DOWN RIGHT
 		if(istart + 2 < triangle.length) {
 			if(triangle[istart+1][jstart+1] && triangle[istart+2][jstart+2] == false) {
-				
+
+				updateTmpBoardProperties(istart,    jstart, sumPegsInPosClass, sumPegsOnEdge, -1);
 				updateTmpBoardProperties(istart+1, jstart+1, sumPegsInPosClass, sumPegsOnEdge, -1);
+				updateTmpBoardProperties(istart+2, jstart+2, sumPegsInPosClass, sumPegsOnEdge, +1);
+
 				ret.addAll( getPromissingMovesAfterJump1MoveAwayFromGoal(getCode(istart, jstart) +"-" + getCode(istart+2, jstart+2), sumPegsInPosClass, sumPegsOnEdge, movingPegPosClass) );
+
+				updateTmpBoardProperties(istart, jstart, sumPegsInPosClass, sumPegsOnEdge, +1);
 				updateTmpBoardProperties(istart+1, jstart+1, sumPegsInPosClass, sumPegsOnEdge, +1);
+				updateTmpBoardProperties(istart+2, jstart+2, sumPegsInPosClass, sumPegsOnEdge, -1);
 			}
 		}
 		

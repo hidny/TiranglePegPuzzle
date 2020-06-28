@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import triangleBoardInterface.TriangleBoardI;
+
 
 //Old ideas:
 
@@ -23,16 +25,16 @@ public class TriangleSolve {
 	// TODO: try finding all optimal solutions later...
 
 	//TODO: use pen & paper to figure out which layer actually needs getNecessaryFilter
-	public static final int LENGTH = 8;
+	public static final int LENGTH = 9;
 
-	public static int MAX_DEPTH_TOTAL = 13;
+	public static int MAX_DEPTH_TOTAL = 16;
 
 	public static boolean SEARCH_SINGLE_GOAL = false;
 	public static int GOAL_I = 0;
 	public static int GOAL_J = 0;
 	
 	
-	public static int MEM_DEPTH_FORWARDS = Math.min(12, MAX_DEPTH_TOTAL - 1);
+	public static int MEM_DEPTH_FORWARDS = Math.min(11, MAX_DEPTH_TOTAL - 1);
 
 	
 	public static void main(String args[]) {
@@ -84,7 +86,7 @@ public class TriangleSolve {
 	}
 
 
-	public static int numFunctionCallFor3AwayDEBUG = 0;
+	public static int numFunctionCallFor4AwayDEBUG = 0;
 	public static int numRecordsSavedForDEBUG = 0;
 	
 	
@@ -111,7 +113,8 @@ public class TriangleSolve {
 		initRecordedTriangles(board.length());
 		debugNumRecordSavedPrevDepth = 0;
 		
-		for(int depth=PositonFilterTests.getNumMesonRegionsSimple(board.getTriangle()); depth<= MAX_DEPTH_TOTAL; depth++) {
+		//TODO: don't keep it hard-coded like this...
+		for(int depth=16/*PositonFilterTests.getNumMesonRegionsSimple(board.getTriangle())*/; depth<= MAX_DEPTH_TOTAL; depth++) {
 			System.out.println("DEBUG: trying depth " + depth);
 			
 			DEPTH_USED_IN_SEARCH = depth;
@@ -151,10 +154,10 @@ public class TriangleSolve {
 	public static void getBestMoveList(TriangleBoard board, int curMaxDepth) {
 
 		debugVisitsPerNumMoves[board.getNumMovesMade()]++;
-		if(curMaxDepth == 3) {
-			numFunctionCallFor3AwayDEBUG++;
+		if(curMaxDepth == 4) {
+			numFunctionCallFor4AwayDEBUG++;
 			
-			if(numFunctionCallFor3AwayDEBUG % 500000 == 0) {
+			if(numFunctionCallFor4AwayDEBUG % 10000 == 0) {
 				
 				System.out.println("Current depth: " + DEPTH_USED_IN_SEARCH + " out of " + MAX_DEPTH_TOTAL);
 	
@@ -180,6 +183,7 @@ public class TriangleSolve {
 		if(board.getNumPiecesLeft() == 1) {
 			System.out.println("FOUND A SOLUTION:");
 			board.draw();
+			//System.exit(1);
 			return;
 		}
 		
@@ -215,14 +219,30 @@ public class TriangleSolve {
 		boolean mustBe100percentMesonEfficient = false;
 		
 		if(curMaxDepth > 0) {
-			int numMesonRegions = PositonFilterTests.getNumMesonRegionsSimple(board.getTriangle());
+			
+
 			//Implemented A* filter
+			//Simple find merson regions:
+			int numMersonRegions = PositonFilterTests.getNumMesonRegionsSimple(board.getTriangle());
+			//int minNumMovesLeft = numMersonRegions;
+			
+			//Complex and untested cheater filter
+			int cheaterNumberOfMoves = PositonFilterTests.getCheaterHeuristicMixedWithNumMesonRegionsSimple(board, DEPTH_USED_IN_SEARCH - board.getNumMovesMade());
+			int minNumMovesLeft = Math.max(numMersonRegions, cheaterNumberOfMoves);
+			
+			
+			
 			//Found heuristic function with merson regions:
-			if(board.getNumMovesMade() + numMesonRegions > DEPTH_USED_IN_SEARCH) {
+			if(board.getNumMovesMade() + minNumMovesLeft > DEPTH_USED_IN_SEARCH) {
+				//board.draw();
+				//System.out.println("Merson of above: " + numMersonRegions);
 				return;
 				
-			} else if(board.getNumMovesMade() + numMesonRegions == DEPTH_USED_IN_SEARCH) {
+			} else if(board.getNumMovesMade() + numMersonRegions == DEPTH_USED_IN_SEARCH) {
 				mustBe100percentMesonEfficient = true;
+				//board.draw();
+				//System.out.println("Merson above is efficient: " + numMersonRegions);
+				
 			}
 			
 			int numMovesLeftBasedOnPegIsolationSpanningTree = 0;
@@ -266,12 +286,13 @@ public class TriangleSolve {
 		
 		//get moves available:
 		ArrayList<String> moves;
-		if(curMaxDepth == 2) {
-			moves = board.getFullMovesWith2MovesAwayFilters(mustBe100percentMesonEfficient);
+		//if(curMaxDepth == 2) {
+				//TODO: it's broken! Simplify it! Fix it!
+		//	moves = board.getFullMovesWith2MovesAwayFilters(mustBe100percentMesonEfficient);
 			
-		} else {
+		//} else {
 			moves = board.getNecessaryFullMovesToCheck(mustBe100percentMesonEfficient);
-		}
+		//}
 		
 		moves = PositonFilterTests.excludeMovesThatLeadToSameOutcome(board, moves);
 			

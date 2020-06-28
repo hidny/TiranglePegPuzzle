@@ -101,6 +101,7 @@ public class TriangleBoardCheater  implements TriangleBoardI {
 		
 	}
 	
+	
 	private boolean triangle[][];
 	private int numPiecesLeft;
 	private int numMovesMade;
@@ -124,6 +125,31 @@ public class TriangleBoardCheater  implements TriangleBoardI {
 		
 		numPiecesLeft = ((triangle.length + 1) * (triangle.length))/2;
 		
+		historicMoveList ="";
+		
+	}
+	
+	public TriangleBoardCheater(TriangleBoardI a) {
+		boolean copyTriangle[][] = a.getTriangle();
+
+		triangle = new boolean[copyTriangle.length][];
+
+		numPiecesLeft = 0;
+		
+		for(int i=0; i<copyTriangle.length; i++) {
+			
+			triangle[i] = new boolean[copyTriangle[i].length];
+
+			for(int j=0; j < copyTriangle[i].length; j++) {
+				triangle[i][j] = copyTriangle[i][j];
+				if(copyTriangle[i][j]) {
+					numPiecesLeft++;
+				}
+				
+			}
+		}
+		
+		numMovesMade = 0;
 		historicMoveList ="";
 		
 	}
@@ -193,6 +219,7 @@ public class TriangleBoardCheater  implements TriangleBoardI {
 				System.exit(1);
 			} else {
 				System.err.println("WARNING: piece you're trying to remove is out of bounds");
+				System.exit(1);
 			}
 		}
 		
@@ -212,6 +239,7 @@ public class TriangleBoardCheater  implements TriangleBoardI {
 				System.exit(1);
 			} else {
 				System.err.println("WARNING: piece you're trying to remove is out of bounds");
+				System.exit(1);
 			}
 		}
 		
@@ -451,10 +479,6 @@ public class TriangleBoardCheater  implements TriangleBoardI {
 	private TriangleBoardCheater moveInternal(String move) {
 		
 
-		if(move.equals("15-15")) {
-			System.out.println("DEBUG!");
-		}
-		
 		String fromTo[] = move.split("-");
 		
 		int from = Integer.parseInt(fromTo[0]);
@@ -481,14 +505,17 @@ public class TriangleBoardCheater  implements TriangleBoardI {
 			
 			if(newBoard.triangle[fromI][fromJ] == false) {
 				System.out.println("ERROR move 1");
+				System.exit(1);
 			}
 			
 			if(newBoard.triangle[(fromI+toI)/2][(fromJ+toJ)/2] == false) {
 				System.out.println("ERROR move 2");
+				System.exit(1);
 			}
 			
 			if(newBoard.triangle[toI][toJ] == true) {
 				System.out.println("ERROR move 3");
+				System.exit(1);
 			}
 			
 			newBoard.triangle[fromI][fromJ] = false;

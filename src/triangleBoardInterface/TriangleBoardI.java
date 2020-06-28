@@ -7,4 +7,8 @@ public interface TriangleBoardI {
 	public boolean[][] getTriangle();
 	
 	public int getNumPiecesLeft();
+	
+	public void draw();
+	
+	public int getNumMovesMade();
 }
