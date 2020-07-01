@@ -210,6 +210,27 @@ public class PositonFilterTests {
 			}
 		}
 		
+		int numMersonRegions = getNumMesonRegionsSimple(triangle);
+		
+		//Get rid of pegs that don't actually reduce the number of merson regions:
+		for(int i=0; i<goodStarts.length; i++) {
+			for(int j=0; j<goodStarts[i].length; j++) {
+				if(goodStarts[i][j]) {
+
+
+					triangle[i][j] = false;
+					int numRegionWithoutPeg =  getNumMesonRegionsSimple(triangle);
+					triangle[i][j] = true;
+					
+					if(numRegionWithoutPeg < numMersonRegions) {
+						goodStarts[i][j] = true;
+					} else {
+						goodStarts[i][j] = false;
+					}
+				}
+			}
+		}
+		
 		return goodStarts;
 		
 	}

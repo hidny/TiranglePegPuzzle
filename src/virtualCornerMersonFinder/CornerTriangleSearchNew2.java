@@ -16,6 +16,28 @@ public class CornerTriangleSearchNew2 {
 
 	
 	public static void main(String args[]) {
+		
+		int NUM_LAYERS=4;
+		
+		for(long lookup=0; lookup< 1000; lookup++) {
+			CornerTriangleBoard tmp = new CornerTriangleBoard(NUM_LAYERS, lookup);
+			
+			System.out.println("Trying new Corner Triangle:");
+			System.out.println(tmp);
+			ArrayList<MersonMoveAndMovePossibility> ret = search(tmp);
+			
+
+			System.out.println("Answers found:");
+			for(int i=0; i<ret.size(); i++) {
+				System.out.println("(num Merson, num Moves) = (" + ret.get(i).getNumMersonMoves() + ", " + ret.get(i).getNumMoves() + ")");
+			}
+			
+		}
+		
+		
+	}
+	
+	public static void testFilled5() {
 		CornerTriangleBoard filled = new CornerTriangleBoard(5);
 		
 		System.out.println(filled);
