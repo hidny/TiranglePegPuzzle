@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 import triangleBoard5.PositonFilterTests;
-import triangleBoard5.triangleRecord;
 import triangleBoard5.utilFunctions;
 
 
@@ -89,13 +88,13 @@ public class TriangleCheaterSolve {
 	public static int numRecordsSavedForDEBUG = 0;
 	
 	
-	public static HashMap<Long, triangleRecord>[] recordedTriangles;
+	public static HashMap<Long, Integer>[] recordedTriangles;
 	
 	public static void initRecordedTriangles(int boardLength) {
 		numRecordsSavedForDEBUG = 0;
 		recordedTriangles = new HashMap[utilFunctions.getTriangleNumber(boardLength)];
 		for(int i=0; i<recordedTriangles.length; i++) {
-			recordedTriangles[i] = new HashMap<Long, triangleRecord>();
+			recordedTriangles[i] = new HashMap<Long, Integer>();
 		}
 		
 	}
@@ -103,7 +102,6 @@ public class TriangleCheaterSolve {
 	
 	public static int getMinNumberOfMovesByCheating(TriangleBoardCheater board, int maxDepth) {
 
-		initRecordedTriangles(board.length());
 
 		int debugNumRecordSavedPrevDepth = 0;
 
@@ -119,6 +117,9 @@ public class TriangleCheaterSolve {
 		for(int depth=PositonFilterTests.getNumMesonRegionsSimple(board.getTriangle()); foundSolution == false && depth<= maxDepth; depth++) {
 			//System.out.println("DEBUG: trying depth " + depth);
 			
+
+			initRecordedTriangles(board.length());
+
 			DEPTH_USED_IN_SEARCH = depth;
 			
 			foundSolution = getBestMoveList(board, depth);
@@ -187,23 +188,15 @@ public class TriangleCheaterSolve {
 
 		if(recordedTriangles[board.getNumPiecesLeft()].containsKey(lookup)) {
 			
-			triangleRecord previouslyFoundNode = recordedTriangles[board.getNumPiecesLeft()].get(lookup);
+			int previouslyFoundNumMoves = recordedTriangles[board.getNumPiecesLeft()].get(lookup);
 			
-			if(board.getNumMovesMade() > previouslyFoundNode.getNumMovesToGetToPos()) {
+			if(board.getNumMovesMade() >= previouslyFoundNumMoves) {
 				return false;
 				
-			} else if(board.getNumMovesMade() == previouslyFoundNode.getNumMovesToGetToPos()){
-				
-				if(previouslyFoundNode.getDepthUsedToFindRecord() == DEPTH_USED_IN_SEARCH) {
-					return false;
-					
-				} else {
-					previouslyFoundNode.updateNumMovesToGetToPos(board.getNumMovesMade(), DEPTH_USED_IN_SEARCH);
-					
-				}
-				
 			} else {
-				previouslyFoundNode.updateNumMovesToGetToPos(board.getNumMovesMade(), DEPTH_USED_IN_SEARCH);
+				recordedTriangles[board.getNumPiecesLeft()].remove(lookup);
+				recordedTriangles[board.getNumPiecesLeft()].put(lookup, board.getNumMovesMade());
+				
 			}
 		}
 		
@@ -231,7 +224,7 @@ public class TriangleCheaterSolve {
 		if(board.getNumMovesMade() <= MEM_DEPTH_FORWARDS) {
 		
 			if(recordedTriangles[board.getNumPiecesLeft()].containsKey(lookup) == false) {
-				recordedTriangles[board.getNumPiecesLeft()].put(lookup, new triangleRecord(board.getNumMovesMade(), DEPTH_USED_IN_SEARCH));
+				recordedTriangles[board.getNumPiecesLeft()].put(lookup, board.getNumMovesMade());
 				numRecordsSavedForDEBUG++;
 				
 			}

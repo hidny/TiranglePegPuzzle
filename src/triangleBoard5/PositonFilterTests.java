@@ -202,6 +202,19 @@ public class PositonFilterTests {
 					// don't start with that peg:
 					if(getNumMesonRegionsSimple(triangle) == curNumMesonRegions) {
 						goodStarts[i][j] = false;
+						/*System.out.println("TEST FILTER GOOD STARTS");
+						for(int i2=0; i2<triangle.length; i2++) {
+							for(int j2=0; j2<=i2; j2++) {
+								if(triangle[i2][j2]) {
+									System.out.print("1 ");
+								} else {
+									System.out.print("0 ");
+								}
+							}
+							System.out.println();
+						}
+						System.out.println(i +", " + j);
+						*/
 					}
 
 					//At least I change it back...

@@ -6,6 +6,9 @@ package triangleBoard5;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 import triangleBoardInterface.TriangleBoardI;
 
@@ -18,24 +21,28 @@ import triangleBoardInterface.TriangleBoardI;
 public class TriangleSolve {
 
 
-	public static HashSet<Long> startingPositionSearched = new HashSet<Long>();
 
 
 	//This is looking for just 1 solution...
 	// TODO: try finding all optimal solutions later...
 
 	//TODO: use pen & paper to figure out which layer actually needs getNecessaryFilter
-	public static final int LENGTH = 9;
+	public static final int LENGTH = 7;
 
-	public static int MAX_DEPTH_TOTAL = 16;
+	public static int MAX_DEPTH_TOTAL = 13;
 
 	public static boolean SEARCH_SINGLE_GOAL = false;
 	public static int GOAL_I = 0;
 	public static int GOAL_J = 0;
 	
 	
-	public static int MEM_DEPTH_FORWARDS = Math.min(11, MAX_DEPTH_TOTAL - 1);
+	public static int PERMANENT_SAVE_DEPTH = 10;
+	
+	public static int REFRESH_MEM_DEPTH_FORWARDS = Math.min(14, MAX_DEPTH_TOTAL - 1);
 
+	public static int EIGHTEEN_MIL = 18000000;
+	//public static int SAVE_LIMIT = 3000000;
+	public static int SAVE_LIMIT = 5000;
 	
 	public static void main(String args[]) {
 		
@@ -55,7 +62,9 @@ public class TriangleSolve {
 	}
 	
 	public static void getForwardSolutions() {
-		
+
+		HashSet<Long> startingPositionSearched = new HashSet<Long>();
+
 		System.out.println("Trying " + LENGTH + " in TriangleSolveOptimizedTrial5");
 		System.out.println("Giving up after reaching a max depth of " + MAX_DEPTH_TOTAL);
 		System.out.println();
@@ -88,42 +97,101 @@ public class TriangleSolve {
 
 	public static int numFunctionCallFor4AwayDEBUG = 0;
 	public static int numRecordsSavedForDEBUG = 0;
+	public static int numRecordsCurrentlySaved = 0;
 	
 	
-	public static HashMap<Long, triangleRecord>[] recordedTriangles;
+	public static HashMap<Long, Integer>[] recordedTriangles;
 	
 	public static void initRecordedTriangles(int boardLength) {
 		numRecordsSavedForDEBUG = 0;
+		numRecordsCurrentlySaved = 0;
 		recordedTriangles = new HashMap[utilFunctions.getTriangleNumber(boardLength)];
 		for(int i=0; i<recordedTriangles.length; i++) {
-			recordedTriangles[i] = new HashMap<Long, triangleRecord>();
+			recordedTriangles[i] = new HashMap<Long, Integer>();
 		}
 		
+	}
+	
+	public static void refreshTriangles(int boardLength) {
+		
+		System.out.println("REFRESH TRIANGLES");
+/*
+	    for (Entry<Integer, String> entry : MONTHS.entrySet()) {
+	        if (entry.getValue().length() == 4) {
+	            monthsWithLengthFour.put(entry.getKey(), entry.getValue());
+	        }
+	    }
+
+	    logger.info(monthsWithLengthFour);
+
+	    assertThat(monthsWithLengthFour.values(), contains("June", "July"));
+	*/    
+		
+		//TODO: could do slightly better by not checking triangles with too many pegs...
+		for(int i=0; i<utilFunctions.getTriangleNumber(boardLength); i++) {
+			
+			Iterator it = recordedTriangles[i].keySet().iterator();
+			HashMap<Long, Integer> permaSavedPos = new HashMap<Long, Integer>();
+			
+			while(it.hasNext()) {
+				long tmp = (Long)it.next();
+				if(recordedTriangles[i].get(tmp) > PERMANENT_SAVE_DEPTH) {
+					numRecordsCurrentlySaved--;
+				} else {
+					permaSavedPos.put(tmp, recordedTriangles[i].get(tmp));
+				}
+			}
+
+			recordedTriangles[i] = permaSavedPos;
+		}
+		
+		
+		//SANITY TEST TODO
+		//TEST could do slightly better...
+		for(int i=0; i<utilFunctions.getTriangleNumber(boardLength); i++) {
+			
+			Iterator it = recordedTriangles[i].keySet().iterator();
+			
+			while(it.hasNext()) {
+				if(recordedTriangles[i].get(it.next()) > PERMANENT_SAVE_DEPTH) {
+					System.out.println("ERROR: didn't delete properly!");
+					System.exit(1);
+				}
+			}
+		}
+		//SANITY TEST TODO
+		
+		//have the limit of saved positions be at least FACTOR times the number of positions to auto-save.
+		int ceiling = numRecordsCurrentlySaved * 2;
+		
+		if(ceiling > SAVE_LIMIT) {
+			System.out.println("Extending save limit from " + SAVE_LIMIT + " to " + ceiling);
+			SAVE_LIMIT = ceiling;
+		}
 	}
 	
 	
 	public static void getBestMoveList(TriangleBoard board) {
 
-		initRecordedTriangles(board.length());
-
 		int debugNumRecordSavedPrevDepth = 0;	
 		System.out.println("Start search for solution starting with:\n"  + board);
 		
 		//Need to reinit recorded triangle because we're starting over from depth 1:
-		initRecordedTriangles(board.length());
 		debugNumRecordSavedPrevDepth = 0;
 		
-		//TODO: don't keep it hard-coded like this...
-		for(int depth=16/*PositonFilterTests.getNumMesonRegionsSimple(board.getTriangle())*/; depth<= MAX_DEPTH_TOTAL; depth++) {
+		for(int depth = PositonFilterTests.getNumMesonRegionsSimple(board.getTriangle()); depth<= MAX_DEPTH_TOTAL; depth++) {
 			System.out.println("DEBUG: trying depth " + depth);
 			
 			DEPTH_USED_IN_SEARCH = depth;
+
+			initRecordedTriangles(board.length());
 			
 			getBestMoveList(board, depth);
 			
 			System.out.println("End of search with depth " + depth + " and triangle length " + board.length());
 			System.out.println("Num records saved for prev depths: " + debugNumRecordSavedPrevDepth);
 			System.out.println("Num records saved total: " + numRecordsSavedForDEBUG);
+			System.out.println("Num records saved currently: " + numRecordsCurrentlySaved);
 			debugNumRecordSavedPrevDepth = numRecordsSavedForDEBUG;
 			
 		}
@@ -151,13 +219,14 @@ public class TriangleSolve {
 	
 	private static int DEPTH_USED_IN_SEARCH = -1;
 	
+	
 	public static void getBestMoveList(TriangleBoard board, int curMaxDepth) {
 
 		debugVisitsPerNumMoves[board.getNumMovesMade()]++;
 		if(curMaxDepth == 4) {
 			numFunctionCallFor4AwayDEBUG++;
 			
-			if(numFunctionCallFor4AwayDEBUG % 10000 == 0) {
+			if(numFunctionCallFor4AwayDEBUG % 100000 == 0) {
 				
 				System.out.println("Current depth: " + DEPTH_USED_IN_SEARCH + " out of " + MAX_DEPTH_TOTAL);
 	
@@ -195,23 +264,15 @@ public class TriangleSolve {
 
 		if(recordedTriangles[board.getNumPiecesLeft()].containsKey(lookup)) {
 			
-			triangleRecord previouslyFoundNode = recordedTriangles[board.getNumPiecesLeft()].get(lookup);
+			int prevNumMovesToGetToPos = recordedTriangles[board.getNumPiecesLeft()].get(lookup);
 			
-			if(board.getNumMovesMade() > previouslyFoundNode.getNumMovesToGetToPos()) {
+			if(board.getNumMovesMade() >= prevNumMovesToGetToPos) {
 				return;
 				
-			} else if(board.getNumMovesMade() == previouslyFoundNode.getNumMovesToGetToPos()){
-				
-				if(previouslyFoundNode.getDepthUsedToFindRecord() == DEPTH_USED_IN_SEARCH) {
-					return;
-					
-				} else {
-					previouslyFoundNode.updateNumMovesToGetToPos(board.getNumMovesMade(), DEPTH_USED_IN_SEARCH);
-					
-				}
-				
 			} else {
-				previouslyFoundNode.updateNumMovesToGetToPos(board.getNumMovesMade(), DEPTH_USED_IN_SEARCH);
+				recordedTriangles[board.getNumPiecesLeft()].remove(lookup);
+				recordedTriangles[board.getNumPiecesLeft()].put(lookup, board.getNumMovesMade());
+				
 			}
 		}
 		
@@ -224,11 +285,12 @@ public class TriangleSolve {
 			//Implemented A* filter
 			//Simple find merson regions:
 			int numMersonRegions = PositonFilterTests.getNumMesonRegionsSimple(board.getTriangle());
-			//int minNumMovesLeft = numMersonRegions;
+			int minNumMovesLeft = numMersonRegions;
 			
+			//TODO: Fix it!
 			//Complex and untested cheater filter
-			int cheaterNumberOfMoves = PositonFilterTests.getCheaterHeuristicMixedWithNumMesonRegionsSimple(board, DEPTH_USED_IN_SEARCH - board.getNumMovesMade());
-			int minNumMovesLeft = Math.max(numMersonRegions, cheaterNumberOfMoves);
+			//int cheaterNumberOfMoves = PositonFilterTests.getCheaterHeuristicMixedWithNumMesonRegionsSimple(board, DEPTH_USED_IN_SEARCH - board.getNumMovesMade());
+			//int minNumMovesLeft = Math.max(numMersonRegions, cheaterNumberOfMoves);
 			
 			
 			
@@ -275,24 +337,29 @@ public class TriangleSolve {
 
 		//Record position if worthwhile:
 		//(Only record if it won't affect memory requirements too much)
-		if(board.getNumMovesMade() <= MEM_DEPTH_FORWARDS) {
+		if(board.getNumMovesMade() <= REFRESH_MEM_DEPTH_FORWARDS) {
 		
 			if(recordedTriangles[board.getNumPiecesLeft()].containsKey(lookup) == false) {
-				recordedTriangles[board.getNumPiecesLeft()].put(lookup, new triangleRecord(board.getNumMovesMade(), DEPTH_USED_IN_SEARCH));
+				recordedTriangles[board.getNumPiecesLeft()].put(lookup, board.getNumMovesMade());
 				numRecordsSavedForDEBUG++;
+				numRecordsCurrentlySaved++;
+				
+				if(numRecordsCurrentlySaved > SAVE_LIMIT) {
+					refreshTriangles(LENGTH);
+				}
 				
 			}
 		}
 		
 		//get moves available:
 		ArrayList<String> moves;
-		//if(curMaxDepth == 2) {
+		if(curMaxDepth == 2) {
 				//TODO: it's broken! Simplify it! Fix it!
-		//	moves = board.getFullMovesWith2MovesAwayFilters(mustBe100percentMesonEfficient);
+			moves = board.getFullMovesWith2MovesAwayFilters(mustBe100percentMesonEfficient);
 			
-		//} else {
+		} else {
 			moves = board.getNecessaryFullMovesToCheck(mustBe100percentMesonEfficient);
-		//}
+		}
 		
 		moves = PositonFilterTests.excludeMovesThatLeadToSameOutcome(board, moves);
 			

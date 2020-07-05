@@ -302,9 +302,6 @@ public class TriangleBoard implements TriangleBoardI {
 	//WARN: lots of copy/paste from getFullMovesExcludingRepeatMoves
 	public ArrayList<String> getFullMovesWith2MovesAwayFilters(boolean mustBe100percentMesonEfficient) {
 
-		if(this.getLookupNumber() == 5) {
-			System.out.println("DEBUG");
-		}
 		boolean goodStarts[][] = this.triangle;
 		if(mustBe100percentMesonEfficient) {
 			goodStarts = PositonFilterTests.getPegsToMoveThatReduceNumMesonRegions(this.triangle);
@@ -329,9 +326,11 @@ public class TriangleBoard implements TriangleBoardI {
 		int sumPegsInPosClass[] = getSumPegsInPosClass(triangle);
 		int sumPegsOnEdge[] = getSumPegsInEdgeClass(triangle);
 		
+		
 		for(int i=0; i<triangle.length; i++) {
 			for(int j=0; j<triangle[i].length; j++) {
 				if(goodStarts[i][j] && (i != lastPegLocationi || j != lastPegLocationj) ) {
+
 					int movingPegPosClass = getPositionClass(i, j);
 					ret.addAll(getPromisingMovesToPositions1MoveAwayFromGoal(i * triangle.length + j, sumPegsInPosClass, sumPegsOnEdge, movingPegPosClass));
 				}
@@ -389,10 +388,10 @@ public class TriangleBoard implements TriangleBoardI {
 	}
 
 	private void updateSumOfEdges(int i, int j, int sumPegsOnEdge[], int diff) {
-		if(i==0) {
+		if(j==0) {
 			sumPegsOnEdge[0] += diff;
 		}
-		if(i==j) {
+		if(j==i) {
 			sumPegsOnEdge[1] += diff;
 		}
 		if(i==triangle.length - 1) {
@@ -401,8 +400,8 @@ public class TriangleBoard implements TriangleBoardI {
 	}
 	
 	public void updateTmpBoardProperties(int i, int j, int sumPegsInPosClass[], int sumPegsOnEdge[], int diff) {
-		updateSumOfEdges(i, j, sumPegsInPosClass, diff);
 		sumPegsInPosClass[getPositionClass(i, j)] += diff;
+		updateSumOfEdges(i, j, sumPegsOnEdge, diff);
 	}
 
 	private ArrayList<String> getPromisingMovesToPositions1MoveAwayFromGoal(int code, int sumPegsInPosClass[], int sumPegsOnEdge[], int movingPegPosClass) {
@@ -524,7 +523,7 @@ public class TriangleBoard implements TriangleBoardI {
 				//TODO: implement edge filters!
 				if(triangle.length % 2 == 0) {
 					//TODO: test! n=6
-					if( (i==0 && sumPegsOnEdge[2] == 0)
+					if(        (i==0 && sumPegsOnEdge[2] == 0)
 							|| (i==1 && sumPegsOnEdge[0] == 0 && sumPegsOnEdge[1] == 0 && sumPegsOnEdge[2] == 0)
 							|| (i==2 && sumPegsOnEdge[1] == 0)
 							|| (i==3 && sumPegsOnEdge[0] == 0) ){
