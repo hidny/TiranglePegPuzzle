@@ -26,7 +26,6 @@ public class TriangleSolve {
 	//This is looking for just 1 solution...
 	// TODO: try finding all optimal solutions later...
 
-	//TODO: use pen & paper to figure out which layer actually needs getNecessaryFilter
 	public static final int LENGTH = 9;
 
 	public static int MAX_DEPTH_TOTAL = 16;
@@ -38,12 +37,19 @@ public class TriangleSolve {
 	
 	public static int PERMANENT_SAVE_DEPTH = 10;
 	
-	public static int REFRESH_MEM_DEPTH_FORWARDS = Math.min(14, MAX_DEPTH_TOTAL - 1);
-
-	//public static int EIGHTEEN_MIL = 18000000;
-	public static int SAVE_LIMIT = 3000000;
-	//public static int SAVE_LIMIT = 5000;
+	public static int REFRESH_MEM_DEPTH_FORWARDS = Math.min(14, MAX_DEPTH_TOTAL - 3);
 	
+	//recorded overnight:
+	//32486384
+	//Made it to:
+	// 27-9  0-18  29-27-9  20-0-18  45-27-9-29  40-20  60-40  56-36  74-56  63-45  48-28-30-50-48-46-28  45-27-29
+	//public static int EIGHTEEN_MIL = 18000000;
+	public static int SAVE_LIMIT = 20000000;
+	
+	//After reducing save limit to 20M: (It's much faster!)
+	//public static int SAVE_LIMIT = 5000;
+	// 27-9  0-18  29-27-9  20-0-18  48-28  56-38  45-27-9-29-47  68-48  60-58  74-56-38  63-45-65  72-74-54
+
 	public static void main(String args[]) {
 		
 
@@ -115,19 +121,7 @@ public class TriangleSolve {
 	public static void refreshTriangles(int boardLength) {
 		
 		System.out.println("REFRESH TRIANGLES");
-/*
-	    for (Entry<Integer, String> entry : MONTHS.entrySet()) {
-	        if (entry.getValue().length() == 4) {
-	            monthsWithLengthFour.put(entry.getKey(), entry.getValue());
-	        }
-	    }
 
-	    logger.info(monthsWithLengthFour);
-
-	    assertThat(monthsWithLengthFour.values(), contains("June", "July"));
-	*/    
-		
-		//TODO: could do slightly better by not checking triangles with too many pegs...
 		for(int i=0; i<utilFunctions.getTriangleNumber(boardLength); i++) {
 			
 			Iterator it = recordedTriangles[i].keySet().iterator();
@@ -146,8 +140,7 @@ public class TriangleSolve {
 		}
 		
 		
-		//SANITY TEST TODO
-		//TEST could do slightly better...
+		//SANITY TEST
 		for(int i=0; i<utilFunctions.getTriangleNumber(boardLength); i++) {
 			
 			Iterator it = recordedTriangles[i].keySet().iterator();
@@ -159,7 +152,7 @@ public class TriangleSolve {
 				}
 			}
 		}
-		//SANITY TEST TODO
+		//SANITY TEST
 		
 		//have the limit of saved positions be at least FACTOR times the number of positions to auto-save.
 		int ceiling = numRecordsCurrentlySaved * 2;
@@ -168,6 +161,9 @@ public class TriangleSolve {
 			System.out.println("Extending save limit from " + SAVE_LIMIT + " to " + ceiling);
 			SAVE_LIMIT = ceiling;
 		}
+		
+
+		System.out.println("END REFRESH TRIANGLES");
 	}
 	
 	
@@ -230,7 +226,8 @@ public class TriangleSolve {
 				
 				System.out.println("Current depth: " + DEPTH_USED_IN_SEARCH + " out of " + MAX_DEPTH_TOTAL);
 	
-				System.out.println("Num records saved: " + numRecordsSavedForDEBUG);
+				System.out.println("Num records saved total: " + numRecordsSavedForDEBUG);
+				System.out.println("Num records saved currently: " + numRecordsCurrentlySaved);
 				board.draw();
 				System.out.println("Min num moves: " +( board.getNumMovesMade() + PositonFilterTests.getNumMesonRegionsSimple(board.getTriangle())));
 				
@@ -354,7 +351,6 @@ public class TriangleSolve {
 		//get moves available:
 		ArrayList<String> moves;
 		if(curMaxDepth == 2) {
-				//TODO: it's broken! Simplify it! Fix it!
 			moves = board.getFullMovesWith2MovesAwayFilters(mustBe100percentMesonEfficient);
 			
 		} else {

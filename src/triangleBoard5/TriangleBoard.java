@@ -520,9 +520,8 @@ public class TriangleBoard implements TriangleBoardI {
 
 		for(int i=0; i<NUM_POSITION_CLASSES; i++) {
 			if(i != movingPegPosClass && sumPegsInPosClass[i] == 1) {
-				//TODO: implement edge filters!
 				if(triangle.length % 2 == 0) {
-					//TODO: test! n=6
+					//Edge filters:
 					if(        (i==0 && sumPegsOnEdge[2] == 0)
 							|| (i==1 && sumPegsOnEdge[0] == 0 && sumPegsOnEdge[1] == 0 && sumPegsOnEdge[2] == 0)
 							|| (i==2 && sumPegsOnEdge[1] == 0)
@@ -532,7 +531,7 @@ public class TriangleBoard implements TriangleBoardI {
 					}
 					
 				} else {
-					//TODO: test! n=7 
+					//Edge filters:
 					if(i==0
 							|| (i==1 && sumPegsOnEdge[0] == 0 && sumPegsOnEdge[1] == 0)
 							|| (i==2 && sumPegsOnEdge[1] == 0 && sumPegsOnEdge[2] == 0)
