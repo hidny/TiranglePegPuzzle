@@ -27,9 +27,9 @@ public class TriangleSolve {
 	// TODO: try finding all optimal solutions later...
 
 	//TODO: use pen & paper to figure out which layer actually needs getNecessaryFilter
-	public static final int LENGTH = 7;
+	public static final int LENGTH = 9;
 
-	public static int MAX_DEPTH_TOTAL = 13;
+	public static int MAX_DEPTH_TOTAL = 16;
 
 	public static boolean SEARCH_SINGLE_GOAL = false;
 	public static int GOAL_I = 0;
@@ -40,9 +40,9 @@ public class TriangleSolve {
 	
 	public static int REFRESH_MEM_DEPTH_FORWARDS = Math.min(14, MAX_DEPTH_TOTAL - 1);
 
-	public static int EIGHTEEN_MIL = 18000000;
-	//public static int SAVE_LIMIT = 3000000;
-	public static int SAVE_LIMIT = 5000;
+	//public static int EIGHTEEN_MIL = 18000000;
+	public static int SAVE_LIMIT = 3000000;
+	//public static int SAVE_LIMIT = 5000;
 	
 	public static void main(String args[]) {
 		
